@@ -501,7 +501,7 @@ int read_imdiv(FILE *ifile,IntervalMap imdiv[],int div,int i_div,int ntop)
     block=ntop%div;
   ipos *= sizeof(IntervalMap); /* CALCULATE FILE POSITION IN BYTES */
   PYGR_FSEEK(ifile,ipos,SEEK_SET);
-  fread(imdiv,sizeof(IntervalMap),block,ifile);
+  size_t readed = fread(imdiv,sizeof(IntervalMap),block,ifile);
   return block;
 }
 

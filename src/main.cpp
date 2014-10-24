@@ -10,7 +10,6 @@
 #include <set>
 #include <algorithm>
 #include <stdio.h>
-//#include "RTree.h"
 #include <random>
 #include <memory>
 
@@ -61,10 +60,12 @@ int main(int argc, char *argv[]) {
 	UploadData(datasetPath.c_str(), &data, &queries);
 
 	vector<std::shared_ptr<TWrapper> > wrappers;
+	wrappers.push_back(std::shared_ptr<TWrapper>(new TRTreeWrapper("NClist")));
 	wrappers.push_back(std::shared_ptr<TWrapper>(new TIntervalIndexWrapper("MavlyutovIndex")));
-	wrappers.push_back(std::shared_ptr<TWrapper>(new TIntervalTreeWrapper("ITree")));
-	wrappers.push_back(std::shared_ptr<TWrapper>(new TRTreeWrapper("RTree")));
-
+	wrappers.push_back(std::shared_ptr<TWrapper>(new TIntervalTreeWrapper("Interval Tree")));
+	wrappers.push_back(std::shared_ptr<TWrapper>(new TRTreeWrapper("R-Tree")));
+	wrappers.push_back(std::shared_ptr<TWrapper>(new TRTreeWrapper("R*-Tree")));
+	wrappers.push_back(std::shared_ptr<TWrapper>(new TSegementTreeWrapper("Segment Tree")));
 	long long totalHitsCount = 0;
 	for (auto wrapperIt = wrappers.begin(); wrapperIt != wrappers.end(); ++wrapperIt) {
 		wrapperIt->get()->Build(data);

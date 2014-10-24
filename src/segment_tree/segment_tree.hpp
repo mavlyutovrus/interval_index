@@ -108,7 +108,7 @@ private:
 			}
 			leafNodes.push_back(TNode(start, start));
 		}
-		{// create tree structure
+		{//create tree structure
 			int insertBefore = 1;
 			int layerSize = 1;
 			while (layerSize < leafNodes.size()) {
