@@ -54,6 +54,11 @@ void UploadData(const char* filename, vector<TKeyId>* intervalsPtr, vector<TInte
 
 
 int main(int argc, char *argv[]) {
+	//initialise PAPI
+	if (PAPI_library_init(PAPI_VER_CURRENT) != PAPI_VER_CURRENT) {
+		exit(1);
+	}
+
 	string datasetPath = argv[1];
 	vector<TKeyId> data;
 	vector<TInterval> queries;
@@ -72,7 +77,7 @@ int main(int argc, char *argv[]) {
 		//wrapperIt->get()->TestQuality(data, queries);
 		long long hitsCount = 0;
 		double queryTime = wrapperIt->get()->CalcQueryTime(queries, &hitsCount);
-		std::cout << datasetPath << "\t" << wrapperIt->get()->Id << "\t" << hitsCount << "\t" << queryTime << "\n";
+		std::cout << datasetPath << "\t" << wrapperIt->get()->Id << "\t" << hitsCount << "\t" << queryTime << "\t" << wrapperIt->get()->DeltaVirtualMicroSec / 1000000.0 << "\n";
 		std::cout.flush();
 		wrapperIt->get()->Clear();
 		if (wrapperIt == wrappers.begin()) {

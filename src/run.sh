@@ -1,6 +1,5 @@
 rm index_run
-g++ -O3 main.cpp nclist/intervaldb.c -o index_run -std=gnu++11
-#g++ -g main.cpp -o index_run -std=gnu++11
+g++ -O3 main.cpp nclist/intervaldb.c ../tools/papi-5.3.2/src/libpapi.a -I../tools/papi-5.3.2/src/ -std=gnu++11 -o index_run
 
 
 for path in `ls $1/*.txt`

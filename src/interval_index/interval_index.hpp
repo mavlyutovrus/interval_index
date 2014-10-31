@@ -34,6 +34,8 @@ public:
 	TIntervalIndex(const vector<TKeyId>& data, const double spaceFactor=1.0)
 													: CheckpointInterval(1)
 													, Index(data) {
+
+
 		std::sort(Index.begin(), Index.end());
 		BoundingInterval.first = Index.size() ? Index[0].first.first : 0;
 		BoundingInterval.second = BoundingInterval.first;
