@@ -73,11 +73,13 @@ int main(int argc, char *argv[]) {
 	wrappers.push_back(std::shared_ptr<TWrapper>(new TSegementTreeWrapper("Segment Tree")));
 	long long totalHitsCount = 0;
 	for (auto wrapperIt = wrappers.begin(); wrapperIt != wrappers.end(); ++wrapperIt) {
-		wrapperIt->get()->Build(data);
+		double memUsageKb;
+		double buildTimeMilliSec;
+		wrapperIt->get()->Build(data, &buildTimeMilliSec, &memUsageKb);
 		//wrapperIt->get()->TestQuality(data, queries);
 		long long hitsCount = 0;
 		double queryTime = wrapperIt->get()->CalcQueryTime(queries, &hitsCount);
-		std::cout << datasetPath << "\t" << wrapperIt->get()->Id << "\t" << hitsCount << "\t" << queryTime << "\t" << wrapperIt->get()->DeltaVirtualMicroSec / 1000000.0 << "\n";
+		std::cout << datasetPath << "\t" << wrapperIt->get()->Id << "\t" << hitsCount << "\t" << memUsageKb << "\t" << buildTimeMilliSec <<  "\t" << queryTime << "\t" << wrapperIt->get()->DeltaVirtualMicroSec / 1000000.0 << "\n";
 		std::cout.flush();
 		wrapperIt->get()->Clear();
 		if (wrapperIt == wrappers.begin()) {

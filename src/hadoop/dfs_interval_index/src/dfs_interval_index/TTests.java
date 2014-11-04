@@ -3,6 +3,7 @@ package dfs_interval_index;
 
 import dfs_interval_index.TDFSIntervaIndex;
 import dfs_interval_index.TMapReduceSearcher;
+import dfs_interval_index.TSpatialHadoop;
 
 import java.io.*;
 import java.util.*;
@@ -31,6 +32,7 @@ import org.apache.hadoop.util.ProgramDriver;
 
 
 
+
 public class TTests {
 
 	public TTests() {
@@ -38,6 +40,11 @@ public class TTests {
 	}
 
 	public static void main(String[] args) throws IOException {
+		
+		
+		
+		
+		
 		//String sourceFile = "/user/ruslan/ruslan/intervals.txt";
 		String sourceFile = "/user/ruslan/ruslan/intervals.txt.short";
 		String indexFile = "/user/ruslan/ruslan/interval_index";
@@ -48,6 +55,13 @@ public class TTests {
 		config.addResource(new Path("/home/arslan/jeclipse/eclipse/workspace/hadoop_test/global_conf/mapred-site.xml"));
 		config.addResource(new Path("/home/arslan/jeclipse/eclipse/workspace/hadoop_test/global_conf/yarn-site.xml"));
 		FileSystem fs = FileSystem.get(config);
+		
+		TSpatialHadoop spatialHadoop = new TSpatialHadoop(fs, config);
+		//spatialHadoop.Convert2MBR(sourceFile, sourceFile + ".spatial_hadoop");
+		
+		
+		
+		/*
 		//TDFSIntervaIndex index = new TDFSIntervaIndex(sourceFile, indexFile, fs, config);
 		TDFSIntervaIndex index = new TDFSIntervaIndex(indexFile, fs, config);
 		Random rand = new Random();
@@ -62,10 +76,8 @@ public class TTests {
 				System.exit(1);
 			}
 			System.out.println(String.format(".. test case %d", testCase));
-
-		
 		}
-		
+		*/
 	}
 
 }

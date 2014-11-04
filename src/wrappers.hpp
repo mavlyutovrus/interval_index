@@ -24,6 +24,7 @@
 #include "r_tree/RTree.h"
 #include "nclist/intervaldb.h"
 #include "segment_tree/segment_tree.hpp"
+#include "mem_usage.h"
 #define TSharedPtr std::shared_ptr
 
 
@@ -40,7 +41,7 @@ typedef std::pair<TInterval, TValue> TKeyId;
 
 class TWrapper {
 public:
-	virtual void Build(const vector<TKeyId>&) = 0;
+	virtual void Build(const vector<TKeyId>&, double* timeConsumptionPtr, double* memConsumptionPtr) = 0;
 	virtual double CalcQueryTime(const vector<TInterval>&, long long* hitsCountPtr=NULL) = 0;
 	virtual void Clear() = 0;
 	virtual void TestQuality(const vector<TKeyId>& data, const vector<TInterval>& queries) const {
@@ -55,13 +56,18 @@ public:
 							  , DeltaRealCycles(0)
 							  , DeltaRealMicroSec(0)
 							  , DeltaVirtualCycles(0)
-							  , DeltaVirtualMicroSec(0) {
-	}
+							  , DeltaVirtualMicroSec(0)
+							  , VirtMemUsageOnStart(0)
+							  , ResidenMemUsageOnStart(0)
+							  , VirtMemUsageDeltaKb(0)
+							  , ResidenMemUsageDeltaKb(0) {}
 	string Id;
 	long long StartRealCycles, StartRealMicroSec;
 	long long StartVirtualCycles, StartVirtualMicroSec;
 	long long DeltaRealCycles, DeltaRealMicroSec;
 	long long DeltaVirtualCycles, DeltaVirtualMicroSec;
+	double VirtMemUsageOnStart, ResidenMemUsageOnStart;
+	double VirtMemUsageDeltaKb, ResidenMemUsageDeltaKb;
 
 	void StartTimer() {
 
@@ -75,6 +81,19 @@ public:
 		DeltaRealMicroSec = PAPI_get_real_usec() - StartRealMicroSec;
 		DeltaVirtualCycles = PAPI_get_virt_cyc() - StartVirtualCycles;
 		DeltaVirtualMicroSec = PAPI_get_virt_usec() - StartVirtualMicroSec;
+	}
+
+	void StartMeasureMemory() {
+		//to be sure, that the values are updated
+		process_mem_usage(VirtMemUsageOnStart, ResidenMemUsageOnStart);
+		process_mem_usage(VirtMemUsageOnStart, ResidenMemUsageOnStart);
+		process_mem_usage(VirtMemUsageOnStart, ResidenMemUsageOnStart);
+	}
+
+	void CalcMemoryUsage() {
+		process_mem_usage(VirtMemUsageDeltaKb, ResidenMemUsageDeltaKb);
+		VirtMemUsageDeltaKb -= VirtMemUsageOnStart;
+		ResidenMemUsageDeltaKb -= ResidenMemUsageOnStart;
 	}
 
 
@@ -104,9 +123,16 @@ public:
 										   , IntervalIndexPtr(NULL) {
 
 	}
-	virtual void Build(const vector<TKeyId>& data) {
+	virtual void Build(const vector<TKeyId>& data, double* timeConsumptionPtr, double* memConsumptionPtr) {
+		StartMeasureMemory();
+		StartTimer();
+
 		IntervalIndexPtr = TSharedPtr<TIntervalIndex<TIntervalBorder, TValue> >
 								(new TIntervalIndex<TIntervalBorder, TValue>(data));
+		StopTimer();
+		CalcMemoryUsage();
+		*timeConsumptionPtr = DeltaVirtualMicroSec / 1000.0;
+		*memConsumptionPtr = VirtMemUsageDeltaKb;
 	}
 	virtual void Clear() {
 		IntervalIndexPtr = NULL;
@@ -139,7 +165,7 @@ public:
 	TIntervalTreeWrapper(const string id) : TWrapper(id)
 										  , ContainerPtr(NULL) {
 	}
-	virtual void Build(const vector<TKeyId>& data) {
+	virtual void Build(const vector<TKeyId>& data, double* timeConsumptionPtr, double* memConsumptionPtr) {
 		vector<Interval<TValue, TIntervalBorder> > points4tree;
 		for (int pointIndex = 0; pointIndex < data.size(); ++pointIndex) {
 			const TIntervalBorder& start = data[pointIndex].first.first;
@@ -147,8 +173,15 @@ public:
 			const TValue& value = data[pointIndex].second;
 			points4tree.push_back(Interval<TValue, TIntervalBorder>(start, end, data[pointIndex].second));
 		}
+
+		StartMeasureMemory();
+		StartTimer();
 		ContainerPtr = TSharedPtr<IntervalTree<TValue, TIntervalBorder> >
 		                    (new IntervalTree<TValue, TIntervalBorder>(points4tree));
+		StopTimer();
+		CalcMemoryUsage();
+		*timeConsumptionPtr = DeltaVirtualMicroSec / 1000.0;
+		*memConsumptionPtr = VirtMemUsageDeltaKb;
 	}
 	virtual void Clear() {
 		ContainerPtr = NULL;
@@ -227,7 +260,7 @@ public:
 	TSegementTreeWrapper(const string id) : TWrapper(id)
 										  , ContainerPtr(NULL) {
 	}
-	virtual void Build(const vector<TKeyId>& data) {
+	virtual void Build(const vector<TKeyId>& data, double* timeConsumptionPtr, double* memConsumptionPtr) {
 		vector<TSTKeyValue> points4tree;
 		for (int pointIndex = 0; pointIndex < data.size(); ++pointIndex) {
 			const TIntervalBorder& start = data[pointIndex].first.first;
@@ -235,7 +268,14 @@ public:
 			const TValue& value = data[pointIndex].second;
 			points4tree.push_back(TSTKeyValue(start, end, value));
 		}
+
+		StartMeasureMemory();
+		StartTimer();
 		ContainerPtr = TSharedPtr<TSegTree>(new TSegTree(points4tree));
+		StopTimer();
+		CalcMemoryUsage();
+		*timeConsumptionPtr = DeltaVirtualMicroSec / 1000.0;
+		*memConsumptionPtr = VirtMemUsageDeltaKb;
 	}
 	virtual void Clear() {
 		ContainerPtr = NULL;
@@ -275,13 +315,19 @@ public:
 	typedef RTree<int, double, 1, double> TRTree;
 	TRTreeWrapper(const string id) : TWrapper(id), ContainerPtr(NULL) {
 	}
-	virtual void Build(const vector<TKeyId>& data) {
+	virtual void Build(const vector<TKeyId>& data, double* timeConsumptionPtr, double* memConsumptionPtr) {
+		StartMeasureMemory();
+		StartTimer();
 		ContainerPtr = TSharedPtr<TRTree>(new TRTree);
 		for (int pointIndex = 0; pointIndex < data.size(); ++pointIndex) {
 			double start[1] = { data[pointIndex].first.first };
 			double end[1] = { data[pointIndex].first.second };
 			ContainerPtr->Insert(start, end, data[pointIndex].second);
 		}
+		StopTimer();
+		CalcMemoryUsage();
+		*timeConsumptionPtr = DeltaVirtualMicroSec / 1000.0;
+		*memConsumptionPtr = VirtMemUsageDeltaKb;
 	}
 	virtual void Clear() {
 		ContainerPtr = NULL;
@@ -319,7 +365,7 @@ public:
 									  p_n(0),
 									  p_nlists(0) {
 	}
-	virtual void Build(const vector<TKeyId>& data) {
+	virtual void Build(const vector<TKeyId>& data, double* timeConsumptionPtr, double* memConsumptionPtr) {
 		Clear();
 		for (int pointIndex = 0; pointIndex < data.size(); ++pointIndex) {
 			IntervalMap interval;
@@ -331,10 +377,16 @@ public:
 			interval.target_end = 0;
 			Points4Nclist.push_back(interval);
 		}
+		StartMeasureMemory();
+		StartTimer();
 		ContainerPtr = TSharedPtr<SublistHeader>(build_nested_list(&Points4Nclist[0],
 															 Points4Nclist.size(),
 															 &p_n,
 															 &p_nlists));
+		StopTimer();
+		CalcMemoryUsage();
+		*timeConsumptionPtr = DeltaVirtualMicroSec / 1000.0;
+		*memConsumptionPtr = VirtMemUsageDeltaKb;
 	}
 	virtual void Clear() {
 		ContainerPtr = NULL;
@@ -398,7 +450,9 @@ public:
 	};
 	TRStarTreeWrapper(const string id) : TWrapper(id), ContainerPtr(NULL) {
 	}
-	virtual void Build(const vector<TKeyId>& data) {
+	virtual void Build(const vector<TKeyId>& data, double* timeConsumptionPtr, double* memConsumptionPtr) {
+		StartMeasureMemory();
+		StartTimer();
 		ContainerPtr = TSharedPtr<TRStarTree>(new TRStarTree);
 		for (int pointIndex = 0; pointIndex < data.size(); ++pointIndex) {
 			TRStarTree::BoundingBox interval;
@@ -406,6 +460,10 @@ public:
 			interval.edges[0].second = data[pointIndex].first.second * DOUBLE2INT_MULT;
 			ContainerPtr->Insert(pointIndex + 1, interval);
 		}
+		StopTimer();
+		CalcMemoryUsage();
+		*timeConsumptionPtr = DeltaVirtualMicroSec / 1000.0;
+		*memConsumptionPtr = VirtMemUsageDeltaKb;
 	}
 	virtual void Clear() {
 		ContainerPtr = NULL;
