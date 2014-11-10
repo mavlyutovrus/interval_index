@@ -117,6 +117,7 @@ private:
 };
 
 
+template <int SPACE_FACTOR>
 class TIntervalIndexWrapper : public TWrapper {
 public:
 	TIntervalIndexWrapper(const string id) : TWrapper(id)
@@ -128,7 +129,7 @@ public:
 		StartTimer();
 
 		IntervalIndexPtr = TSharedPtr<TIntervalIndex<TIntervalBorder, TValue> >
-								(new TIntervalIndex<TIntervalBorder, TValue>(data));
+								(new TIntervalIndex<TIntervalBorder, TValue>(data, SPACE_FACTOR));
 		StopTimer();
 		CalcMemoryUsage();
 		*timeConsumptionPtr = DeltaVirtualMicroSec / 1000.0;

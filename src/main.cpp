@@ -66,7 +66,9 @@ int main(int argc, char *argv[]) {
 
 	vector<std::shared_ptr<TWrapper> > wrappers;
 	wrappers.push_back(std::shared_ptr<TWrapper>(new TRTreeWrapper("NClist")));
-	wrappers.push_back(std::shared_ptr<TWrapper>(new TIntervalIndexWrapper("MavlyutovIndex")));
+	wrappers.push_back(std::shared_ptr<TWrapper>(new TIntervalIndexWrapper<1>("MavlyutovIndex_x1")));
+	wrappers.push_back(std::shared_ptr<TWrapper>(new TIntervalIndexWrapper<2>("MavlyutovIndex_x2")));
+	wrappers.push_back(std::shared_ptr<TWrapper>(new TIntervalIndexWrapper<3>("MavlyutovIndex_x3")));
 	wrappers.push_back(std::shared_ptr<TWrapper>(new TIntervalTreeWrapper("Interval Tree")));
 	wrappers.push_back(std::shared_ptr<TWrapper>(new TRTreeWrapper("R-Tree")));
 	wrappers.push_back(std::shared_ptr<TWrapper>(new TRTreeWrapper("R*-Tree")));
