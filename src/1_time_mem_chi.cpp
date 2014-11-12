@@ -73,6 +73,13 @@ int main(int argc, char *argv[]) {
 	vector<TKeyId> data;
 	vector<TInterval> queries;
 	UploadData(datasetPath.c_str(), &data, &queries);
+	{
+	    vector<TKeyId> buffer;
+	    for (int i = 0; i < 20; ++i) {
+	        buffer.insert(buffer.end(), data.begin(), data.end());
+	    }
+	    std::cout << buffer.size() << "\n";
+	}
 
 	{
 		std::shared_ptr<TIntervalIndexTester>* wrapperIt = &wrappers[algoToRun];
