@@ -161,6 +161,85 @@ private:
 
 
 
+class TIntervalIndexTester {
+public:
+	TIntervalIndexTester(const string id,
+								   const int spaceFactor=1,
+								   const int checkpointInterval=-1) :
+									   Id(id),
+									   SPACE_FACTOR(spaceFactor),
+									   CheckpointInterval(checkpointInterval),
+									   IntervalIndexPtr(NULL) {
+	}
+	void Build(const vector<TKeyId>& data) {
+		IntervalIndexPtr = TSharedPtr<TIntervalIndex<TIntervalBorder, TValue> >
+							(new TIntervalIndex<TIntervalBorder, TValue>(data, SPACE_FACTOR, CheckpointInterval));
+	}
+    void Clear() {
+		IntervalIndexPtr = NULL;
+	}
+	double CalcQueryTime(const vector<TInterval>& queries,
+								 long long* hitsCountPtr,
+								 double* onlyBinarySearchesPtr,
+								 double* onlyStartingBeforePtr,
+								 double* wholeTimePtr) {
+		if (!IntervalIndexPtr) {
+			return 0.0;
+		}
+		*onlyBinarySearchesPtr = 0;
+		*onlyStartingBeforePtr = 0;
+		*wholeTimePtr = 0;
+		*hitsCountPtr = 0;
+
+		{
+			TResultsCounter counter;
+			TTime startTime = GetTime();
+			for (int queryIndex = 0; queryIndex < queries.size(); ++queryIndex) {
+				IntervalIndexPtr->Search(queries[queryIndex].first, queries[queryIndex].second, &counter);
+			}
+			*wholeTimePtr = GetElapsedInSeconds(startTime, GetTime());
+			if (hitsCountPtr) {
+				*hitsCountPtr += counter.GetCount();
+			}
+		}
+		{
+			TResultsCounter counter;
+			TTime startTime = GetTime();
+			//to prevent over-optimization with 03
+			int dummy_counter = 0;
+			for (int queryIndex = 0; queryIndex < queries.size(); ++queryIndex) {
+				dummy_counter += IntervalIndexPtr->SearchBinarySearchOnly(queries[queryIndex].first, queries[queryIndex].second, &counter);
+			}
+			*onlyBinarySearchesPtr = GetElapsedInSeconds(startTime, GetTime());
+			if (hitsCountPtr) {
+				*hitsCountPtr += dummy_counter;
+			}
+		}
+
+		{
+			TResultsCounter counter;
+			TTime startTime = GetTime();
+			for (int queryIndex = 0; queryIndex < queries.size(); ++queryIndex) {
+				IntervalIndexPtr->SearchStartingBeforeOnly(queries[queryIndex].first, queries[queryIndex].second, &counter);
+			}
+			*onlyStartingBeforePtr = GetElapsedInSeconds(startTime, GetTime());
+			if (hitsCountPtr) {
+				*hitsCountPtr += counter.GetCount();
+			}
+		}
+		return *wholeTimePtr;
+	}
+
+	const string Id;
+	const int SPACE_FACTOR;
+	const int CheckpointInterval;
+	TSharedPtr<TIntervalIndex<TIntervalBorder, TValue> > IntervalIndexPtr;
+};
+
+
+
+
+
 class TIntervalTreeWrapper : public TWrapper {
 public:
 	TIntervalTreeWrapper(const string id) : TWrapper(id)
