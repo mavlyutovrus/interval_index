@@ -234,6 +234,59 @@ public:
 		}
 	}
 
+	//this method is only for performance measurements
+	template <class TCallback>
+	void BinSearchWalkToCheckpointOnly(const TIntervalBorder start, const TIntervalBorder stop, TCallback* callbackPtr=NULL,
+							bool onlyBinarySearch=false, bool skipIntervalsStartedBeforeQuery=false) const {
+		if (stop < start) {
+			return;
+		}
+		if (!Index.size()) {
+			return;
+		}
+		if (BoundingInterval.first > stop || BoundingInterval.second < start) {
+			return;
+		}
+		int leftmostStartInsideQuery;
+		if (Index.rbegin()->first.first < start) {
+			leftmostStartInsideQuery = Index.size();
+		} else if (Index.begin()->first.first >= start) {
+			leftmostStartInsideQuery = 0;
+		} else {//binary search
+			int left = 0;
+			int right = Index.size() - 1;
+			while (right > left + 1) {
+				int middle = (left + right) / 2;
+				if (Index[middle].first.first < start) {
+					left = middle;
+				} else {
+					right = middle;
+				}
+			}
+			leftmostStartInsideQuery = left + 1;
+		}
+		int checkpointIndex = 0;
+		if (leftmostStartInsideQuery == 0 || leftmostStartInsideQuery % CheckpointInterval > 0
+										  || start == Index[leftmostStartInsideQuery].first.first) {
+			checkpointIndex = leftmostStartInsideQuery / CheckpointInterval;
+		} else {
+			// because there might be an interval which overlaps query,
+			//   but ends BEFORE leftmostStartInsideQuery's start
+			checkpointIndex = (leftmostStartInsideQuery - 1) / CheckpointInterval;
+		}
+		checkpointIndex = std::min(checkpointIndex, (int)Checkpoints.size() - 1);
+		const int checkpointPosition = CheckpointInterval * checkpointIndex;
+		if (leftmostStartInsideQuery > 0) {//checkpoint_position -> start_point
+			for (int current = checkpointPosition; current < leftmostStartInsideQuery; ++current) {
+				if (Index[current].first.second >= start) {
+					if (callbackPtr) {
+						(*callbackPtr)(Index[current].first, Index[current].second);
+					}
+				}
+			}
+		}
+	}
+
 
 	template <class TCallback>
 	void Search(const TIntervalBorder start, const TIntervalBorder stop, TCallback* callbackPtr=NULL) const {

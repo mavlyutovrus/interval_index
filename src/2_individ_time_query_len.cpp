@@ -62,14 +62,15 @@ int main(int argc, char *argv[]) {
 		tester.Build(data);
 		long long dataMemConsumption, dsMemConsumption;
 		tester.IntervalIndexPtr->GetMemoryConsumption(&dataMemConsumption, &dsMemConsumption);
-		long long dummyCounter = 0;
+		long long hitsCount = 0, hitsStartedBeforeQueryCountPtr = 0;
 		double binSearchTime, noInsideTime, fullQueryTime;
-		tester.CalcQueryTime(queries, &dummyCounter, &binSearchTime, &noInsideTime, &fullQueryTime);
+		tester.CalcQueryTime(queries, &hitsCount, &hitsStartedBeforeQueryCountPtr, &binSearchTime, &noInsideTime, &fullQueryTime);
 		std::cout << datasetPath
 					  << "\t" << tester.Id
 					  << "\t" << dataMemConsumption
 					  << "\t" << dsMemConsumption
-					  << "\t" << dummyCounter
+					  << "\t" << hitsCount
+					  << "\t" << hitsStartedBeforeQueryCountPtr
 					  << "\t" << tester.IntervalIndexPtr->GetCheckpointInterval()
 					  << "\t" << binSearchTime
 					  << "\t" << noInsideTime

@@ -19,7 +19,7 @@
 
 #include <papi.h>
 
-#include "interval_index/interval_index.hpp"
+#include "interval_index/interval_index_alt.hpp"
 #include "interval_tree/IntervalTree.h"
 #include "r_tree/RTree.h"
 #include "nclist/intervaldb.h"
@@ -179,17 +179,22 @@ public:
 		IntervalIndexPtr = NULL;
 	}
 	double CalcQueryTime(const vector<TInterval>& queries,
+								 long long* hitsFromWalkToCheckpointPtr,
+								 long long* hitsStartedBeforeQueryCountPtr,
 								 long long* hitsCountPtr,
 								 double* onlyBinarySearchesPtr,
+								 double* onlyBinarySearchesAndWalkToCheckpointPtr,
 								 double* onlyStartingBeforePtr,
 								 double* wholeTimePtr) {
 		if (!IntervalIndexPtr) {
 			return 0.0;
 		}
 		*onlyBinarySearchesPtr = 0;
+		*onlyBinarySearchesAndWalkToCheckpointPtr = 0;
 		*onlyStartingBeforePtr = 0;
 		*wholeTimePtr = 0;
 		*hitsCountPtr = 0;
+		*hitsStartedBeforeQueryCountPtr = 0;
 
 		{
 			TResultsCounter counter;
@@ -199,7 +204,7 @@ public:
 			}
 			*wholeTimePtr = GetElapsedInSeconds(startTime, GetTime());
 			if (hitsCountPtr) {
-				*hitsCountPtr += counter.GetCount();
+				*hitsCountPtr = counter.GetCount();
 			}
 		}
 		{
@@ -211,11 +216,21 @@ public:
 				dummy_counter += IntervalIndexPtr->SearchBinarySearchOnly(queries[queryIndex].first, queries[queryIndex].second, &counter);
 			}
 			*onlyBinarySearchesPtr = GetElapsedInSeconds(startTime, GetTime());
-			if (hitsCountPtr) {
-				*hitsCountPtr += dummy_counter;
-			}
+			//DO NOT REMOVE, doesn't allow compiler to cut this part of code
+			std::cout << dummy_counter << "\n";
 		}
 
+		{
+			TResultsCounter counter;
+			TTime startTime = GetTime();
+			for (int queryIndex = 0; queryIndex < queries.size(); ++queryIndex) {
+				IntervalIndexPtr->BinSearchWalkToCheckpointOnly(queries[queryIndex].first, queries[queryIndex].second, &counter);
+			}
+			*onlyBinarySearchesAndWalkToCheckpointPtr = GetElapsedInSeconds(startTime, GetTime());
+			if (hitsFromWalkToCheckpointPtr) {
+				*hitsFromWalkToCheckpointPtr = counter.GetCount();
+			}
+		}
 		{
 			TResultsCounter counter;
 			TTime startTime = GetTime();
@@ -223,8 +238,8 @@ public:
 				IntervalIndexPtr->SearchStartingBeforeOnly(queries[queryIndex].first, queries[queryIndex].second, &counter);
 			}
 			*onlyStartingBeforePtr = GetElapsedInSeconds(startTime, GetTime());
-			if (hitsCountPtr) {
-				*hitsCountPtr += counter.GetCount();
+			if (hitsStartedBeforeQueryCountPtr) {
+				*hitsStartedBeforeQueryCountPtr = counter.GetCount();
 			}
 		}
 		return *wholeTimePtr;
