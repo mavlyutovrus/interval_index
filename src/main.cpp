@@ -12,86 +12,50 @@
 #include <stdio.h>
 #include <random>
 #include <memory>
-
-
 #include "wrappers.hpp"
 
 
-
-
-using std::vector;
-using std::string;
-using std::cout;
-using std::ifstream;
-using std::pair;
-using std::set;
-
-
-
-
-void UploadData(const char* filename, vector<TKeyId>* intervalsPtr, vector<TInterval>* queriesPtr) {
-	std::ifstream stream (filename, std::ifstream::binary);
-	if (!stream) {
-		return;
-	}
-	int intervalsCount;
-	stream >> intervalsCount;
-	for (int interval_index = 0; interval_index < intervalsCount; ++interval_index) {
-		TIntervalBorder start, end;
-		TValue id;
-		stream >> start >> end >> id;
-		intervalsPtr->push_back(TKeyId(TInterval(start, end), id));
-	}
-	int queriesCount;
-	stream >> queriesCount;
-	for (int queryIndex = 0; queryIndex < queriesCount; ++queryIndex) {
-		TIntervalBorder start, end;
-		stream >> start >> end;
-		queriesPtr->push_back(TInterval(start, end));
-	}
-}
-
-
-
 int main(int argc, char *argv[]) {
-	//initialise PAPI
-	if (PAPI_library_init(PAPI_VER_CURRENT) != PAPI_VER_CURRENT) {
-		exit(1);
+	vector<std::shared_ptr<TWrapper> > wrappers;
+	wrappers.push_back(std::shared_ptr<TWrapper>(new TIntervalIndexWrapper<1>("MavlyutovIndex_x1")));
+	wrappers.push_back(std::shared_ptr<TWrapper>(new TNClistWrapper("NClist")));
+	wrappers.push_back(std::shared_ptr<TWrapper>(new TIntervalTreeWrapper("Interval Tree")));
+
+	wrappers.push_back(std::shared_ptr<TWrapper>(new TRTreeWrapper<4>("R-Tree4")));
+	wrappers.push_back(std::shared_ptr<TWrapper>(new TRTreeWrapper<8>("R-Tree8")));
+	wrappers.push_back(std::shared_ptr<TWrapper>(new TRTreeWrapper<16>("R-Tree16")));
+	wrappers.push_back(std::shared_ptr<TWrapper>(new TRTreeWrapper<32>("R-Tree32")));
+	wrappers.push_back(std::shared_ptr<TWrapper>(new TRTreeWrapper<64>("R-Tree64")));
+
+	wrappers.push_back(std::shared_ptr<TWrapper>(new TSegementTreeWrapper("Segment Tree")));
+	//wrappers.push_back(std::shared_ptr<TWrapper>(new TRStarTreeWrapper("R*-Tree")));
+
+	if (string(argv[1]) == "-wcount") {
+		std::cout << wrappers.size() << "\n";
+		return 0;
 	}
 
 	string datasetPath = argv[1];
+	const int algo2use = atoi(argv[2]);
 	vector<TKeyId> data;
 	vector<TInterval> queries;
 	UploadData(datasetPath.c_str(), &data, &queries);
 
-	vector<std::shared_ptr<TWrapper> > wrappers;
-	wrappers.push_back(std::shared_ptr<TWrapper>(new TRTreeWrapper("NClist")));
-	wrappers.push_back(std::shared_ptr<TWrapper>(new TIntervalIndexWrapper<1>("MavlyutovIndex_x1")));
-	wrappers.push_back(std::shared_ptr<TWrapper>(new TIntervalIndexWrapper<2>("MavlyutovIndex_x2")));
-	wrappers.push_back(std::shared_ptr<TWrapper>(new TIntervalIndexWrapper<3>("MavlyutovIndex_x3")));
-	wrappers.push_back(std::shared_ptr<TWrapper>(new TIntervalTreeWrapper("Interval Tree")));
-	wrappers.push_back(std::shared_ptr<TWrapper>(new TRTreeWrapper("R-Tree")));
-	wrappers.push_back(std::shared_ptr<TWrapper>(new TRTreeWrapper("R*-Tree")));
-	wrappers.push_back(std::shared_ptr<TWrapper>(new TSegementTreeWrapper("Segment Tree")));
-	long long totalHitsCount = 0;
-	for (auto wrapperIt = wrappers.begin(); wrapperIt != wrappers.end(); ++wrapperIt) {
-		double memUsageKb;
-		double buildTimeMilliSec;
-		wrapperIt->get()->Build(data, &buildTimeMilliSec, &memUsageKb);
-		//wrapperIt->get()->TestQuality(data, queries);
-		long long hitsCount = 0;
-		double queryTime = wrapperIt->get()->CalcQueryTime(queries, &hitsCount);
-		std::cout << datasetPath << "\t" << wrapperIt->get()->Id << "\t" << hitsCount << "\t" << memUsageKb << "\t" << buildTimeMilliSec <<  "\t" << queryTime << "\t" << wrapperIt->get()->DeltaVirtualMicroSec / 1000000.0 << "\n";
-		std::cout.flush();
-		wrapperIt->get()->Clear();
-		if (wrapperIt == wrappers.begin()) {
-			totalHitsCount = hitsCount;
-		} else if (totalHitsCount != hitsCount) {
-			std::cerr << "Mismatched number of results: " << totalHitsCount << " >< " <<  hitsCount << "\n";
-			//exit(1);
-		}
-	}
+//	{//warmup
+//	    vector<TKeyId> buffer;
+//	    for (int i = 0; i < 5; ++i) {
+//	        buffer.insert(buffer.end(), data.begin(), data.end());
+//	    }
+//	    std::cout << "warmup: " << buffer.size() << "\n";
+//	}
 
+	vector<std::shared_ptr<TWrapper> >::iterator wrapperIt = wrappers.begin() + algo2use;
+	double memUsageKb;
+	double buildTimeSec;
+	wrapperIt->get()->Build(data, &buildTimeSec, &memUsageKb);
+	long long hitsCount = 0;
+	double queryTime = wrapperIt->get()->CalcQueryTime(queries, &hitsCount);
+	std::cout << datasetPath << "\t" << wrapperIt->get()->Id << "\t" << hitsCount << "\t" << memUsageKb << "\t" << buildTimeSec <<  "\t" << queryTime << "\n";
 
 	return 0;
 }

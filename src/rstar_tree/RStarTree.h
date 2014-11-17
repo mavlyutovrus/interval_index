@@ -209,15 +209,14 @@ public:
 		for decent performance.
 	*/
 	template <typename Acceptor, typename Visitor>
-	Visitor Query(const Acceptor &accept, Visitor visitor)
+	void Query(const Acceptor &accept, Visitor& visitor)
 	{
+
 		if (m_root)
 		{	
 			QueryFunctor<Acceptor, Visitor> query(accept, visitor);
 			query(m_root);
 		}
-		
-		return visitor;
 	}
 
 	
@@ -606,9 +605,9 @@ protected:
 		void operator()( BoundedItem * item ) 
 		{
 			Leaf * leaf = static_cast<Leaf*>(item);
-		
-			if (accept(leaf))
+			if (accept(leaf)) {
 				visit(leaf);
+			}
 		}
 	};
 	
@@ -627,10 +626,11 @@ protected:
 		
 			if (visitor.ContinueVisiting && accept(node))
 			{
-				if (node->hasLeaves)
+				if (node->hasLeaves) {
 					for_each(node->items.begin(), node->items.end(), VisitFunctor<Acceptor, Visitor>(accept, visitor));
-				else
+				} else {
 					for_each(node->items.begin(), node->items.end(), *this);
+				}
 			}
 		}
 	};

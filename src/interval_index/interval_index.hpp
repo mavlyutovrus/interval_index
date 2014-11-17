@@ -162,7 +162,7 @@ public:
 					right = middle;
 				}
 			}
-			leftmostStartInsideQuery = left + 1;
+			leftmostStartInsideQuery = right;
 		}
 		return leftmostStartInsideQuery;
 	}
@@ -197,7 +197,7 @@ public:
 					right = middle;
 				}
 			}
-			leftmostStartInsideQuery = left + 1;
+			leftmostStartInsideQuery = right;
 		}
 		int checkpointIndex = 0;
 		if (leftmostStartInsideQuery == 0 || leftmostStartInsideQuery % CheckpointInterval > 0
@@ -263,7 +263,7 @@ public:
 					right = middle;
 				}
 			}
-			leftmostStartInsideQuery = left + 1;
+			leftmostStartInsideQuery = right;
 		}
 		int checkpointIndex = 0;
 		if (leftmostStartInsideQuery == 0 || leftmostStartInsideQuery % CheckpointInterval > 0
@@ -315,7 +315,7 @@ public:
 					right = middle;
 				}
 			}
-			leftmostStartInsideQuery = left + 1;
+			leftmostStartInsideQuery = right;
 		}
 		int checkpointIndex = 0;
 		if (leftmostStartInsideQuery == 0 || leftmostStartInsideQuery % CheckpointInterval > 0
@@ -338,8 +338,7 @@ public:
 			}
 		}
 		{//start_point -> (till left border goes beyond stop value)
-			int current = 0;
-			for (current = leftmostStartInsideQuery;
+			for (int current = leftmostStartInsideQuery;
 					 current < Index.size() && Index[current].first.first <= stop; ++current) {
 				if (callbackPtr) {
 					(*callbackPtr)(Index[current].first, Index[current].second);
@@ -383,7 +382,8 @@ public:
 		return CheckpointInterval;
 	}
 
-private:
+//private:
+public:
 	int CheckpointInterval;
 	vector<TKeyId> Index;
 	vector<TKeyId> CheckpointsData;
