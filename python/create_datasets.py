@@ -9,24 +9,56 @@ from heapq import heapify, heappush, heappop
 MIN = 0
 MAX = 10000000
 POINTS_COUNT = 1000000
-QUERIES_COUNT = 100000
+QUERIES_COUNT = 200000
 
 
 def save_dataset(filename, intervals, queries):
+    intervals_copy = [value for value in intervals]
+    queries_copy = [value for value in queries]
+    random.shuffle(intervals_copy)
+    random.shuffle(queries_copy)
     out = open(filename, "w")
-    out.write(str(len(intervals)) + "\n")
-    for index in xrange(len(intervals)):
-        start, length = intervals[index]
+    out.write(str(len(intervals_copy)) + "\n")
+    for index in xrange(len(intervals_copy)):
+        start, length = intervals_copy[index]
         out.write(str(start) + "\t" + str(start + length) + "\t" + str(index + 1) + "\n")
-    out.write(str(len(queries)) + "\n")
-    for start, length in queries:
+    out.write(str(len(queries_copy)) + "\n")
+    for start, length in queries_copy:
         out.write(str(start) + "\t" + str(start + length) + "\n")
     out.close()
 
-
-
-
-
+if 0:
+    # chi_time_mem
+    len_mean = 100
+    len_stdev = 10
+    intervals = []
+    queries = []
+    lengths = [length >=0 and length or 0.0 for length in normal(len_mean, len_stdev, POINTS_COUNT)]
+    for point_index in xrange(POINTS_COUNT):
+        start = random.random() * (MAX - MIN) + MIN
+        length = lengths[point_index]
+        intervals += [(start, length)]
+    intervals.sort()
+    overlappings = []
+    started = []
+    for start, length in intervals:
+        while started:
+            right_border = heappop(started)
+            if right_border >= start:
+                heappush(started, right_border)
+                break
+        overlappings += [len(started)]
+        heappush(started, start + length)
+    avg_overlapping = sum(overlappings) / float(len(overlappings))    
+    print "avg overlapping", avg_overlapping
+    QUERIES_COUNT_SPEC = 1000000
+    query_len_mean = 100
+    lengths = normal(query_len_mean, len_stdev, QUERIES_COUNT_SPEC)
+    queries = []
+    for point_index in xrange(QUERIES_COUNT_SPEC):
+        start = random.random() * (MAX - MIN) + MIN
+        queries += [(start, lengths[point_index])]
+    save_dataset("../datasets/chi_time_mem_1M_100_1M_100.txt", intervals, queries)
 
 
 if 0:
@@ -55,38 +87,30 @@ if 0:
     avg_overlapping = sum(overlappings) / float(len(overlappings))
     
     lengths = normal(100, 10, QUERIES_COUNT)
-    DATASETS_COUNT = 20
-    query_length = 5
-    for length_factor in xrange(1, DATASETS_COUNT + 1):
-        query_length =  query_length * 2
+    DATASETS_COUNT = 30
+    query_length = 10
+    factor = math.exp(math.log(10000 / float(query_length) ) / (DATASETS_COUNT - 1))
+    
+    for length_factor in xrange(DATASETS_COUNT):
+        queries = []
         for point_index in xrange(QUERIES_COUNT):
             start = random.random() * (MAX - MIN) + MIN
-            queries += [(start, query_length)]  
-        queries.sort()
-        out = open("../datasets/query_len/dataset_query_len_%d.txt" % (query_length), "w")
-        out.write(str(len(intervals)) + "\n")
-        for index in xrange(len(intervals)):
-            start, length = intervals[index]
-            out.write(str(start) + "\t" + str(start + length) + "\t" + str(index + 1) + "\n")
-        out.write(str(len(queries)) + "\n")
-        for start, length in queries:
-            out.write(str(start) + "\t" + str(start + length) + "\n")
+            queries += [(start, query_length)]
+        save_dataset("../datasets/query_len/dataset_query_len_%d.txt" % (query_length), intervals, queries)
         print query_length
+        query_length =  math.ceil(query_length * factor)
 
-
- 
 if 0:
     # avg_overlapping
     queries = []
-    for query_index in xrange(POINTS_COUNT):
+    for query_index in xrange(QUERIES_COUNT):
         start = random.random() * (MAX - MIN) + MIN
         length = 100
         queries += [(start, length)]
-    queries.sort()
     
     len_mean = 1
     max_len = 100000
-    DATASETS_COUNT = 20
+    DATASETS_COUNT = 30
     factor = math.exp(math.log(max_len / float(len_mean) ) / (DATASETS_COUNT - 1))
     while len_mean <= 100000:
         print "mean len:", len_mean
@@ -114,20 +138,19 @@ if 0:
             print sum(overlappings)
             print "avg. overlapping", avg_overlapping
             save_dataset("../datasets/avg_overlapping/%f.txt" % (avg_overlapping), intervals, queries)
-        len_mean = len_mean * factor
+        len_mean = math.ceil(len_mean * factor)
 
 
 if 0:
     # avg_overlapping standard deviation
     queries = []
-    for query_index in xrange(POINTS_COUNT):
+    for query_index in xrange(QUERIES_COUNT):
         start = random.random() * (MAX - MIN) + MIN
         length = 100
         queries += [(start, length)]
-    queries.sort()
     
     len_mean = 1000
-    DATASETS_COUNT = 20
+    DATASETS_COUNT = 30
     radius = 0
     max_radius = len_mean
     delta = (max_radius - radius) / (float(DATASETS_COUNT - 1))
@@ -160,6 +183,45 @@ if 0:
 
 
 if 1:
+    # different number of intervals
+    intervals_counts = [10000]
+    for _ in xrange(50):
+        intervals_counts += [int(1.15 * intervals_counts[-1])]
+    max_values = [counts for counts in intervals_counts]
+    interval_length = 10
+    
+    for dataset_index in xrange(len(intervals_counts)):
+        intervals_count = intervals_counts[dataset_index]
+        MAX = max_values[dataset_index]
+        intervals = []
+        for _ in xrange(intervals_count):
+            start = random.random() * MAX
+            intervals += [(start, interval_length)]
+        if intervals_count < 10000000:
+            intervals.sort()
+            overlappings = []
+            started = []
+            for start, length in intervals:
+                while started:
+                    right_border = heappop(started)
+                    if right_border >= start:
+                        heappush(started, right_border)
+                        break
+                overlappings += [len(started)]
+                heappush(started, start + length)
+            avg_overlapping = sum(overlappings) / float(len(overlappings))
+            print sum(overlappings)
+            print "avg. overlapping", avg_overlapping
+            
+        queries = []
+        for query_index in xrange(QUERIES_COUNT):
+            start = random.random() * MAX
+            length = 1000
+            queries += [(start, length)]
+        print "intervals_count", intervals_count
+        save_dataset("../datasets/intervals_count/%d.txt" % (intervals_count), intervals, queries)
+
+if 0:
     #real: exome
     queries = []
     for line in open("../datasets/exome_alignement/20130108.exome.targets.bed"):
@@ -187,9 +249,47 @@ if 1:
         print "avg. overlapping", avg_overlapping
     save_dataset("../datasets/exome_alignement/dataset.txt", intervals, queries)
 
+if 0:
+    #real: time intervals
+    import os
+    path = "../datasets/time_intervals/"
+    files = [fname for fname in os.listdir(path) if fname.startswith("all_intervals")]
+    id = 0
+    intervals = []
+    
+    for file in files:
+        file = path + file
+        for line in open(file):
+           start, end = [float(item) for item in line.split("\t")[1:-1]]
+           intervals += [(start, end - start)]
+    min_left = min(left for left, _ in intervals )
+    intervals = [(start - min_left, end) for start, end in intervals]
+           
+    print len(intervals)
+    intervals.sort()
+    out = open("t", "w")
+    for start, end in intervals:
+        out.write(str(start) + "\t" + str(end) + "\n")
+    out.close()
+    if 1:
+        overlappings = []
+        started = []
+        for start, length in intervals:
+            while started:
+                right_border = heappop(started)
+                if right_border >= start:
+                    heappush(started, right_border)
+                    break
+            overlappings += [len(started)]
+            heappush(started, start + length)
+        avg_overlapping = sum(overlappings) / float(len(overlappings))
+        print sum(overlappings)
+        print "avg. overlapping", avg_overlapping
+    #save_dataset("../datasets/exome_alignement/dataset.txt", intervals, queries)
+
+
+
 exit()
-
-
 
 queries = []
 for _ in xrange(QUERIES_COUNT):

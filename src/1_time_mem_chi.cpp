@@ -21,29 +21,6 @@ using std::ifstream;
 using std::pair;
 using std::set;
 
-void UploadData(const char* filename, vector<TKeyId>* intervalsPtr, vector<TInterval>* queriesPtr) {
-	std::ifstream stream (filename, std::ifstream::binary);
-	if (!stream) {
-		return;
-	}
-	int intervalsCount;
-	stream >> intervalsCount;
-	for (int interval_index = 0; interval_index < intervalsCount; ++interval_index) {
-		TIntervalBorder start, end;
-		TValue id;
-		stream >> start >> end >> id;
-		intervalsPtr->push_back(TKeyId(TInterval(start, end), id));
-	}
-	int queriesCount;
-	stream >> queriesCount;
-	for (int queryIndex = 0; queryIndex < queriesCount; ++queryIndex) {
-		TIntervalBorder start, end;
-		stream >> start >> end;
-		queriesPtr->push_back(TInterval(start, end));
-	}
-}
-
-
 
 int main(int argc, char *argv[]) {
 	vector<std::shared_ptr<TIntervalIndexTester> > wrappers;

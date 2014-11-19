@@ -23,6 +23,7 @@ import org.apache.hadoop.mapred.Mapper;
 import org.apache.hadoop.mapred.OutputCollector;
 import org.apache.hadoop.mapred.Reporter;
 import org.apache.hadoop.mapred.TextInputFormat;
+import org.apache.hadoop.util.GenericOptionsParser;
 
 import edu.umn.cs.spatialHadoop.core.CellInfo;
 import edu.umn.cs.spatialHadoop.core.GridInfo;
@@ -31,6 +32,7 @@ import edu.umn.cs.spatialHadoop.core.Rectangle;
 import edu.umn.cs.spatialHadoop.core.Shape;
 import edu.umn.cs.spatialHadoop.core.SpatialSite;
 import edu.umn.cs.spatialHadoop.io.TextSerializerHelper;
+import edu.umn.cs.spatialHadoop.OperationsParams;
 import edu.umn.cs.spatialHadoop.RandomSpatialGenerator;
 import edu.umn.cs.spatialHadoop.ReadFile;
 import edu.umn.cs.spatialHadoop.mapred.GridOutputFormat;
@@ -38,6 +40,7 @@ import edu.umn.cs.spatialHadoop.mapred.RandomInputFormat;
 import edu.umn.cs.spatialHadoop.nasa.HDFPlot;
 import edu.umn.cs.spatialHadoop.nasa.HDFToText;
 import edu.umn.cs.spatialHadoop.nasa.MakeHDFVideo;
+import edu.umn.cs.spatialHadoop.operations.RangeQuery;
 import edu.umn.cs.spatialHadoop.operations.Repartition;
 import edu.umn.cs.spatialHadoop.operations.Repartition.RepartitionReduce;
 
@@ -53,29 +56,61 @@ public class TSpatialHadoop {
 		Config = config;
 	}
 	
+	public void CreateIndex(String inFile, String outFile) throws IOException {	
+		OperationsParams params = new OperationsParams(Config);
+		params.set("sindex", "rtree");
+		params.set("shape", "rect");
+		params.setBoolean("overwrite", true);
+		params.setBoolean("local", false);
+		Path InPath = new Path(inFile);
+		Path OutPath = new Path(outFile);
+		HDFS.delete(OutPath, true);
+		
+		try {
+		
+			Repartition.repartition(InPath, OutPath, params);
+		} catch (java.io.IOException err) {
+			System.out.println("Stupid mistake!");
+			System.err.println(err.getMessage());
+		}
+	}
+	
+	public long Query(double queryLeft, double queryRight, String indexPath) throws IOException {
+		OperationsParams params = new OperationsParams(Config, String.format("rect:%f,0,%f,1", queryLeft, queryRight));
+		params.set("sindex", "grid");
+		params.set("shape", "rect");
+		params.setBoolean("overwrite", true);
+		params.setBoolean("local", false);
+		Path InPath = new Path(indexPath);
+		Path OutPath = new Path("/user/ruslan/ruslan/sp_results");
+		HDFS.delete(OutPath, true);
+		return RangeQuery.rangeQuery(InPath, OutPath, new Rectangle(queryLeft, 0, queryRight, 1), params);
+	}
+	
+	
 	public void Convert2MBR(String InPath, String OutPath) throws IOException {
 	
 		JobConf job = new JobConf(Config);
-		job.setJobName("Generator");
-		Shape shape = new Rectangle(); //params.getShape("shape");
-
-		ClusterStatus clusterStatus = new JobClient(job).getClusterStatus();
-
+		job.setJobName("Convertor");
+		
 		job.setInputFormat(TextInputFormat.class);
 		job.setOutputFormat(GridOutputFormat.class);
+		//Shape s = new Rectangle();
 		
 		job.setMapperClass(dfs_interval_index.TSpatialHadoop.Map.class);
 		job.setMapOutputKeyClass(IntWritable.class);
-		job.setMapOutputValueClass(shape.getClass());
-		job.setNumMapTasks(10 * Math.max(1, clusterStatus.getMaxMapTasks()));
+		job.setMapOutputValueClass(Shape.class);
+		ClusterStatus clusterStatus = new JobClient(job).getClusterStatus();
+		//job.setNumMapTasks(10 * Math.max(1, clusterStatus.getMaxMapTasks()));
+		//System.out.println(String.format("map tasks count: %d", clusterStatus.getMaxMapTasks()));
+		job.setNumMapTasks(1);
 
-		String sindex = null;//params.get("sindex");
+		//String sindex = null;//params.get("sindex");
+		//TODO: set as a paarameter
 		Rectangle mbr = new Rectangle(0, 0, 5002000, 1);
 
 		CellInfo[] cells;
 		cells = new CellInfo[] { new CellInfo(1, mbr) };
-
-
 		SpatialSite.setCells(job, cells);
 
 		// Do not set a reduce function. Use the default identity reduce
@@ -94,7 +129,9 @@ public class TSpatialHadoop {
 
 		// Set paths
 		//job.setJar("/home/arslan/src/spatialhadoop-2.2/lib/spatialhadoop-2.2.jar");
+		//TODO: as a parameter
 		job.setJar("/home/arslan/src/1d_interval_index/src/hadoop/dfs_interval_index.jar");
+		
 		FileInputFormat.setInputPaths(job, new Path(InPath));
 		HDFS.delete(new Path(OutPath), true);
 		FileOutputFormat.setOutputPath(job, new Path(OutPath));

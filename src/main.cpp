@@ -21,7 +21,6 @@ int main(int argc, char *argv[]) {
 	wrappers.push_back(std::shared_ptr<TWrapper>(new TNClistWrapper("NClist")));
 	wrappers.push_back(std::shared_ptr<TWrapper>(new TIntervalTreeWrapper("Interval Tree")));
 
-	wrappers.push_back(std::shared_ptr<TWrapper>(new TRTreeWrapper<4>("R-Tree4")));
 	wrappers.push_back(std::shared_ptr<TWrapper>(new TRTreeWrapper<8>("R-Tree8")));
 	wrappers.push_back(std::shared_ptr<TWrapper>(new TRTreeWrapper<16>("R-Tree16")));
 	wrappers.push_back(std::shared_ptr<TWrapper>(new TRTreeWrapper<32>("R-Tree32")));

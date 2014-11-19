@@ -10,6 +10,40 @@ using std::vector;
 using std::set;
 
 
+//counts number of results without repeating
+//doesn't create a time overhead during query,
+//though needs an O(ResponseSize) time to refresh its counters after the query.
+class TSegmentTreeBitmapCounter {
+public:
+	TSegmentTreeBitmapCounter(): ResultsBitMap(1000000, false), Count(0) {
+		Results.reserve(10000);
+	}
+	inline void operator()(const int& value) {
+		if (value >= ResultsBitMap.size()) {
+			ResultsBitMap.resize((value << 1), false);
+		}
+		if (!ResultsBitMap[value]) {
+			ResultsBitMap[value] = true;
+			Results.push_back(value);
+		}
+	}
+	inline long long GetCount() const {
+		return Results.size();
+	}
+	inline void Refresh() {
+		for (int index = 0; index < Results.size(); ++index) {
+			ResultsBitMap[Results[index]] = false;
+		}
+		Results.resize(0);
+	}
+	std::vector<int> Results;
+	std::vector<bool> ResultsBitMap;
+private:
+	long long Count;
+
+};
+
+
 template <class TKey, class TValue>
 class TSegmentTree {
 public:

@@ -14,6 +14,7 @@ import org.apache.hadoop.io.*;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.*;
 import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.SequenceFile.Reader;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapred.FileInputFormat;
 import org.apache.hadoop.mapred.FileOutputFormat;
@@ -137,7 +138,7 @@ public class TDFSIntervaIndex {
 																			throws IOException {	
 		
 		boolean preSort = false;
-		boolean calcOptimalCheckpointInterval = false;
+		boolean calcOptimalCheckpointInterval = true;
 		boolean buildIndex = true;
 		String sortedFile = sourceFilePath + ".sorted";
 		
@@ -152,14 +153,21 @@ public class TDFSIntervaIndex {
 		    jobConfig.setOutputKeyClass(dfs_interval_index.TInterval.class);
 			jobConfig.setOutputValueClass(NullWritable.class);
 			
-
 			jobConfig.setMapperClass(dfs_interval_index.TSortMR.Map.class);
 			jobConfig.setReducerClass(dfs_interval_index.TSortMR.Reduce.class);
 			jobConfig.setInputFormat(TextInputFormat.class);
 			jobConfig.setOutputFormat(SequenceFileOutputFormat.class);		
+			//everything will be joined into one file!
 			jobConfig.setNumReduceTasks(1);
 			
-			jobConfig.setJar("/home/arslan/src/1d_interval_index/src/hadoop/dfs_interval_index.jar");
+			String jarPath = dfs_interval_index.TSortMR.Map.class.getProtectionDomain().getCodeSource().getLocation().getPath();
+			if (jarPath.endsWith("jar")) {
+				jobConfig.setJar(jarPath);
+				System.out.println("JAR: " + jarPath);
+			} else {
+				//TODO: replace
+				jobConfig.setJar("/home/arslan/src/1d_interval_index/src/hadoop/dfs_interval_index.jar");
+			}
 			
 			FileInputFormat.setInputPaths(jobConfig, new Path(sourceFilePath));
 			FileOutputFormat.setOutputPath(jobConfig, new Path(sortedFile));
@@ -170,18 +178,21 @@ public class TDFSIntervaIndex {
 			}
 		}
 		
+		//since 1 reducer on the previous stage, the sorted file is merged	
 		Path sortedFilePath = new Path(sortedFile + "/part-00000");
 		
-		if (calcOptimalCheckpointInterval) {//
+		if (calcOptimalCheckpointInterval) {
 		    Path overlappingsFilePath = new Path(sourceFilePath + ".overallpings");
 		    hdfs.delete(overlappingsFilePath, true);	
 		    FSDataOutputStream overlappingsFile = hdfs.create(overlappingsFilePath);		    
-		    ArrayList<Integer> overlappingsSample = new ArrayList<Integer>();		    
+		    ArrayList<Integer> overlappingsSample = new ArrayList<Integer>();	
+		    //TODO: replace deprecated method
 		    SequenceFile.Reader reader = new SequenceFile.Reader(hdfs, sortedFilePath, config);
 			PriorityQueue<Double> rightBordersHeap = new PriorityQueue<Double>();
 			TInterval key = new TInterval();
 			NullWritable nullWritable = NullWritable.get();	
 			int processed = 0;
+			final int SAMPLE_SIZE = 1000000;
 			while (reader.next(key, nullWritable)) {
 				while (rightBordersHeap.peek() != null) {
 					if (rightBordersHeap.peek() < key.Start) {
@@ -198,7 +209,7 @@ public class TDFSIntervaIndex {
 					if (processed % 500000 == 0) {
 						System.out.println(String.format("..processed, %d", processed));
 					}
-					if (processed >= 1000000) {
+					if (processed >= SAMPLE_SIZE) {
 						break;
 					}
 				}
@@ -211,6 +222,7 @@ public class TDFSIntervaIndex {
 				}
 				avgOverlapping = avgOverlapping / overlappingsSample.size();
 				System.out.println(String.format("Avg overlapping: %f", avgOverlapping));
+				
 				
 				double maxMemoryUsage = overlappingsSample.size();//spaceFactor == 1
 				for (CheckpointInterval = 1; CheckpointInterval <= overlappingsSample.size(); ++CheckpointInterval) {
@@ -248,7 +260,7 @@ public class TDFSIntervaIndex {
 			TInterval key = new TInterval();
 			NullWritable nullWritable = NullWritable.get();	
 			while (reader.next(key, nullWritable)) {
-				if (recordIndex % 100000 == 0) {
+				if (recordIndex % 50000 == 0) {
 					System.out.println(String.format("..processed %d", recordIndex));
 				}
 				if (recordIndex % CheckpointInterval == 0) {

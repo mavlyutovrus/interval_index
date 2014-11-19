@@ -271,35 +271,6 @@ private:
 };
 
 
-class TSegmentTreeCounter {
-public:
-	TSegmentTreeCounter(): Count(0) {
-	}
-	inline void operator()(const int& value) {
-		if (value >= ResultsBitMap.size()) {
-			ResultsBitMap.resize((value << 1), false);
-		}
-		if (!ResultsBitMap[value]) {
-			ResultsBitMap[value] = true;
-			Results.push_back(value);
-		}
-	}
-	inline long long GetCount() const {
-		return Results.size();
-	}
-	inline void Refresh() {
-		for (int index = 0; index < Results.size(); ++index) {
-			ResultsBitMap[Results[index]] = false;
-		}
-		Results.resize(0);
-	}
-	std::vector<int> Results;
-	std::vector<bool> ResultsBitMap;
-private:
-	long long Count;
-
-};
-
 class TSegementTreeWrapper : public TWrapper {
 public:
 	typedef TSegmentTree<TIntervalBorder, TValue> TSegTree;
@@ -329,7 +300,7 @@ public:
 	}
 
 	virtual double CalcQueryTime(const vector<TInterval>& queries, long long* hitsCountPtr=NULL) {
-		TSegmentTreeCounter counter;
+		TSegmentTreeBitmapCounter counter;
 		long long totalHits = 0;
 		StartTimer();
 		for (int query_index = 0; query_index < queries.size(); ++query_index) {

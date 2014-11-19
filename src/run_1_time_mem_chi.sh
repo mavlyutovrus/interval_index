@@ -1,6 +1,6 @@
 rm index_run
-g++-4.8 -O3 1_time_mem_chi.cpp  -I../tools/papi-5.3.2/src/ -std=gnu++11 -o index_run
-filename=../datasets/chi_time_mem_1M_100_1M_200.txt
+g++-4.8 -O3 1_time_mem_chi.cpp  -std=gnu++11 -o index_run
+filename=../datasets/chi_time_mem_1M_100_1M_100.txt
 last_algo=`./index_run -wcount`
 last_algo=`expr $last_algo - 1` 
 for run in `seq 1 30`

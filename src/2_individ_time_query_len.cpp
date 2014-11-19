@@ -21,28 +21,6 @@ using std::ifstream;
 using std::pair;
 using std::set;
 
-void UploadData(const char* filename, vector<TKeyId>* intervalsPtr, vector<TInterval>* queriesPtr) {
-	std::ifstream stream (filename, std::ifstream::binary);
-	if (!stream) {
-		return;
-	}
-	int intervalsCount;
-	stream >> intervalsCount;
-	for (int interval_index = 0; interval_index < intervalsCount; ++interval_index) {
-		TIntervalBorder start, end;
-		TValue id;
-		stream >> start >> end >> id;
-		intervalsPtr->push_back(TKeyId(TInterval(start, end), id));
-	}
-	int queriesCount;
-	stream >> queriesCount;
-	for (int queryIndex = 0; queryIndex < queriesCount; ++queryIndex) {
-		TIntervalBorder start, end;
-		stream >> start >> end;
-		queriesPtr->push_back(TInterval(start, end));
-	}
-}
-
 
 
 int main(int argc, char *argv[]) {
@@ -62,17 +40,26 @@ int main(int argc, char *argv[]) {
 		tester.Build(data);
 		long long dataMemConsumption, dsMemConsumption;
 		tester.IntervalIndexPtr->GetMemoryConsumption(&dataMemConsumption, &dsMemConsumption);
-		long long hitsCount = 0, hitsStartedBeforeQueryCountPtr = 0;
-		double binSearchTime, noInsideTime, fullQueryTime;
-		tester.CalcQueryTime(queries, &hitsCount, &hitsStartedBeforeQueryCountPtr, &binSearchTime, &noInsideTime, &fullQueryTime);
+		long long hitsCount = 0, hitsStartedBeforeQueryCount = 0, hitsWalkToCheckpoint = 0;
+		double binSearchTime, binSearchAndWalkToChi, noInsideTime, fullQueryTime;
+		tester.CalcQueryTime(queries,
+								&hitsWalkToCheckpoint,
+								&hitsStartedBeforeQueryCount,
+								&hitsCount,
+							 &binSearchTime,
+							 &binSearchAndWalkToChi,
+							 &noInsideTime,
+							 &fullQueryTime);
 		std::cout << datasetPath
 					  << "\t" << tester.Id
 					  << "\t" << dataMemConsumption
 					  << "\t" << dsMemConsumption
+					  << "\t" << hitsWalkToCheckpoint
+					  << "\t" << hitsStartedBeforeQueryCount
 					  << "\t" << hitsCount
-					  << "\t" << hitsStartedBeforeQueryCountPtr
 					  << "\t" << tester.IntervalIndexPtr->GetCheckpointInterval()
 					  << "\t" << binSearchTime
+					  << "\t" << binSearchAndWalkToChi
 					  << "\t" << noInsideTime
 					  << "\t" << fullQueryTime << "\n";
 		std::cout.flush();
