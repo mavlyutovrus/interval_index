@@ -1,0 +1,1610 @@
+run0
+../datasets/avg_overlapping_stdev//0.000000.txt	MavlyutovIndex_x1	201905781	39580	0.472457	0.614598
+../datasets/avg_overlapping_stdev//0.000000.txt	NClist	201905613	0	0.353555	1.53801
+../datasets/avg_overlapping_stdev//0.000000.txt	Interval Tree	201905781	26556	0.260002	1.96969
+../datasets/avg_overlapping_stdev//0.000000.txt	R-Tree8	201905781	35376	1.36279	4.71083
+../datasets/avg_overlapping_stdev//0.000000.txt	R-Tree16	201905781	31288	1.57748	2.87323
+../datasets/avg_overlapping_stdev//0.000000.txt	R-Tree32	201905781	29436	2.12437	2.1523
+../datasets/avg_overlapping_stdev//0.000000.txt	R-Tree64	201905781	28512	3.03832	1.72191
+../datasets/avg_overlapping_stdev//0.000000.txt	Segment Tree	201905781	198364	2.40601	1.99274
+../datasets/avg_overlapping_stdev//10344.827586.txt	MavlyutovIndex_x1	201911761	39600	0.47882	0.669528
+../datasets/avg_overlapping_stdev//10344.827586.txt	NClist	201911558	3904	0.534363	4.66305
+../datasets/avg_overlapping_stdev//10344.827586.txt	Interval Tree	201911761	26752	0.261592	2.51268
+../datasets/avg_overlapping_stdev//10344.827586.txt	R-Tree8	201911761	36036	1.38946	5.57051
+../datasets/avg_overlapping_stdev//10344.827586.txt	R-Tree16	201911761	31420	1.55801	3.4784
+../datasets/avg_overlapping_stdev//10344.827586.txt	R-Tree32	201911761	29304	2.02987	2.72318
+../datasets/avg_overlapping_stdev//10344.827586.txt	R-Tree64	201911761	28512	2.79027	2.18608
+../datasets/avg_overlapping_stdev//10344.827586.txt	Segment Tree	201911761	198364	2.0651	2.01456
+../datasets/avg_overlapping_stdev//11034.482759.txt	MavlyutovIndex_x1	202017419	39544	0.481545	0.675755
+../datasets/avg_overlapping_stdev//11034.482759.txt	NClist	202017215	3904	0.534636	4.68038
+../datasets/avg_overlapping_stdev//11034.482759.txt	Interval Tree	202017419	26576	0.263453	2.50489
+../datasets/avg_overlapping_stdev//11034.482759.txt	R-Tree8	202017419	36036	1.38339	5.54822
+../datasets/avg_overlapping_stdev//11034.482759.txt	R-Tree16	202017419	31416	1.56206	3.53237
+../datasets/avg_overlapping_stdev//11034.482759.txt	R-Tree32	202017419	29304	2.03367	2.65484
+../datasets/avg_overlapping_stdev//11034.482759.txt	R-Tree64	202017419	28380	2.8098	2.28712
+../datasets/avg_overlapping_stdev//11034.482759.txt	Segment Tree	202017419	198232	2.07376	2.00424
+../datasets/avg_overlapping_stdev//11724.137931.txt	MavlyutovIndex_x1	201727690	39580	0.489499	0.691289
+../datasets/avg_overlapping_stdev//11724.137931.txt	NClist	201727499	3904	0.544274	4.73241
+../datasets/avg_overlapping_stdev//11724.137931.txt	Interval Tree	201727690	26444	0.262486	2.54895
+../datasets/avg_overlapping_stdev//11724.137931.txt	R-Tree8	201727690	36036	1.39086	5.64989
+../datasets/avg_overlapping_stdev//11724.137931.txt	R-Tree16	201727690	31416	1.55194	3.55578
+../datasets/avg_overlapping_stdev//11724.137931.txt	R-Tree32	201727690	29304	2.062	2.76037
+../datasets/avg_overlapping_stdev//11724.137931.txt	R-Tree64	201727690	28380	2.78103	2.28901
+../datasets/avg_overlapping_stdev//11724.137931.txt	Segment Tree	201727690	197968	2.03355	1.99469
+../datasets/avg_overlapping_stdev//12413.793103.txt	MavlyutovIndex_x1	201805243	39544	0.47956	0.693468
+../datasets/avg_overlapping_stdev//12413.793103.txt	NClist	201805024	3904	0.53571	4.77515
+../datasets/avg_overlapping_stdev//12413.793103.txt	Interval Tree	201805243	26736	0.263174	2.59624
+../datasets/avg_overlapping_stdev//12413.793103.txt	R-Tree8	201805243	36036	1.38303	5.79349
+../datasets/avg_overlapping_stdev//12413.793103.txt	R-Tree16	201805243	31416	1.57789	3.5736
+../datasets/avg_overlapping_stdev//12413.793103.txt	R-Tree32	201805243	29436	2.04908	2.80174
+../datasets/avg_overlapping_stdev//12413.793103.txt	R-Tree64	201805243	28380	2.77976	2.33416
+../datasets/avg_overlapping_stdev//12413.793103.txt	Segment Tree	201805243	197704	2.0641	2.01317
+../datasets/avg_overlapping_stdev//13103.448276.txt	MavlyutovIndex_x1	201920016	39580	0.481252	0.700016
+../datasets/avg_overlapping_stdev//13103.448276.txt	NClist	201919814	3900	0.537242	4.84581
+../datasets/avg_overlapping_stdev//13103.448276.txt	Interval Tree	201920016	26528	0.263558	2.62544
+../datasets/avg_overlapping_stdev//13103.448276.txt	R-Tree8	201920016	36036	1.38988	5.70959
+../datasets/avg_overlapping_stdev//13103.448276.txt	R-Tree16	201920016	31416	1.54938	3.61355
+../datasets/avg_overlapping_stdev//13103.448276.txt	R-Tree32	201920016	29436	2.03279	2.83641
+../datasets/avg_overlapping_stdev//13103.448276.txt	R-Tree64	201920016	28512	2.76705	2.36065
+../datasets/avg_overlapping_stdev//13103.448276.txt	Segment Tree	201920016	197440	2.05201	2.00626
+../datasets/avg_overlapping_stdev//1379.310345.txt	MavlyutovIndex_x1	201902815	39544	0.472626	0.62004
+../datasets/avg_overlapping_stdev//1379.310345.txt	NClist	201902623	3856	0.520398	3.947
+../datasets/avg_overlapping_stdev//1379.310345.txt	Interval Tree	201902815	26172	0.259167	2.01397
+../datasets/avg_overlapping_stdev//1379.310345.txt	R-Tree8	201902815	35772	1.35561	4.82857
+../datasets/avg_overlapping_stdev//1379.310345.txt	R-Tree16	201902815	31152	1.52555	2.97626
+../datasets/avg_overlapping_stdev//1379.310345.txt	R-Tree32	201902815	29308	2.01216	2.26628
+../datasets/avg_overlapping_stdev//1379.310345.txt	R-Tree64	201902815	28380	2.80623	1.81418
+../datasets/avg_overlapping_stdev//1379.310345.txt	Segment Tree	201902815	197968	2.0822	2.00297
+../datasets/avg_overlapping_stdev//2068.965517.txt	MavlyutovIndex_x1	201881761	39580	0.482514	0.61823
+../datasets/avg_overlapping_stdev//2068.965517.txt	NClist	201881589	3872	0.52196	4.02715
+../datasets/avg_overlapping_stdev//2068.965517.txt	Interval Tree	201881761	26448	0.262808	2.08535
+../datasets/avg_overlapping_stdev//2068.965517.txt	R-Tree8	201881761	35772	1.36024	4.91469
+../datasets/avg_overlapping_stdev//2068.965517.txt	R-Tree16	201881761	31288	1.52647	3.03597
+../datasets/avg_overlapping_stdev//2068.965517.txt	R-Tree32	201881761	29304	2.00643	2.32004
+../datasets/avg_overlapping_stdev//2068.965517.txt	R-Tree64	201881761	28116	2.84552	1.87443
+../datasets/avg_overlapping_stdev//2068.965517.txt	Segment Tree	201881761	198100	2.06652	2.021
+../datasets/avg_overlapping_stdev//2758.620690.txt	MavlyutovIndex_x1	201891258	39544	0.477281	0.619876
+../datasets/avg_overlapping_stdev//2758.620690.txt	NClist	201891033	3880	0.526502	4.08013
+../datasets/avg_overlapping_stdev//2758.620690.txt	Interval Tree	201891258	26284	0.260864	2.1184
+../datasets/avg_overlapping_stdev//2758.620690.txt	R-Tree8	201891258	35904	1.36284	4.99703
+../datasets/avg_overlapping_stdev//2758.620690.txt	R-Tree16	201891258	31284	1.52513	3.0855
+../datasets/avg_overlapping_stdev//2758.620690.txt	R-Tree32	201891258	29304	1.98184	2.35758
+../datasets/avg_overlapping_stdev//2758.620690.txt	R-Tree64	201891258	28380	2.79355	1.92877
+../datasets/avg_overlapping_stdev//2758.620690.txt	Segment Tree	201891258	197968	2.05437	2.01534
+../datasets/avg_overlapping_stdev//3448.275862.txt	MavlyutovIndex_x1	201926465	39580	0.474321	0.619846
+../datasets/avg_overlapping_stdev//3448.275862.txt	NClist	201926245	3884	0.527946	4.1223
+../datasets/avg_overlapping_stdev//3448.275862.txt	Interval Tree	201926465	26384	0.262758	2.16767
+../datasets/avg_overlapping_stdev//3448.275862.txt	R-Tree8	201926465	35904	1.36858	5.05244
+../datasets/avg_overlapping_stdev//3448.275862.txt	R-Tree16	201926465	31284	1.52469	3.13178
+../datasets/avg_overlapping_stdev//3448.275862.txt	R-Tree32	201926465	29304	2.01377	2.43986
+../datasets/avg_overlapping_stdev//3448.275862.txt	R-Tree64	201926465	28248	3.20249	2.48076
+../datasets/avg_overlapping_stdev//3448.275862.txt	Segment Tree	201926465	197968	2.28816	2.14408
+../datasets/avg_overlapping_stdev//4137.931034.txt	MavlyutovIndex_x1	201923128	39580	0.472584	0.629678
+../datasets/avg_overlapping_stdev//4137.931034.txt	NClist	201922927	3888	0.532988	4.19777
+../datasets/avg_overlapping_stdev//4137.931034.txt	Interval Tree	201923128	26516	0.268512	2.21743
+../datasets/avg_overlapping_stdev//4137.931034.txt	R-Tree8	201923128	35904	1.38749	5.12201
+../datasets/avg_overlapping_stdev//4137.931034.txt	R-Tree16	201923128	31284	1.55578	3.19475
+../datasets/avg_overlapping_stdev//4137.931034.txt	R-Tree32	201923128	29304	2.01203	2.47483
+../datasets/avg_overlapping_stdev//4137.931034.txt	R-Tree64	201923128	28380	2.84099	2.01226
+../datasets/avg_overlapping_stdev//4137.931034.txt	Segment Tree	201923128	197968	2.07301	2.04618
+../datasets/avg_overlapping_stdev//4827.586207.txt	MavlyutovIndex_x1	201920557	39580	0.474688	0.634208
+../datasets/avg_overlapping_stdev//4827.586207.txt	NClist	201920358	3892	0.541063	4.23107
+../datasets/avg_overlapping_stdev//4827.586207.txt	Interval Tree	201920557	26580	0.259792	2.27477
+../datasets/avg_overlapping_stdev//4827.586207.txt	R-Tree8	201920557	35904	1.38009	5.18295
+../datasets/avg_overlapping_stdev//4827.586207.txt	R-Tree16	201920557	31284	1.54341	3.19283
+../datasets/avg_overlapping_stdev//4827.586207.txt	R-Tree32	201920557	29304	2.02112	2.46342
+../datasets/avg_overlapping_stdev//4827.586207.txt	R-Tree64	201920557	28248	2.8211	2.03191
+../datasets/avg_overlapping_stdev//4827.586207.txt	Segment Tree	201920557	198100	2.09257	2.02634
+../datasets/avg_overlapping_stdev//5517.241379.txt	MavlyutovIndex_x1	201893658	39580	0.476873	0.624787
+../datasets/avg_overlapping_stdev//5517.241379.txt	NClist	201893452	3892	0.53094	4.29721
+../datasets/avg_overlapping_stdev//5517.241379.txt	Interval Tree	201893658	26556	0.262049	2.30464
+../datasets/avg_overlapping_stdev//5517.241379.txt	R-Tree8	201893658	36036	1.38472	5.25846
+../datasets/avg_overlapping_stdev//5517.241379.txt	R-Tree16	201893658	31284	1.56022	3.27178
+../datasets/avg_overlapping_stdev//5517.241379.txt	R-Tree32	201893658	29304	2.03981	2.50736
+../datasets/avg_overlapping_stdev//5517.241379.txt	R-Tree64	201893658	28380	2.7946	2.05321
+../datasets/avg_overlapping_stdev//5517.241379.txt	Segment Tree	201893658	198100	2.0767	2.03259
+../datasets/avg_overlapping_stdev//6206.896552.txt	MavlyutovIndex_x1	201965129	39580	0.475435	0.647817
+../datasets/avg_overlapping_stdev//6206.896552.txt	NClist	201964951	3896	0.534527	4.33348
+../datasets/avg_overlapping_stdev//6206.896552.txt	Interval Tree	201965129	26560	0.264293	2.34802
+../datasets/avg_overlapping_stdev//6206.896552.txt	R-Tree8	201965129	36036	1.38029	5.29092
+../datasets/avg_overlapping_stdev//6206.896552.txt	R-Tree16	201965129	31284	1.54415	3.30619
+../datasets/avg_overlapping_stdev//6206.896552.txt	R-Tree32	201965129	29304	2.01097	2.59578
+../datasets/avg_overlapping_stdev//6206.896552.txt	R-Tree64	201965129	28380	2.77115	2.12949
+../datasets/avg_overlapping_stdev//6206.896552.txt	Segment Tree	201965129	198232	2.07818	2.01467
+../datasets/avg_overlapping_stdev//6896.551724.txt	MavlyutovIndex_x1	201920597	39544	0.477547	0.632784
+../datasets/avg_overlapping_stdev//6896.551724.txt	NClist	201920421	3896	0.5346	4.38477
+../datasets/avg_overlapping_stdev//6896.551724.txt	Interval Tree	201920597	26136	0.260824	2.37936
+../datasets/avg_overlapping_stdev//6896.551724.txt	R-Tree8	201920597	36036	1.42719	5.33451
+../datasets/avg_overlapping_stdev//6896.551724.txt	R-Tree16	201920597	31284	1.5749	3.34842
+../datasets/avg_overlapping_stdev//6896.551724.txt	R-Tree32	201920597	29304	2.02032	2.60561
+../datasets/avg_overlapping_stdev//6896.551724.txt	R-Tree64	201920597	28380	2.81403	2.14427
+../datasets/avg_overlapping_stdev//6896.551724.txt	Segment Tree	201920598	198232	2.22687	2.01095
+../datasets/avg_overlapping_stdev//689.655172.txt	MavlyutovIndex_x1	201914013	39544	0.48269	0.619329
+../datasets/avg_overlapping_stdev//689.655172.txt	NClist	201913808	3796	0.508691	3.85065
+../datasets/avg_overlapping_stdev//689.655172.txt	Interval Tree	201914013	26340	0.262489	2.01344
+../datasets/avg_overlapping_stdev//689.655172.txt	R-Tree8	201914013	35640	1.36681	4.75484
+../datasets/avg_overlapping_stdev//689.655172.txt	R-Tree16	201914013	31152	1.52284	2.91971
+../datasets/avg_overlapping_stdev//689.655172.txt	R-Tree32	201914013	29172	2.04777	2.2288
+../datasets/avg_overlapping_stdev//689.655172.txt	R-Tree64	201914013	28248	2.87668	1.76153
+../datasets/avg_overlapping_stdev//689.655172.txt	Segment Tree	201914013	198232	2.09285	1.99818
+../datasets/avg_overlapping_stdev//7586.206897.txt	MavlyutovIndex_x1	201946923	39544	0.488035	0.659903
+../datasets/avg_overlapping_stdev//7586.206897.txt	NClist	201946740	3900	0.544339	4.45322
+../datasets/avg_overlapping_stdev//7586.206897.txt	Interval Tree	201946923	26304	0.26105	2.42857
+../datasets/avg_overlapping_stdev//7586.206897.txt	R-Tree8	201946923	36036	1.39103	5.40577
+../datasets/avg_overlapping_stdev//7586.206897.txt	R-Tree16	201946923	31284	1.55447	3.4093
+../datasets/avg_overlapping_stdev//7586.206897.txt	R-Tree32	201946923	29440	2.03447	2.62439
+../datasets/avg_overlapping_stdev//7586.206897.txt	R-Tree64	201946923	28380	2.81327	2.16658
+../datasets/avg_overlapping_stdev//7586.206897.txt	Segment Tree	201946923	198232	2.07298	2.04598
+../datasets/avg_overlapping_stdev//8275.862069.txt	MavlyutovIndex_x1	201829716	39580	0.475725	0.660435
+../datasets/avg_overlapping_stdev//8275.862069.txt	NClist	201829515	3900	0.542449	4.51404
+../datasets/avg_overlapping_stdev//8275.862069.txt	Interval Tree	201829716	26564	0.259483	2.4483
+../datasets/avg_overlapping_stdev//8275.862069.txt	R-Tree8	201829716	36036	1.39982	5.46473
+../datasets/avg_overlapping_stdev//8275.862069.txt	R-Tree16	201829716	31284	1.56137	3.41459
+../datasets/avg_overlapping_stdev//8275.862069.txt	R-Tree32	201829716	29436	2.04713	2.68188
+../datasets/avg_overlapping_stdev//8275.862069.txt	R-Tree64	201829716	28380	2.85924	2.21928
+../datasets/avg_overlapping_stdev//8275.862069.txt	Segment Tree	201829716	198232	2.08412	2.0253
+../datasets/avg_overlapping_stdev//8965.517241.txt	MavlyutovIndex_x1	201912651	39580	0.485006	0.669233
+../datasets/avg_overlapping_stdev//8965.517241.txt	NClist	201912474	3900	0.534547	4.57077
+../datasets/avg_overlapping_stdev//8965.517241.txt	Interval Tree	201912651	26752	0.272195	2.48511
+../datasets/avg_overlapping_stdev//8965.517241.txt	R-Tree8	201912651	36036	1.3953	5.46912
+../datasets/avg_overlapping_stdev//8965.517241.txt	R-Tree16	201912651	31416	1.55318	3.4619
+../datasets/avg_overlapping_stdev//8965.517241.txt	R-Tree32	201912651	29436	2.03853	2.71038
+../datasets/avg_overlapping_stdev//8965.517241.txt	R-Tree64	201912651	28380	2.84	2.34003
+../datasets/avg_overlapping_stdev//8965.517241.txt	Segment Tree	201912651	198364	2.0887	2.07566
+../datasets/avg_overlapping_stdev//9655.172414.txt	MavlyutovIndex_x1	201903733	39580	0.481519	0.657467
+../datasets/avg_overlapping_stdev//9655.172414.txt	NClist	201903535	3900	0.537547	4.59749
+../datasets/avg_overlapping_stdev//9655.172414.txt	Interval Tree	201903733	26424	0.270373	2.50884
+../datasets/avg_overlapping_stdev//9655.172414.txt	R-Tree8	201903733	36036	1.43486	5.53188
+../datasets/avg_overlapping_stdev//9655.172414.txt	R-Tree16	201903733	31416	1.55454	3.50708
+../datasets/avg_overlapping_stdev//9655.172414.txt	R-Tree32	201903733	29304	2.04019	2.70996
+../datasets/avg_overlapping_stdev//9655.172414.txt	R-Tree64	201903733	28380	2.80133	2.2243
+../datasets/avg_overlapping_stdev//9655.172414.txt	Segment Tree	201903733	198364	2.08159	2.04009
+run1
+../datasets/avg_overlapping_stdev//0.000000.txt	MavlyutovIndex_x1	201905781	39580	0.471417	0.629289
+../datasets/avg_overlapping_stdev//0.000000.txt	NClist	201905613	0	0.354902	1.53488
+../datasets/avg_overlapping_stdev//0.000000.txt	Interval Tree	201905781	26556	0.258401	2.00458
+../datasets/avg_overlapping_stdev//0.000000.txt	R-Tree8	201905781	35376	1.41218	4.60148
+../datasets/avg_overlapping_stdev//0.000000.txt	R-Tree16	201905781	31288	1.62122	2.85328
+../datasets/avg_overlapping_stdev//0.000000.txt	R-Tree32	201905781	29436	2.14027	2.14857
+../datasets/avg_overlapping_stdev//0.000000.txt	R-Tree64	201905781	28512	3.03688	1.72459
+../datasets/avg_overlapping_stdev//0.000000.txt	Segment Tree	201905781	198364	2.04541	2.02417
+../datasets/avg_overlapping_stdev//10344.827586.txt	MavlyutovIndex_x1	201911761	39600	0.477446	0.680126
+../datasets/avg_overlapping_stdev//10344.827586.txt	NClist	201911558	3904	0.54029	4.67092
+../datasets/avg_overlapping_stdev//10344.827586.txt	Interval Tree	201911761	26752	0.268771	2.54265
+../datasets/avg_overlapping_stdev//10344.827586.txt	R-Tree8	201911761	36036	1.41177	5.58756
+../datasets/avg_overlapping_stdev//10344.827586.txt	R-Tree16	201911761	31420	1.56643	3.53574
+../datasets/avg_overlapping_stdev//10344.827586.txt	R-Tree32	201911761	29304	2.24926	2.7323
+../datasets/avg_overlapping_stdev//10344.827586.txt	R-Tree64	201911761	28512	2.81115	2.29689
+../datasets/avg_overlapping_stdev//10344.827586.txt	Segment Tree	201911761	198364	2.07364	2.02973
+../datasets/avg_overlapping_stdev//11034.482759.txt	MavlyutovIndex_x1	202017419	39544	0.479106	0.679935
+../datasets/avg_overlapping_stdev//11034.482759.txt	NClist	202017215	3904	0.539899	4.68446
+../datasets/avg_overlapping_stdev//11034.482759.txt	Interval Tree	202017419	26576	0.262932	2.58761
+../datasets/avg_overlapping_stdev//11034.482759.txt	R-Tree8	202017419	36036	1.40253	5.60756
+../datasets/avg_overlapping_stdev//11034.482759.txt	R-Tree16	202017419	31416	1.56856	3.52796
+../datasets/avg_overlapping_stdev//11034.482759.txt	R-Tree32	202017419	29304	2.05508	2.77448
+../datasets/avg_overlapping_stdev//11034.482759.txt	R-Tree64	202017419	28380	2.97513	2.3215
+../datasets/avg_overlapping_stdev//11034.482759.txt	Segment Tree	202017419	198232	2.13205	2.01737
+../datasets/avg_overlapping_stdev//11724.137931.txt	MavlyutovIndex_x1	201727690	39580	0.480736	0.680922
+../datasets/avg_overlapping_stdev//11724.137931.txt	NClist	201727499	3904	0.536044	4.7391
+../datasets/avg_overlapping_stdev//11724.137931.txt	Interval Tree	201727690	26444	0.263624	2.57477
+../datasets/avg_overlapping_stdev//11724.137931.txt	R-Tree8	201727690	36036	1.39874	5.65525
+../datasets/avg_overlapping_stdev//11724.137931.txt	R-Tree16	201727690	31416	1.57008	3.57537
+../datasets/avg_overlapping_stdev//11724.137931.txt	R-Tree32	201727690	29304	2.06121	2.80806
+../datasets/avg_overlapping_stdev//11724.137931.txt	R-Tree64	201727690	28380	2.79682	2.32749
+../datasets/avg_overlapping_stdev//11724.137931.txt	Segment Tree	201727690	197968	2.1066	2.01989
+../datasets/avg_overlapping_stdev//12413.793103.txt	MavlyutovIndex_x1	201805243	39544	0.480714	0.704458
+../datasets/avg_overlapping_stdev//12413.793103.txt	NClist	201805024	3904	0.54072	4.77938
+../datasets/avg_overlapping_stdev//12413.793103.txt	Interval Tree	201805243	26736	0.264491	2.61866
+../datasets/avg_overlapping_stdev//12413.793103.txt	R-Tree8	201805243	36036	1.39598	5.70055
+../datasets/avg_overlapping_stdev//12413.793103.txt	R-Tree16	201805243	31416	1.59465	3.59756
+../datasets/avg_overlapping_stdev//12413.793103.txt	R-Tree32	201805243	29436	2.08773	2.81162
+../datasets/avg_overlapping_stdev//12413.793103.txt	R-Tree64	201805243	28380	2.80722	2.36695
+../datasets/avg_overlapping_stdev//12413.793103.txt	Segment Tree	201805243	197704	2.08694	2.03212
+../datasets/avg_overlapping_stdev//13103.448276.txt	MavlyutovIndex_x1	201920016	39580	0.479994	0.71269
+../datasets/avg_overlapping_stdev//13103.448276.txt	NClist	201919814	3900	0.538961	4.82876
+../datasets/avg_overlapping_stdev//13103.448276.txt	Interval Tree	201920016	26528	0.263459	2.66115
+../datasets/avg_overlapping_stdev//13103.448276.txt	R-Tree8	201920016	36036	1.42734	5.89118
+../datasets/avg_overlapping_stdev//13103.448276.txt	R-Tree16	201920016	31416	1.56422	3.59865
+../datasets/avg_overlapping_stdev//13103.448276.txt	R-Tree32	201920016	29436	2.04634	2.82643
+../datasets/avg_overlapping_stdev//13103.448276.txt	R-Tree64	201920016	28512	2.80159	2.36341
+../datasets/avg_overlapping_stdev//13103.448276.txt	Segment Tree	201920016	197440	2.07415	2.03754
+../datasets/avg_overlapping_stdev//1379.310345.txt	MavlyutovIndex_x1	201902815	39544	0.484133	0.625437
+../datasets/avg_overlapping_stdev//1379.310345.txt	NClist	201902623	3856	0.529134	3.94685
+../datasets/avg_overlapping_stdev//1379.310345.txt	Interval Tree	201902815	26172	0.259852	2.0626
+../datasets/avg_overlapping_stdev//1379.310345.txt	R-Tree8	201902815	35772	1.37549	4.84734
+../datasets/avg_overlapping_stdev//1379.310345.txt	R-Tree16	201902815	31152	1.55422	2.99069
+../datasets/avg_overlapping_stdev//1379.310345.txt	R-Tree32	201902815	29308	2.03833	2.30715
+../datasets/avg_overlapping_stdev//1379.310345.txt	R-Tree64	201902815	28380	2.85268	1.82969
+../datasets/avg_overlapping_stdev//1379.310345.txt	Segment Tree	201902815	197968	2.08335	2.02673
+../datasets/avg_overlapping_stdev//2068.965517.txt	MavlyutovIndex_x1	201881761	39580	0.473376	0.619255
+../datasets/avg_overlapping_stdev//2068.965517.txt	NClist	201881589	3872	0.522816	4.04338
+../datasets/avg_overlapping_stdev//2068.965517.txt	Interval Tree	201881761	26448	0.260861	2.112
+../datasets/avg_overlapping_stdev//2068.965517.txt	R-Tree8	201881761	35772	1.37169	4.95158
+../datasets/avg_overlapping_stdev//2068.965517.txt	R-Tree16	201881761	31288	1.54566	3.03441
+../datasets/avg_overlapping_stdev//2068.965517.txt	R-Tree32	201881761	29304	2.01537	2.34858
+../datasets/avg_overlapping_stdev//2068.965517.txt	R-Tree64	201881761	28116	2.8563	1.89249
+../datasets/avg_overlapping_stdev//2068.965517.txt	Segment Tree	201881761	198100	2.09275	2.01273
+../datasets/avg_overlapping_stdev//2758.620690.txt	MavlyutovIndex_x1	201891258	39544	0.47436	0.611294
+../datasets/avg_overlapping_stdev//2758.620690.txt	NClist	201891033	3880	0.527415	4.13247
+../datasets/avg_overlapping_stdev//2758.620690.txt	Interval Tree	201891258	26284	0.261528	2.13646
+../datasets/avg_overlapping_stdev//2758.620690.txt	R-Tree8	201891258	35904	1.39735	4.99219
+../datasets/avg_overlapping_stdev//2758.620690.txt	R-Tree16	201891258	31284	1.53561	3.10616
+../datasets/avg_overlapping_stdev//2758.620690.txt	R-Tree32	201891258	29304	2.01223	2.36592
+../datasets/avg_overlapping_stdev//2758.620690.txt	R-Tree64	201891258	28380	2.8635	1.9437
+../datasets/avg_overlapping_stdev//2758.620690.txt	Segment Tree	201891258	197968	2.05961	1.99883
+../datasets/avg_overlapping_stdev//3448.275862.txt	MavlyutovIndex_x1	201926465	39580	0.47839	0.61695
+../datasets/avg_overlapping_stdev//3448.275862.txt	NClist	201926245	3884	0.529684	4.13784
+../datasets/avg_overlapping_stdev//3448.275862.txt	Interval Tree	201926465	26384	0.263682	2.15238
+../datasets/avg_overlapping_stdev//3448.275862.txt	R-Tree8	201926465	35904	1.37945	5.15587
+../datasets/avg_overlapping_stdev//3448.275862.txt	R-Tree16	201926465	31284	1.55279	3.15189
+../datasets/avg_overlapping_stdev//3448.275862.txt	R-Tree32	201926465	29304	2.02068	2.41482
+../datasets/avg_overlapping_stdev//3448.275862.txt	R-Tree64	201926465	28248	2.77881	1.96066
+../datasets/avg_overlapping_stdev//3448.275862.txt	Segment Tree	201926465	197968	2.05105	2.02088
+../datasets/avg_overlapping_stdev//4137.931034.txt	MavlyutovIndex_x1	201923128	39580	0.476208	0.630204
+../datasets/avg_overlapping_stdev//4137.931034.txt	NClist	201922927	3888	0.534335	4.23144
+../datasets/avg_overlapping_stdev//4137.931034.txt	Interval Tree	201923128	26516	0.260501	2.23042
+../datasets/avg_overlapping_stdev//4137.931034.txt	R-Tree8	201923128	35904	1.37838	5.14654
+../datasets/avg_overlapping_stdev//4137.931034.txt	R-Tree16	201923128	31284	1.534	3.20243
+../datasets/avg_overlapping_stdev//4137.931034.txt	R-Tree32	201923128	29304	2.03195	2.54256
+../datasets/avg_overlapping_stdev//4137.931034.txt	R-Tree64	201923128	28380	2.86738	2.03106
+../datasets/avg_overlapping_stdev//4137.931034.txt	Segment Tree	201923128	197968	2.05111	2.00058
+../datasets/avg_overlapping_stdev//4827.586207.txt	MavlyutovIndex_x1	201920557	39580	0.473134	0.631286
+../datasets/avg_overlapping_stdev//4827.586207.txt	NClist	201920358	3892	0.53153	4.24667
+../datasets/avg_overlapping_stdev//4827.586207.txt	Interval Tree	201920557	26580	0.260164	2.28292
+../datasets/avg_overlapping_stdev//4827.586207.txt	R-Tree8	201920557	35904	1.38138	5.16964
+../datasets/avg_overlapping_stdev//4827.586207.txt	R-Tree16	201920557	31284	1.5407	3.23641
+../datasets/avg_overlapping_stdev//4827.586207.txt	R-Tree32	201920557	29304	2.02062	2.49715
+../datasets/avg_overlapping_stdev//4827.586207.txt	R-Tree64	201920557	28248	2.81019	2.04069
+../datasets/avg_overlapping_stdev//4827.586207.txt	Segment Tree	201920557	198100	2.09668	2.03562
+../datasets/avg_overlapping_stdev//5517.241379.txt	MavlyutovIndex_x1	201893658	39580	0.47539	0.639353
+../datasets/avg_overlapping_stdev//5517.241379.txt	NClist	201893452	3892	0.535491	4.31943
+../datasets/avg_overlapping_stdev//5517.241379.txt	Interval Tree	201893658	26556	0.265471	2.29857
+../datasets/avg_overlapping_stdev//5517.241379.txt	R-Tree8	201893658	36036	1.37781	5.2601
+../datasets/avg_overlapping_stdev//5517.241379.txt	R-Tree16	201893658	31284	1.54937	3.28385
+../datasets/avg_overlapping_stdev//5517.241379.txt	R-Tree32	201893658	29304	2.06718	2.51922
+../datasets/avg_overlapping_stdev//5517.241379.txt	R-Tree64	201893658	28380	2.80793	2.09331
+../datasets/avg_overlapping_stdev//5517.241379.txt	Segment Tree	201893658	198100	2.07846	2.01314
+../datasets/avg_overlapping_stdev//6206.896552.txt	MavlyutovIndex_x1	201965129	39580	0.475578	0.629104
+../datasets/avg_overlapping_stdev//6206.896552.txt	NClist	201964951	3896	0.533201	4.33975
+../datasets/avg_overlapping_stdev//6206.896552.txt	Interval Tree	201965129	26560	0.268406	2.33387
+../datasets/avg_overlapping_stdev//6206.896552.txt	R-Tree8	201965129	36036	1.39196	5.26148
+../datasets/avg_overlapping_stdev//6206.896552.txt	R-Tree16	201965129	31284	1.56	3.26078
+../datasets/avg_overlapping_stdev//6206.896552.txt	R-Tree32	201965129	29304	2.00416	2.52722
+../datasets/avg_overlapping_stdev//6206.896552.txt	R-Tree64	201965129	28380	2.76217	2.09805
+../datasets/avg_overlapping_stdev//6206.896552.txt	Segment Tree	201965129	198232	2.08334	2.02808
+../datasets/avg_overlapping_stdev//6896.551724.txt	MavlyutovIndex_x1	201920597	39544	0.474864	0.652604
+../datasets/avg_overlapping_stdev//6896.551724.txt	NClist	201920421	3896	0.542305	4.41141
+../datasets/avg_overlapping_stdev//6896.551724.txt	Interval Tree	201920597	26136	0.261405	2.34864
+../datasets/avg_overlapping_stdev//6896.551724.txt	R-Tree8	201920597	36036	1.41547	5.3754
+../datasets/avg_overlapping_stdev//6896.551724.txt	R-Tree16	201920597	31284	1.55602	3.35583
+../datasets/avg_overlapping_stdev//6896.551724.txt	R-Tree32	201920597	29304	2.03488	2.58671
+../datasets/avg_overlapping_stdev//6896.551724.txt	R-Tree64	201920597	28380	2.83323	2.1454
+../datasets/avg_overlapping_stdev//6896.551724.txt	Segment Tree	201920598	198232	2.08425	2.02205
+../datasets/avg_overlapping_stdev//689.655172.txt	MavlyutovIndex_x1	201914013	39544	0.471263	0.625062
+../datasets/avg_overlapping_stdev//689.655172.txt	NClist	201913808	3796	0.514388	3.86481
+../datasets/avg_overlapping_stdev//689.655172.txt	Interval Tree	201914013	26340	0.257991	1.99442
+../datasets/avg_overlapping_stdev//689.655172.txt	R-Tree8	201914013	35640	1.35955	4.72021
+../datasets/avg_overlapping_stdev//689.655172.txt	R-Tree16	201914013	31152	1.54025	2.88659
+../datasets/avg_overlapping_stdev//689.655172.txt	R-Tree32	201914013	29172	2.03408	2.22787
+../datasets/avg_overlapping_stdev//689.655172.txt	R-Tree64	201914013	28248	2.87141	1.74794
+../datasets/avg_overlapping_stdev//689.655172.txt	Segment Tree	201914013	198232	2.13672	2.01593
+../datasets/avg_overlapping_stdev//7586.206897.txt	MavlyutovIndex_x1	201946923	39544	0.480332	0.649078
+../datasets/avg_overlapping_stdev//7586.206897.txt	NClist	201946740	3900	0.53776	4.44856
+../datasets/avg_overlapping_stdev//7586.206897.txt	Interval Tree	201946923	26304	0.262257	2.4067
+../datasets/avg_overlapping_stdev//7586.206897.txt	R-Tree8	201946923	36036	1.3843	5.40427
+../datasets/avg_overlapping_stdev//7586.206897.txt	R-Tree16	201946923	31284	1.55775	3.38801
+../datasets/avg_overlapping_stdev//7586.206897.txt	R-Tree32	201946923	29440	2.06974	2.60872
+../datasets/avg_overlapping_stdev//7586.206897.txt	R-Tree64	201946923	28380	2.81932	2.19375
+../datasets/avg_overlapping_stdev//7586.206897.txt	Segment Tree	201946923	198232	2.05497	2.01064
+../datasets/avg_overlapping_stdev//8275.862069.txt	MavlyutovIndex_x1	201829716	39580	0.479006	0.648325
+../datasets/avg_overlapping_stdev//8275.862069.txt	NClist	201829515	3900	0.538933	4.50585
+../datasets/avg_overlapping_stdev//8275.862069.txt	Interval Tree	201829716	26564	0.26015	2.46996
+../datasets/avg_overlapping_stdev//8275.862069.txt	R-Tree8	201829716	36036	1.41877	5.47957
+../datasets/avg_overlapping_stdev//8275.862069.txt	R-Tree16	201829716	31284	1.56842	3.38956
+../datasets/avg_overlapping_stdev//8275.862069.txt	R-Tree32	201829716	29436	2.07221	2.65329
+../datasets/avg_overlapping_stdev//8275.862069.txt	R-Tree64	201829716	28380	2.76773	2.18725
+../datasets/avg_overlapping_stdev//8275.862069.txt	Segment Tree	201829716	198232	2.07674	2.03464
+../datasets/avg_overlapping_stdev//8965.517241.txt	MavlyutovIndex_x1	201912651	39580	0.481085	0.645277
+../datasets/avg_overlapping_stdev//8965.517241.txt	NClist	201912474	3900	0.532863	4.55483
+../datasets/avg_overlapping_stdev//8965.517241.txt	Interval Tree	201912651	26752	0.270846	2.47052
+../datasets/avg_overlapping_stdev//8965.517241.txt	R-Tree8	201912651	36036	1.41344	5.48433
+../datasets/avg_overlapping_stdev//8965.517241.txt	R-Tree16	201912651	31416	1.55487	3.4704
+../datasets/avg_overlapping_stdev//8965.517241.txt	R-Tree32	201912651	29436	2.03312	2.67188
+../datasets/avg_overlapping_stdev//8965.517241.txt	R-Tree64	201912651	28380	2.86016	2.24292
+../datasets/avg_overlapping_stdev//8965.517241.txt	Segment Tree	201912651	198364	2.08918	2.04924
+../datasets/avg_overlapping_stdev//9655.172414.txt	MavlyutovIndex_x1	201903733	39580	0.479319	0.667871
+../datasets/avg_overlapping_stdev//9655.172414.txt	NClist	201903535	3900	0.533033	4.60072
+../datasets/avg_overlapping_stdev//9655.172414.txt	Interval Tree	201903733	26424	0.265599	2.50858
+../datasets/avg_overlapping_stdev//9655.172414.txt	R-Tree8	201903733	36036	1.39765	5.5277
+../datasets/avg_overlapping_stdev//9655.172414.txt	R-Tree16	201903733	31416	1.54686	3.47762
+../datasets/avg_overlapping_stdev//9655.172414.txt	R-Tree32	201903733	29304	2.057	2.69778
+../datasets/avg_overlapping_stdev//9655.172414.txt	R-Tree64	201903733	28380	2.80565	2.20328
+../datasets/avg_overlapping_stdev//9655.172414.txt	Segment Tree	201903733	198364	2.08609	2.01768
+run2
+../datasets/avg_overlapping_stdev//0.000000.txt	MavlyutovIndex_x1	201905781	39580	0.473798	0.624756
+../datasets/avg_overlapping_stdev//0.000000.txt	NClist	201905613	0	0.355952	1.52503
+../datasets/avg_overlapping_stdev//0.000000.txt	Interval Tree	201905781	26556	0.264155	1.96738
+../datasets/avg_overlapping_stdev//0.000000.txt	R-Tree8	201905781	35376	1.39343	4.60214
+../datasets/avg_overlapping_stdev//0.000000.txt	R-Tree16	201905781	31288	1.58776	2.84732
+../datasets/avg_overlapping_stdev//0.000000.txt	R-Tree32	201905781	29436	2.17129	2.15122
+../datasets/avg_overlapping_stdev//0.000000.txt	R-Tree64	201905781	28512	3.03298	1.72296
+../datasets/avg_overlapping_stdev//0.000000.txt	Segment Tree	201905781	198364	2.06967	1.98758
+../datasets/avg_overlapping_stdev//10344.827586.txt	MavlyutovIndex_x1	201911761	39600	0.487447	0.66166
+../datasets/avg_overlapping_stdev//10344.827586.txt	NClist	201911558	3904	0.542833	4.62659
+../datasets/avg_overlapping_stdev//10344.827586.txt	Interval Tree	201911761	26752	0.26498	2.54638
+../datasets/avg_overlapping_stdev//10344.827586.txt	R-Tree8	201911761	36036	1.41028	5.60006
+../datasets/avg_overlapping_stdev//10344.827586.txt	R-Tree16	201911761	31420	1.58954	3.49093
+../datasets/avg_overlapping_stdev//10344.827586.txt	R-Tree32	201911761	29304	2.05513	2.73912
+../datasets/avg_overlapping_stdev//10344.827586.txt	R-Tree64	201911761	28512	2.81813	2.2694
+../datasets/avg_overlapping_stdev//10344.827586.txt	Segment Tree	201911761	198364	2.09672	2.02783
+../datasets/avg_overlapping_stdev//11034.482759.txt	MavlyutovIndex_x1	202017419	39544	0.497581	0.661687
+../datasets/avg_overlapping_stdev//11034.482759.txt	NClist	202017215	3904	0.540353	4.69439
+../datasets/avg_overlapping_stdev//11034.482759.txt	Interval Tree	202017419	26576	0.262969	2.55278
+../datasets/avg_overlapping_stdev//11034.482759.txt	R-Tree8	202017419	36036	1.39974	5.63745
+../datasets/avg_overlapping_stdev//11034.482759.txt	R-Tree16	202017419	31416	1.58077	3.54837
+../datasets/avg_overlapping_stdev//11034.482759.txt	R-Tree32	202017419	29304	2.04599	2.81957
+../datasets/avg_overlapping_stdev//11034.482759.txt	R-Tree64	202017419	28380	2.85753	2.29186
+../datasets/avg_overlapping_stdev//11034.482759.txt	Segment Tree	202017419	198232	2.10111	2.02693
+../datasets/avg_overlapping_stdev//11724.137931.txt	MavlyutovIndex_x1	201727690	39580	0.480057	0.690778
+../datasets/avg_overlapping_stdev//11724.137931.txt	NClist	201727499	3904	0.537238	4.74514
+../datasets/avg_overlapping_stdev//11724.137931.txt	Interval Tree	201727690	26444	0.261531	2.59359
+../datasets/avg_overlapping_stdev//11724.137931.txt	R-Tree8	201727690	36036	1.40674	5.64859
+../datasets/avg_overlapping_stdev//11724.137931.txt	R-Tree16	201727690	31416	1.55726	3.5651
+../datasets/avg_overlapping_stdev//11724.137931.txt	R-Tree32	201727690	29304	2.05916	2.77934
+../datasets/avg_overlapping_stdev//11724.137931.txt	R-Tree64	201727690	28380	2.79413	2.35218
+../datasets/avg_overlapping_stdev//11724.137931.txt	Segment Tree	201727690	197968	2.0462	2.02575
+../datasets/avg_overlapping_stdev//12413.793103.txt	MavlyutovIndex_x1	201805243	39544	0.481265	0.705767
+../datasets/avg_overlapping_stdev//12413.793103.txt	NClist	201805024	3904	0.539176	4.80918
+../datasets/avg_overlapping_stdev//12413.793103.txt	Interval Tree	201805243	26736	0.266553	2.63108
+../datasets/avg_overlapping_stdev//12413.793103.txt	R-Tree8	201805243	36036	1.40177	5.69472
+../datasets/avg_overlapping_stdev//12413.793103.txt	R-Tree16	201805243	31416	1.59667	3.58746
+../datasets/avg_overlapping_stdev//12413.793103.txt	R-Tree32	201805243	29436	2.08106	2.82314
+../datasets/avg_overlapping_stdev//12413.793103.txt	R-Tree64	201805243	28380	2.83637	2.37555
+../datasets/avg_overlapping_stdev//12413.793103.txt	Segment Tree	201805243	197704	2.04776	2.00393
+../datasets/avg_overlapping_stdev//13103.448276.txt	MavlyutovIndex_x1	201920016	39580	0.482913	0.726769
+../datasets/avg_overlapping_stdev//13103.448276.txt	NClist	201919814	3900	0.538301	4.88585
+../datasets/avg_overlapping_stdev//13103.448276.txt	Interval Tree	201920016	26528	0.280143	2.6279
+../datasets/avg_overlapping_stdev//13103.448276.txt	R-Tree8	201920016	36036	1.40339	5.71951
+../datasets/avg_overlapping_stdev//13103.448276.txt	R-Tree16	201920016	31416	1.56637	3.62098
+../datasets/avg_overlapping_stdev//13103.448276.txt	R-Tree32	201920016	29436	2.03789	2.86322
+../datasets/avg_overlapping_stdev//13103.448276.txt	R-Tree64	201920016	28512	2.78731	2.36635
+../datasets/avg_overlapping_stdev//13103.448276.txt	Segment Tree	201920016	197440	2.05596	2.02094
+../datasets/avg_overlapping_stdev//1379.310345.txt	MavlyutovIndex_x1	201902815	39544	0.472401	0.628318
+../datasets/avg_overlapping_stdev//1379.310345.txt	NClist	201902623	3856	0.523094	3.96777
+../datasets/avg_overlapping_stdev//1379.310345.txt	Interval Tree	201902815	26172	0.265465	2.00684
+../datasets/avg_overlapping_stdev//1379.310345.txt	R-Tree8	201902815	35772	1.3783	4.95331
+../datasets/avg_overlapping_stdev//1379.310345.txt	R-Tree16	201902815	31152	1.54131	3.11823
+../datasets/avg_overlapping_stdev//1379.310345.txt	R-Tree32	201902815	29308	2.03774	2.27856
+../datasets/avg_overlapping_stdev//1379.310345.txt	R-Tree64	201902815	28380	2.84153	1.83728
+../datasets/avg_overlapping_stdev//1379.310345.txt	Segment Tree	201902815	197968	2.0731	2.0246
+../datasets/avg_overlapping_stdev//2068.965517.txt	MavlyutovIndex_x1	201881761	39580	0.482093	0.617682
+../datasets/avg_overlapping_stdev//2068.965517.txt	NClist	201881589	3872	0.527929	4.05354
+../datasets/avg_overlapping_stdev//2068.965517.txt	Interval Tree	201881761	26448	0.260632	2.13357
+../datasets/avg_overlapping_stdev//2068.965517.txt	R-Tree8	201881761	35772	1.38037	4.91788
+../datasets/avg_overlapping_stdev//2068.965517.txt	R-Tree16	201881761	31288	1.55216	3.04791
+../datasets/avg_overlapping_stdev//2068.965517.txt	R-Tree32	201881761	29304	2.0091	2.34609
+../datasets/avg_overlapping_stdev//2068.965517.txt	R-Tree64	201881761	28116	2.84842	1.88186
+../datasets/avg_overlapping_stdev//2068.965517.txt	Segment Tree	201881761	198100	2.1153	2.02234
+../datasets/avg_overlapping_stdev//2758.620690.txt	MavlyutovIndex_x1	201891258	39544	0.491743	0.621456
+../datasets/avg_overlapping_stdev//2758.620690.txt	NClist	201891033	3880	0.527047	4.09304
+../datasets/avg_overlapping_stdev//2758.620690.txt	Interval Tree	201891258	26284	0.261779	2.15956
+../datasets/avg_overlapping_stdev//2758.620690.txt	R-Tree8	201891258	35904	1.38017	5.02765
+../datasets/avg_overlapping_stdev//2758.620690.txt	R-Tree16	201891258	31284	1.54244	3.09039
+../datasets/avg_overlapping_stdev//2758.620690.txt	R-Tree32	201891258	29304	2.00631	2.38422
+../datasets/avg_overlapping_stdev//2758.620690.txt	R-Tree64	201891258	28380	2.81308	1.95753
+../datasets/avg_overlapping_stdev//2758.620690.txt	Segment Tree	201891258	197968	2.0832	2.04409
+../datasets/avg_overlapping_stdev//3448.275862.txt	MavlyutovIndex_x1	201926465	39580	0.473517	0.621539
+../datasets/avg_overlapping_stdev//3448.275862.txt	NClist	201926245	3884	0.537719	4.21854
+../datasets/avg_overlapping_stdev//3448.275862.txt	Interval Tree	201926465	26384	0.270407	2.23224
+../datasets/avg_overlapping_stdev//3448.275862.txt	R-Tree8	201926465	35904	1.38608	5.0757
+../datasets/avg_overlapping_stdev//3448.275862.txt	R-Tree16	201926465	31284	1.55216	3.14826
+../datasets/avg_overlapping_stdev//3448.275862.txt	R-Tree32	201926465	29304	2.04209	2.42043
+../datasets/avg_overlapping_stdev//3448.275862.txt	R-Tree64	201926465	28248	2.78182	1.94336
+../datasets/avg_overlapping_stdev//3448.275862.txt	Segment Tree	201926465	197968	2.08651	2.03446
+../datasets/avg_overlapping_stdev//4137.931034.txt	MavlyutovIndex_x1	201923128	39580	0.474067	0.634061
+../datasets/avg_overlapping_stdev//4137.931034.txt	NClist	201922927	3888	0.529002	4.19596
+../datasets/avg_overlapping_stdev//4137.931034.txt	Interval Tree	201923128	26516	0.257749	2.24456
+../datasets/avg_overlapping_stdev//4137.931034.txt	R-Tree8	201923128	35904	1.37728	5.13876
+../datasets/avg_overlapping_stdev//4137.931034.txt	R-Tree16	201923128	31284	1.56757	3.24739
+../datasets/avg_overlapping_stdev//4137.931034.txt	R-Tree32	201923128	29304	2.03903	2.47369
+../datasets/avg_overlapping_stdev//4137.931034.txt	R-Tree64	201923128	28380	2.84725	2.03961
+../datasets/avg_overlapping_stdev//4137.931034.txt	Segment Tree	201923128	197968	2.10995	2.02597
+../datasets/avg_overlapping_stdev//4827.586207.txt	MavlyutovIndex_x1	201920557	39580	0.479339	0.627516
+../datasets/avg_overlapping_stdev//4827.586207.txt	NClist	201920358	3892	0.533354	4.2538
+../datasets/avg_overlapping_stdev//4827.586207.txt	Interval Tree	201920557	26580	0.257671	2.27556
+../datasets/avg_overlapping_stdev//4827.586207.txt	R-Tree8	201920557	35904	1.39287	5.1999
+../datasets/avg_overlapping_stdev//4827.586207.txt	R-Tree16	201920557	31284	1.55429	3.26001
+../datasets/avg_overlapping_stdev//4827.586207.txt	R-Tree32	201920557	29304	2.01519	2.49068
+../datasets/avg_overlapping_stdev//4827.586207.txt	R-Tree64	201920557	28248	2.82791	2.06405
+../datasets/avg_overlapping_stdev//4827.586207.txt	Segment Tree	201920557	198100	2.12344	2.02987
+../datasets/avg_overlapping_stdev//5517.241379.txt	MavlyutovIndex_x1	201893658	39580	0.47356	0.647076
+../datasets/avg_overlapping_stdev//5517.241379.txt	NClist	201893452	3892	0.533956	4.30999
+../datasets/avg_overlapping_stdev//5517.241379.txt	Interval Tree	201893658	26556	0.264724	2.30775
+../datasets/avg_overlapping_stdev//5517.241379.txt	R-Tree8	201893658	36036	1.39704	5.2623
+../datasets/avg_overlapping_stdev//5517.241379.txt	R-Tree16	201893658	31284	1.58654	3.26278
+../datasets/avg_overlapping_stdev//5517.241379.txt	R-Tree32	201893658	29304	2.04519	2.53808
+../datasets/avg_overlapping_stdev//5517.241379.txt	R-Tree64	201893658	28380	2.79593	2.1088
+../datasets/avg_overlapping_stdev//5517.241379.txt	Segment Tree	201893658	198100	2.06919	2.03145
+../datasets/avg_overlapping_stdev//6206.896552.txt	MavlyutovIndex_x1	201965129	39580	0.478894	0.640235
+../datasets/avg_overlapping_stdev//6206.896552.txt	NClist	201964951	3896	0.533301	4.37712
+../datasets/avg_overlapping_stdev//6206.896552.txt	Interval Tree	201965129	26560	0.265993	2.364
+../datasets/avg_overlapping_stdev//6206.896552.txt	R-Tree8	201965129	36036	1.38631	5.30393
+../datasets/avg_overlapping_stdev//6206.896552.txt	R-Tree16	201965129	31284	1.56203	3.31683
+../datasets/avg_overlapping_stdev//6206.896552.txt	R-Tree32	201965129	29304	2.00861	2.53826
+../datasets/avg_overlapping_stdev//6206.896552.txt	R-Tree64	201965129	28380	2.77368	2.11094
+../datasets/avg_overlapping_stdev//6206.896552.txt	Segment Tree	201965129	198232	2.07579	2.03801
+../datasets/avg_overlapping_stdev//6896.551724.txt	MavlyutovIndex_x1	201920597	39544	0.478866	0.644309
+../datasets/avg_overlapping_stdev//6896.551724.txt	NClist	201920421	3896	0.540812	4.40163
+../datasets/avg_overlapping_stdev//6896.551724.txt	Interval Tree	201920597	26136	0.259288	2.36642
+../datasets/avg_overlapping_stdev//6896.551724.txt	R-Tree8	201920597	36036	1.38926	5.38264
+../datasets/avg_overlapping_stdev//6896.551724.txt	R-Tree16	201920597	31284	1.54576	3.39583
+../datasets/avg_overlapping_stdev//6896.551724.txt	R-Tree32	201920597	29304	2.0225	2.6064
+../datasets/avg_overlapping_stdev//6896.551724.txt	R-Tree64	201920597	28380	2.81342	2.16643
+../datasets/avg_overlapping_stdev//6896.551724.txt	Segment Tree	201920598	198232	2.08387	2.02773
+../datasets/avg_overlapping_stdev//689.655172.txt	MavlyutovIndex_x1	201914013	39544	0.472075	0.620351
+../datasets/avg_overlapping_stdev//689.655172.txt	NClist	201913808	3796	0.514359	3.82833
+../datasets/avg_overlapping_stdev//689.655172.txt	Interval Tree	201914013	26340	0.259271	1.96811
+../datasets/avg_overlapping_stdev//689.655172.txt	R-Tree8	201914013	35640	1.35736	4.73315
+../datasets/avg_overlapping_stdev//689.655172.txt	R-Tree16	201914013	31152	1.52958	2.90811
+../datasets/avg_overlapping_stdev//689.655172.txt	R-Tree32	201914013	29172	2.05365	2.19966
+../datasets/avg_overlapping_stdev//689.655172.txt	R-Tree64	201914013	28248	2.89047	1.72443
+../datasets/avg_overlapping_stdev//689.655172.txt	Segment Tree	201914013	198232	2.26324	2.01229
+../datasets/avg_overlapping_stdev//7586.206897.txt	MavlyutovIndex_x1	201946923	39544	0.476094	0.651874
+../datasets/avg_overlapping_stdev//7586.206897.txt	NClist	201946740	3900	0.536053	4.4321
+../datasets/avg_overlapping_stdev//7586.206897.txt	Interval Tree	201946923	26304	0.261336	2.42053
+../datasets/avg_overlapping_stdev//7586.206897.txt	R-Tree8	201946923	36036	1.39061	5.40636
+../datasets/avg_overlapping_stdev//7586.206897.txt	R-Tree16	201946923	31284	1.56462	3.37604
+../datasets/avg_overlapping_stdev//7586.206897.txt	R-Tree32	201946923	29440	2.03569	2.62632
+../datasets/avg_overlapping_stdev//7586.206897.txt	R-Tree64	201946923	28380	2.80789	2.20276
+../datasets/avg_overlapping_stdev//7586.206897.txt	Segment Tree	201946923	198232	2.11924	2.0299
+../datasets/avg_overlapping_stdev//8275.862069.txt	MavlyutovIndex_x1	201829716	39580	0.474223	0.659455
+../datasets/avg_overlapping_stdev//8275.862069.txt	NClist	201829515	3900	0.637112	4.49583
+../datasets/avg_overlapping_stdev//8275.862069.txt	Interval Tree	201829716	26564	0.260016	2.44949
+../datasets/avg_overlapping_stdev//8275.862069.txt	R-Tree8	201829716	36036	1.41064	5.45716
+../datasets/avg_overlapping_stdev//8275.862069.txt	R-Tree16	201829716	31284	1.58441	3.42951
+../datasets/avg_overlapping_stdev//8275.862069.txt	R-Tree32	201829716	29436	2.05133	2.67965
+../datasets/avg_overlapping_stdev//8275.862069.txt	R-Tree64	201829716	28380	2.76897	2.19061
+../datasets/avg_overlapping_stdev//8275.862069.txt	Segment Tree	201829716	198232	2.0981	2.01009
+../datasets/avg_overlapping_stdev//8965.517241.txt	MavlyutovIndex_x1	201912651	39580	0.477794	0.664011
+../datasets/avg_overlapping_stdev//8965.517241.txt	NClist	201912474	3900	0.53622	4.55538
+../datasets/avg_overlapping_stdev//8965.517241.txt	Interval Tree	201912651	26752	0.263031	2.45132
+../datasets/avg_overlapping_stdev//8965.517241.txt	R-Tree8	201912651	36036	1.38539	5.51721
+../datasets/avg_overlapping_stdev//8965.517241.txt	R-Tree16	201912651	31416	1.58864	3.44316
+../datasets/avg_overlapping_stdev//8965.517241.txt	R-Tree32	201912651	29436	2.03546	2.66386
+../datasets/avg_overlapping_stdev//8965.517241.txt	R-Tree64	201912651	28380	2.82835	2.21532
+../datasets/avg_overlapping_stdev//8965.517241.txt	Segment Tree	201912651	198364	2.06409	2.03284
+../datasets/avg_overlapping_stdev//9655.172414.txt	MavlyutovIndex_x1	201903733	39580	0.478463	0.654778
+../datasets/avg_overlapping_stdev//9655.172414.txt	NClist	201903535	3900	0.537829	4.60446
+../datasets/avg_overlapping_stdev//9655.172414.txt	Interval Tree	201903733	26424	0.268439	2.52736
+../datasets/avg_overlapping_stdev//9655.172414.txt	R-Tree8	201903733	36036	1.40893	5.52255
+../datasets/avg_overlapping_stdev//9655.172414.txt	R-Tree16	201903733	31416	1.56095	3.47287
+../datasets/avg_overlapping_stdev//9655.172414.txt	R-Tree32	201903733	29304	2.0747	2.72698
+../datasets/avg_overlapping_stdev//9655.172414.txt	R-Tree64	201903733	28380	2.80702	2.25207
+../datasets/avg_overlapping_stdev//9655.172414.txt	Segment Tree	201903733	198364	2.07914	2.04141
+run3
+../datasets/avg_overlapping_stdev//0.000000.txt	MavlyutovIndex_x1	201905781	39580	0.469481	0.61781
+../datasets/avg_overlapping_stdev//0.000000.txt	NClist	201905613	0	0.35844	1.53092
+../datasets/avg_overlapping_stdev//0.000000.txt	Interval Tree	201905781	26556	0.262441	1.9768
+../datasets/avg_overlapping_stdev//0.000000.txt	R-Tree8	201905781	35376	1.38117	4.62905
+../datasets/avg_overlapping_stdev//0.000000.txt	R-Tree16	201905781	31288	1.61429	2.81944
+../datasets/avg_overlapping_stdev//0.000000.txt	R-Tree32	201905781	29436	2.14135	2.16119
+../datasets/avg_overlapping_stdev//0.000000.txt	R-Tree64	201905781	28512	3.05993	1.73344
+../datasets/avg_overlapping_stdev//0.000000.txt	Segment Tree	201905781	198364	2.07997	2.00394
+../datasets/avg_overlapping_stdev//10344.827586.txt	MavlyutovIndex_x1	201911761	39600	0.47885	0.676486
+../datasets/avg_overlapping_stdev//10344.827586.txt	NClist	201911558	3904	0.539643	4.63517
+../datasets/avg_overlapping_stdev//10344.827586.txt	Interval Tree	201911761	26752	0.262877	2.5483
+../datasets/avg_overlapping_stdev//10344.827586.txt	R-Tree8	201911761	36036	1.4036	5.55987
+../datasets/avg_overlapping_stdev//10344.827586.txt	R-Tree16	201911761	31420	1.5768	3.51344
+../datasets/avg_overlapping_stdev//10344.827586.txt	R-Tree32	201911761	29304	2.04622	2.75613
+../datasets/avg_overlapping_stdev//10344.827586.txt	R-Tree64	201911761	28512	2.82362	2.2754
+../datasets/avg_overlapping_stdev//10344.827586.txt	Segment Tree	201911761	198364	2.10659	2.04952
+../datasets/avg_overlapping_stdev//11034.482759.txt	MavlyutovIndex_x1	202017419	39544	0.481468	0.679341
+../datasets/avg_overlapping_stdev//11034.482759.txt	NClist	202017215	3904	0.537919	4.74058
+../datasets/avg_overlapping_stdev//11034.482759.txt	Interval Tree	202017419	26576	0.266826	2.56196
+../datasets/avg_overlapping_stdev//11034.482759.txt	R-Tree8	202017419	36036	1.4008	5.63863
+../datasets/avg_overlapping_stdev//11034.482759.txt	R-Tree16	202017419	31416	1.55674	3.5473
+../datasets/avg_overlapping_stdev//11034.482759.txt	R-Tree32	202017419	29304	2.0509	2.76397
+../datasets/avg_overlapping_stdev//11034.482759.txt	R-Tree64	202017419	28380	2.81215	2.30411
+../datasets/avg_overlapping_stdev//11034.482759.txt	Segment Tree	202017419	198232	2.05434	2.01496
+../datasets/avg_overlapping_stdev//11724.137931.txt	MavlyutovIndex_x1	201727690	39580	0.485946	0.682338
+../datasets/avg_overlapping_stdev//11724.137931.txt	NClist	201727499	3904	0.536682	4.7867
+../datasets/avg_overlapping_stdev//11724.137931.txt	Interval Tree	201727690	26444	0.265883	2.59443
+../datasets/avg_overlapping_stdev//11724.137931.txt	R-Tree8	201727690	36036	1.39897	5.67041
+../datasets/avg_overlapping_stdev//11724.137931.txt	R-Tree16	201727690	31416	1.57119	3.54964
+../datasets/avg_overlapping_stdev//11724.137931.txt	R-Tree32	201727690	29304	2.06873	2.95924
+../datasets/avg_overlapping_stdev//11724.137931.txt	R-Tree64	201727690	28380	2.79902	2.34915
+../datasets/avg_overlapping_stdev//11724.137931.txt	Segment Tree	201727690	197968	2.04826	2.02086
+../datasets/avg_overlapping_stdev//12413.793103.txt	MavlyutovIndex_x1	201805243	39544	0.47914	0.721038
+../datasets/avg_overlapping_stdev//12413.793103.txt	NClist	201805024	3904	0.53497	4.78643
+../datasets/avg_overlapping_stdev//12413.793103.txt	Interval Tree	201805243	26736	0.269186	2.6404
+../datasets/avg_overlapping_stdev//12413.793103.txt	R-Tree8	201805243	36036	1.4061	5.70679
+../datasets/avg_overlapping_stdev//12413.793103.txt	R-Tree16	201805243	31416	1.59637	3.58492
+../datasets/avg_overlapping_stdev//12413.793103.txt	R-Tree32	201805243	29436	2.0689	2.82264
+../datasets/avg_overlapping_stdev//12413.793103.txt	R-Tree64	201805243	28380	2.80795	2.44245
+../datasets/avg_overlapping_stdev//12413.793103.txt	Segment Tree	201805243	197704	2.08628	2.06363
+../datasets/avg_overlapping_stdev//13103.448276.txt	MavlyutovIndex_x1	201920016	39580	0.481876	0.701474
+../datasets/avg_overlapping_stdev//13103.448276.txt	NClist	201919814	3900	0.546145	4.85581
+../datasets/avg_overlapping_stdev//13103.448276.txt	Interval Tree	201920016	26528	0.267163	2.66237
+../datasets/avg_overlapping_stdev//13103.448276.txt	R-Tree8	201920016	36036	1.39221	5.43033
+../datasets/avg_overlapping_stdev//13103.448276.txt	R-Tree16	201920016	31416	1.57518	3.48734
+../datasets/avg_overlapping_stdev//13103.448276.txt	R-Tree32	201920016	29436	2.06772	2.85148
+../datasets/avg_overlapping_stdev//13103.448276.txt	R-Tree64	201920016	28512	2.79828	2.37794
+../datasets/avg_overlapping_stdev//13103.448276.txt	Segment Tree	201920016	197440	2.08473	2.0383
+../datasets/avg_overlapping_stdev//1379.310345.txt	MavlyutovIndex_x1	201902815	39544	0.474484	0.610749
+../datasets/avg_overlapping_stdev//1379.310345.txt	NClist	201902623	3856	0.517932	3.9605
+../datasets/avg_overlapping_stdev//1379.310345.txt	Interval Tree	201902815	26172	0.259464	2.07312
+../datasets/avg_overlapping_stdev//1379.310345.txt	R-Tree8	201902815	35772	1.37491	4.8531
+../datasets/avg_overlapping_stdev//1379.310345.txt	R-Tree16	201902815	31152	1.53469	2.94028
+../datasets/avg_overlapping_stdev//1379.310345.txt	R-Tree32	201902815	29308	2.05462	2.26552
+../datasets/avg_overlapping_stdev//1379.310345.txt	R-Tree64	201902815	28380	2.82033	1.79111
+../datasets/avg_overlapping_stdev//1379.310345.txt	Segment Tree	201902815	197968	2.11319	2.03705
+../datasets/avg_overlapping_stdev//2068.965517.txt	MavlyutovIndex_x1	201881761	39580	0.472509	0.632277
+../datasets/avg_overlapping_stdev//2068.965517.txt	NClist	201881589	3872	0.538633	4.03731
+../datasets/avg_overlapping_stdev//2068.965517.txt	Interval Tree	201881761	26448	0.262459	2.11588
+../datasets/avg_overlapping_stdev//2068.965517.txt	R-Tree8	201881761	35772	1.3837	4.91723
+../datasets/avg_overlapping_stdev//2068.965517.txt	R-Tree16	201881761	31288	1.55411	3.0556
+../datasets/avg_overlapping_stdev//2068.965517.txt	R-Tree32	201881761	29304	2.04409	2.32736
+../datasets/avg_overlapping_stdev//2068.965517.txt	R-Tree64	201881761	28116	2.84111	1.90553
+../datasets/avg_overlapping_stdev//2068.965517.txt	Segment Tree	201881761	198100	2.07361	2.01749
+../datasets/avg_overlapping_stdev//2758.620690.txt	MavlyutovIndex_x1	201891258	39544	0.473041	0.629369
+../datasets/avg_overlapping_stdev//2758.620690.txt	NClist	201891033	3880	0.536289	4.09098
+../datasets/avg_overlapping_stdev//2758.620690.txt	Interval Tree	201891258	26284	0.26441	2.15395
+../datasets/avg_overlapping_stdev//2758.620690.txt	R-Tree8	201891258	35904	1.3767	4.95244
+../datasets/avg_overlapping_stdev//2758.620690.txt	R-Tree16	201891258	31284	1.52981	3.06457
+../datasets/avg_overlapping_stdev//2758.620690.txt	R-Tree32	201891258	29304	2.01004	2.35187
+../datasets/avg_overlapping_stdev//2758.620690.txt	R-Tree64	201891258	28380	2.80485	1.90104
+../datasets/avg_overlapping_stdev//2758.620690.txt	Segment Tree	201891258	197968	2.08086	2.02233
+../datasets/avg_overlapping_stdev//3448.275862.txt	MavlyutovIndex_x1	201926465	39580	0.474311	0.621962
+../datasets/avg_overlapping_stdev//3448.275862.txt	NClist	201926245	3884	0.531938	4.18343
+../datasets/avg_overlapping_stdev//3448.275862.txt	Interval Tree	201926465	26384	0.262253	2.18197
+../datasets/avg_overlapping_stdev//3448.275862.txt	R-Tree8	201926465	35904	1.38062	5.08386
+../datasets/avg_overlapping_stdev//3448.275862.txt	R-Tree16	201926465	31284	1.54275	3.14909
+../datasets/avg_overlapping_stdev//3448.275862.txt	R-Tree32	201926465	29304	2.0375	2.40105
+../datasets/avg_overlapping_stdev//3448.275862.txt	R-Tree64	201926465	28248	2.78038	1.97262
+../datasets/avg_overlapping_stdev//3448.275862.txt	Segment Tree	201926465	197968	2.04877	2.01844
+../datasets/avg_overlapping_stdev//4137.931034.txt	MavlyutovIndex_x1	201923128	39580	0.474758	0.632719
+../datasets/avg_overlapping_stdev//4137.931034.txt	NClist	201922927	3888	0.531465	4.18998
+../datasets/avg_overlapping_stdev//4137.931034.txt	Interval Tree	201923128	26516	0.258974	2.23085
+../datasets/avg_overlapping_stdev//4137.931034.txt	R-Tree8	201923128	35904	1.55978	5.12278
+../datasets/avg_overlapping_stdev//4137.931034.txt	R-Tree16	201923128	31284	1.53209	3.19034
+../datasets/avg_overlapping_stdev//4137.931034.txt	R-Tree32	201923128	29304	2.01647	2.47693
+../datasets/avg_overlapping_stdev//4137.931034.txt	R-Tree64	201923128	28380	2.83859	2.0187
+../datasets/avg_overlapping_stdev//4137.931034.txt	Segment Tree	201923128	197968	2.11525	2.02663
+../datasets/avg_overlapping_stdev//4827.586207.txt	MavlyutovIndex_x1	201920557	39580	0.473734	0.636021
+../datasets/avg_overlapping_stdev//4827.586207.txt	NClist	201920358	3892	0.533888	4.241
+../datasets/avg_overlapping_stdev//4827.586207.txt	Interval Tree	201920557	26580	0.273661	2.25443
+../datasets/avg_overlapping_stdev//4827.586207.txt	R-Tree8	201920557	35904	1.39035	5.19953
+../datasets/avg_overlapping_stdev//4827.586207.txt	R-Tree16	201920557	31284	1.54702	3.24538
+../datasets/avg_overlapping_stdev//4827.586207.txt	R-Tree32	201920557	29304	2.21239	2.47867
+../datasets/avg_overlapping_stdev//4827.586207.txt	R-Tree64	201920557	28248	2.78778	2.04401
+../datasets/avg_overlapping_stdev//4827.586207.txt	Segment Tree	201920557	198100	2.07475	2.05568
+../datasets/avg_overlapping_stdev//5517.241379.txt	MavlyutovIndex_x1	201893658	39580	0.475244	0.649271
+../datasets/avg_overlapping_stdev//5517.241379.txt	NClist	201893452	3892	0.535613	4.28745
+../datasets/avg_overlapping_stdev//5517.241379.txt	Interval Tree	201893658	26556	0.260987	2.31284
+../datasets/avg_overlapping_stdev//5517.241379.txt	R-Tree8	201893658	36036	1.38692	5.24316
+../datasets/avg_overlapping_stdev//5517.241379.txt	R-Tree16	201893658	31284	1.54308	3.28387
+../datasets/avg_overlapping_stdev//5517.241379.txt	R-Tree32	201893658	29304	2.04222	2.53976
+../datasets/avg_overlapping_stdev//5517.241379.txt	R-Tree64	201893658	28380	2.80038	2.07568
+../datasets/avg_overlapping_stdev//5517.241379.txt	Segment Tree	201893658	198100	2.11407	2.06282
+../datasets/avg_overlapping_stdev//6206.896552.txt	MavlyutovIndex_x1	201965129	39580	0.475791	0.629834
+../datasets/avg_overlapping_stdev//6206.896552.txt	NClist	201964951	3896	0.536725	4.36262
+../datasets/avg_overlapping_stdev//6206.896552.txt	Interval Tree	201965129	26560	0.262075	2.35776
+../datasets/avg_overlapping_stdev//6206.896552.txt	R-Tree8	201965129	36036	1.39416	5.31787
+../datasets/avg_overlapping_stdev//6206.896552.txt	R-Tree16	201965129	31284	1.57986	3.32799
+../datasets/avg_overlapping_stdev//6206.896552.txt	R-Tree32	201965129	29304	2.02074	2.54576
+../datasets/avg_overlapping_stdev//6206.896552.txt	R-Tree64	201965129	28380	2.7985	2.12936
+../datasets/avg_overlapping_stdev//6206.896552.txt	Segment Tree	201965129	198232	2.05749	2.00883
+../datasets/avg_overlapping_stdev//6896.551724.txt	MavlyutovIndex_x1	201920597	39544	0.476609	0.643448
+../datasets/avg_overlapping_stdev//6896.551724.txt	NClist	201920421	3896	0.533758	4.42109
+../datasets/avg_overlapping_stdev//6896.551724.txt	Interval Tree	201920597	26136	0.260372	2.38778
+../datasets/avg_overlapping_stdev//6896.551724.txt	R-Tree8	201920597	36036	1.39552	5.34743
+../datasets/avg_overlapping_stdev//6896.551724.txt	R-Tree16	201920597	31284	1.55715	3.33794
+../datasets/avg_overlapping_stdev//6896.551724.txt	R-Tree32	201920597	29304	2.02999	2.59262
+../datasets/avg_overlapping_stdev//6896.551724.txt	R-Tree64	201920597	28380	2.80351	2.15126
+../datasets/avg_overlapping_stdev//6896.551724.txt	Segment Tree	201920598	198232	2.08098	2.03673
+../datasets/avg_overlapping_stdev//689.655172.txt	MavlyutovIndex_x1	201914013	39544	0.471336	0.623768
+../datasets/avg_overlapping_stdev//689.655172.txt	NClist	201913808	3796	0.510797	3.84428
+../datasets/avg_overlapping_stdev//689.655172.txt	Interval Tree	201914013	26340	0.26821	1.9994
+../datasets/avg_overlapping_stdev//689.655172.txt	R-Tree8	201914013	35640	1.36356	4.78263
+../datasets/avg_overlapping_stdev//689.655172.txt	R-Tree16	201914013	31152	1.53843	2.92501
+../datasets/avg_overlapping_stdev//689.655172.txt	R-Tree32	201914013	29172	2.06001	2.21799
+../datasets/avg_overlapping_stdev//689.655172.txt	R-Tree64	201914013	28248	2.89529	1.76704
+../datasets/avg_overlapping_stdev//689.655172.txt	Segment Tree	201914013	198232	2.06227	2.02196
+../datasets/avg_overlapping_stdev//7586.206897.txt	MavlyutovIndex_x1	201946923	39544	0.481489	0.663345
+../datasets/avg_overlapping_stdev//7586.206897.txt	NClist	201946740	3900	0.5354	4.47105
+../datasets/avg_overlapping_stdev//7586.206897.txt	Interval Tree	201946923	26304	0.258652	2.44333
+../datasets/avg_overlapping_stdev//7586.206897.txt	R-Tree8	201946923	36036	1.43107	5.37763
+../datasets/avg_overlapping_stdev//7586.206897.txt	R-Tree16	201946923	31284	1.56517	3.38139
+../datasets/avg_overlapping_stdev//7586.206897.txt	R-Tree32	201946923	29440	2.03407	2.6423
+../datasets/avg_overlapping_stdev//7586.206897.txt	R-Tree64	201946923	28380	2.81284	2.2681
+../datasets/avg_overlapping_stdev//7586.206897.txt	Segment Tree	201946923	198232	2.10778	2.2638
+../datasets/avg_overlapping_stdev//8275.862069.txt	MavlyutovIndex_x1	201829716	39580	0.475583	0.651482
+../datasets/avg_overlapping_stdev//8275.862069.txt	NClist	201829515	3900	0.538077	4.49174
+../datasets/avg_overlapping_stdev//8275.862069.txt	Interval Tree	201829716	26564	0.259571	2.43407
+../datasets/avg_overlapping_stdev//8275.862069.txt	R-Tree8	201829716	36036	1.40813	5.44954
+../datasets/avg_overlapping_stdev//8275.862069.txt	R-Tree16	201829716	31284	1.56276	3.40964
+../datasets/avg_overlapping_stdev//8275.862069.txt	R-Tree32	201829716	29436	2.05155	2.63388
+../datasets/avg_overlapping_stdev//8275.862069.txt	R-Tree64	201829716	28380	2.78288	2.21733
+../datasets/avg_overlapping_stdev//8275.862069.txt	Segment Tree	201829716	198232	2.07776	2.02676
+../datasets/avg_overlapping_stdev//8965.517241.txt	MavlyutovIndex_x1	201912651	39580	0.475962	0.668023
+../datasets/avg_overlapping_stdev//8965.517241.txt	NClist	201912474	3900	0.534427	4.63834
+../datasets/avg_overlapping_stdev//8965.517241.txt	Interval Tree	201912651	26752	0.268479	2.63685
+../datasets/avg_overlapping_stdev//8965.517241.txt	R-Tree8	201912651	36036	1.38227	5.51004
+../datasets/avg_overlapping_stdev//8965.517241.txt	R-Tree16	201912651	31416	1.5602	3.43049
+../datasets/avg_overlapping_stdev//8965.517241.txt	R-Tree32	201912651	29436	2.04138	2.68869
+../datasets/avg_overlapping_stdev//8965.517241.txt	R-Tree64	201912651	28380	2.82246	2.25962
+../datasets/avg_overlapping_stdev//8965.517241.txt	Segment Tree	201912651	198364	2.08755	2.01666
+../datasets/avg_overlapping_stdev//9655.172414.txt	MavlyutovIndex_x1	201903733	39580	0.476727	0.672742
+../datasets/avg_overlapping_stdev//9655.172414.txt	NClist	201903535	3900	0.540158	4.58872
+../datasets/avg_overlapping_stdev//9655.172414.txt	Interval Tree	201903733	26424	0.260891	2.5289
+../datasets/avg_overlapping_stdev//9655.172414.txt	R-Tree8	201903733	36036	1.40613	5.51938
+../datasets/avg_overlapping_stdev//9655.172414.txt	R-Tree16	201903733	31416	1.61614	3.61917
+../datasets/avg_overlapping_stdev//9655.172414.txt	R-Tree32	201903733	29304	2.03049	2.72821
+../datasets/avg_overlapping_stdev//9655.172414.txt	R-Tree64	201903733	28380	2.79343	2.25585
+../datasets/avg_overlapping_stdev//9655.172414.txt	Segment Tree	201903733	198364	2.08714	2.01457
+run4
+../datasets/avg_overlapping_stdev//0.000000.txt	MavlyutovIndex_x1	201905781	39580	0.469042	0.630122
+../datasets/avg_overlapping_stdev//0.000000.txt	NClist	201905613	0	0.357981	1.52644
+../datasets/avg_overlapping_stdev//0.000000.txt	Interval Tree	201905781	26556	0.257964	1.94329
+../datasets/avg_overlapping_stdev//0.000000.txt	R-Tree8	201905781	35376	1.37443	4.59691
+../datasets/avg_overlapping_stdev//0.000000.txt	R-Tree16	201905781	31288	1.58519	2.83203
+../datasets/avg_overlapping_stdev//0.000000.txt	R-Tree32	201905781	29436	2.13065	2.16214
+../datasets/avg_overlapping_stdev//0.000000.txt	R-Tree64	201905781	28512	3.02938	1.72687
+../datasets/avg_overlapping_stdev//0.000000.txt	Segment Tree	201905781	198364	2.31013	1.99174
+../datasets/avg_overlapping_stdev//10344.827586.txt	MavlyutovIndex_x1	201911761	39600	0.479207	0.676001
+../datasets/avg_overlapping_stdev//10344.827586.txt	NClist	201911558	3904	0.545107	4.65529
+../datasets/avg_overlapping_stdev//10344.827586.txt	Interval Tree	201911761	26752	0.261453	2.51774
+../datasets/avg_overlapping_stdev//10344.827586.txt	R-Tree8	201911761	36036	1.40764	5.5777
+../datasets/avg_overlapping_stdev//10344.827586.txt	R-Tree16	201911761	31420	1.5667	3.51134
+../datasets/avg_overlapping_stdev//10344.827586.txt	R-Tree32	201911761	29304	2.05006	2.73138
+../datasets/avg_overlapping_stdev//10344.827586.txt	R-Tree64	201911761	28512	2.80932	2.29346
+../datasets/avg_overlapping_stdev//10344.827586.txt	Segment Tree	201911761	198364	2.07211	2.04131
+../datasets/avg_overlapping_stdev//11034.482759.txt	MavlyutovIndex_x1	202017419	39544	0.478322	0.690349
+../datasets/avg_overlapping_stdev//11034.482759.txt	NClist	202017215	3904	0.543859	4.76399
+../datasets/avg_overlapping_stdev//11034.482759.txt	Interval Tree	202017419	26576	0.265589	2.57178
+../datasets/avg_overlapping_stdev//11034.482759.txt	R-Tree8	202017419	36036	1.39408	5.57309
+../datasets/avg_overlapping_stdev//11034.482759.txt	R-Tree16	202017419	31416	1.58384	3.49109
+../datasets/avg_overlapping_stdev//11034.482759.txt	R-Tree32	202017419	29304	2.04365	2.74375
+../datasets/avg_overlapping_stdev//11034.482759.txt	R-Tree64	202017419	28380	2.79839	2.2809
+../datasets/avg_overlapping_stdev//11034.482759.txt	Segment Tree	202017419	198232	2.0785	2.01358
+../datasets/avg_overlapping_stdev//11724.137931.txt	MavlyutovIndex_x1	201727690	39580	0.479248	0.711537
+../datasets/avg_overlapping_stdev//11724.137931.txt	NClist	201727499	3904	0.539752	4.73682
+../datasets/avg_overlapping_stdev//11724.137931.txt	Interval Tree	201727690	26444	0.261979	2.61903
+../datasets/avg_overlapping_stdev//11724.137931.txt	R-Tree8	201727690	36036	1.42339	5.64071
+../datasets/avg_overlapping_stdev//11724.137931.txt	R-Tree16	201727690	31416	1.56082	3.59649
+../datasets/avg_overlapping_stdev//11724.137931.txt	R-Tree32	201727690	29304	2.0784	2.79194
+../datasets/avg_overlapping_stdev//11724.137931.txt	R-Tree64	201727690	28380	2.79857	2.32342
+../datasets/avg_overlapping_stdev//11724.137931.txt	Segment Tree	201727690	197968	2.06007	2.04572
+../datasets/avg_overlapping_stdev//12413.793103.txt	MavlyutovIndex_x1	201805243	39544	0.483407	0.68771
+../datasets/avg_overlapping_stdev//12413.793103.txt	NClist	201805024	3904	0.536832	4.77811
+../datasets/avg_overlapping_stdev//12413.793103.txt	Interval Tree	201805243	26736	0.263067	2.60815
+../datasets/avg_overlapping_stdev//12413.793103.txt	R-Tree8	201805243	36036	1.39674	5.69619
+../datasets/avg_overlapping_stdev//12413.793103.txt	R-Tree16	201805243	31416	1.60299	3.61416
+../datasets/avg_overlapping_stdev//12413.793103.txt	R-Tree32	201805243	29436	2.07234	2.8278
+../datasets/avg_overlapping_stdev//12413.793103.txt	R-Tree64	201805243	28380	2.79708	2.34961
+../datasets/avg_overlapping_stdev//12413.793103.txt	Segment Tree	201805243	197704	2.1012	2.03395
+../datasets/avg_overlapping_stdev//13103.448276.txt	MavlyutovIndex_x1	201920016	39580	0.483158	0.70822
+../datasets/avg_overlapping_stdev//13103.448276.txt	NClist	201919814	3900	0.535014	4.83464
+../datasets/avg_overlapping_stdev//13103.448276.txt	Interval Tree	201920016	26528	0.271771	2.63935
+../datasets/avg_overlapping_stdev//13103.448276.txt	R-Tree8	201920016	36036	1.39912	5.74691
+../datasets/avg_overlapping_stdev//13103.448276.txt	R-Tree16	201920016	31416	1.57274	3.6179
+../datasets/avg_overlapping_stdev//13103.448276.txt	R-Tree32	201920016	29436	2.05593	2.83984
+../datasets/avg_overlapping_stdev//13103.448276.txt	R-Tree64	201920016	28512	2.80927	2.38516
+../datasets/avg_overlapping_stdev//13103.448276.txt	Segment Tree	201920016	197440	2.07997	2.02988
+../datasets/avg_overlapping_stdev//1379.310345.txt	MavlyutovIndex_x1	201902815	39544	0.478192	0.631444
+../datasets/avg_overlapping_stdev//1379.310345.txt	NClist	201902623	3856	0.519722	3.94713
+../datasets/avg_overlapping_stdev//1379.310345.txt	Interval Tree	201902815	26172	0.264159	2.01444
+../datasets/avg_overlapping_stdev//1379.310345.txt	R-Tree8	201902815	35772	1.38099	4.84957
+../datasets/avg_overlapping_stdev//1379.310345.txt	R-Tree16	201902815	31152	1.52852	2.94282
+../datasets/avg_overlapping_stdev//1379.310345.txt	R-Tree32	201902815	29308	2.03328	2.26409
+../datasets/avg_overlapping_stdev//1379.310345.txt	R-Tree64	201902815	28380	2.82283	1.80427
+../datasets/avg_overlapping_stdev//1379.310345.txt	Segment Tree	201902815	197968	2.10459	2.02215
+../datasets/avg_overlapping_stdev//2068.965517.txt	MavlyutovIndex_x1	201881761	39580	0.479839	0.624803
+../datasets/avg_overlapping_stdev//2068.965517.txt	NClist	201881589	3872	0.533795	4.03761
+../datasets/avg_overlapping_stdev//2068.965517.txt	Interval Tree	201881761	26448	0.260674	2.12864
+../datasets/avg_overlapping_stdev//2068.965517.txt	R-Tree8	201881761	35772	1.37485	4.98743
+../datasets/avg_overlapping_stdev//2068.965517.txt	R-Tree16	201881761	31288	1.53973	3.04676
+../datasets/avg_overlapping_stdev//2068.965517.txt	R-Tree32	201881761	29304	2.01944	2.3259
+../datasets/avg_overlapping_stdev//2068.965517.txt	R-Tree64	201881761	28116	2.83837	1.91945
+../datasets/avg_overlapping_stdev//2068.965517.txt	Segment Tree	201881761	198100	2.0745	2.01477
+../datasets/avg_overlapping_stdev//2758.620690.txt	MavlyutovIndex_x1	201891258	39544	0.476877	0.639029
+../datasets/avg_overlapping_stdev//2758.620690.txt	NClist	201891033	3880	0.529399	4.07615
+../datasets/avg_overlapping_stdev//2758.620690.txt	Interval Tree	201891258	26284	0.261026	2.17108
+../datasets/avg_overlapping_stdev//2758.620690.txt	R-Tree8	201891258	35904	1.38566	5.00158
+../datasets/avg_overlapping_stdev//2758.620690.txt	R-Tree16	201891258	31284	1.54778	3.11732
+../datasets/avg_overlapping_stdev//2758.620690.txt	R-Tree32	201891258	29304	2.02786	2.41175
+../datasets/avg_overlapping_stdev//2758.620690.txt	R-Tree64	201891258	28380	2.81186	1.94058
+../datasets/avg_overlapping_stdev//2758.620690.txt	Segment Tree	201891258	197968	2.08583	2.05562
+../datasets/avg_overlapping_stdev//3448.275862.txt	MavlyutovIndex_x1	201926465	39580	0.474785	0.617305
+../datasets/avg_overlapping_stdev//3448.275862.txt	NClist	201926245	3884	0.52886	4.15995
+../datasets/avg_overlapping_stdev//3448.275862.txt	Interval Tree	201926465	26384	0.261963	2.19415
+../datasets/avg_overlapping_stdev//3448.275862.txt	R-Tree8	201926465	35904	1.38412	5.08283
+../datasets/avg_overlapping_stdev//3448.275862.txt	R-Tree16	201926465	31284	1.5377	3.1579
+../datasets/avg_overlapping_stdev//3448.275862.txt	R-Tree32	201926465	29304	2.04136	2.42727
+../datasets/avg_overlapping_stdev//3448.275862.txt	R-Tree64	201926465	28248	2.80781	1.99243
+../datasets/avg_overlapping_stdev//3448.275862.txt	Segment Tree	201926465	197968	2.17793	2.06237
+../datasets/avg_overlapping_stdev//4137.931034.txt	MavlyutovIndex_x1	201923128	39580	0.47806	0.629836
+../datasets/avg_overlapping_stdev//4137.931034.txt	NClist	201922927	3888	0.534226	4.20182
+../datasets/avg_overlapping_stdev//4137.931034.txt	Interval Tree	201923128	26516	0.261418	2.22335
+../datasets/avg_overlapping_stdev//4137.931034.txt	R-Tree8	201923128	35904	1.37665	5.08291
+../datasets/avg_overlapping_stdev//4137.931034.txt	R-Tree16	201923128	31284	1.54704	3.14914
+../datasets/avg_overlapping_stdev//4137.931034.txt	R-Tree32	201923128	29304	2.01285	2.40528
+../datasets/avg_overlapping_stdev//4137.931034.txt	R-Tree64	201923128	28380	2.86532	1.98844
+../datasets/avg_overlapping_stdev//4137.931034.txt	Segment Tree	201923128	197968	2.08538	2.04408
+../datasets/avg_overlapping_stdev//4827.586207.txt	MavlyutovIndex_x1	201920557	39580	0.475653	0.639288
+../datasets/avg_overlapping_stdev//4827.586207.txt	NClist	201920358	3892	0.533625	4.24434
+../datasets/avg_overlapping_stdev//4827.586207.txt	Interval Tree	201920557	26580	0.269256	2.24884
+../datasets/avg_overlapping_stdev//4827.586207.txt	R-Tree8	201920557	35904	1.38768	5.23717
+../datasets/avg_overlapping_stdev//4827.586207.txt	R-Tree16	201920557	31284	1.56121	3.23135
+../datasets/avg_overlapping_stdev//4827.586207.txt	R-Tree32	201920557	29304	2.03277	2.48478
+../datasets/avg_overlapping_stdev//4827.586207.txt	R-Tree64	201920557	28248	2.78652	2.06781
+../datasets/avg_overlapping_stdev//4827.586207.txt	Segment Tree	201920557	198100	2.10129	2.01978
+../datasets/avg_overlapping_stdev//5517.241379.txt	MavlyutovIndex_x1	201893658	39580	0.475241	0.643671
+../datasets/avg_overlapping_stdev//5517.241379.txt	NClist	201893452	3892	0.540964	4.30775
+../datasets/avg_overlapping_stdev//5517.241379.txt	Interval Tree	201893658	26556	0.264856	2.30554
+../datasets/avg_overlapping_stdev//5517.241379.txt	R-Tree8	201893658	36036	1.3857	5.20062
+../datasets/avg_overlapping_stdev//5517.241379.txt	R-Tree16	201893658	31284	1.54252	3.23113
+../datasets/avg_overlapping_stdev//5517.241379.txt	R-Tree32	201893658	29304	2.03311	2.49767
+../datasets/avg_overlapping_stdev//5517.241379.txt	R-Tree64	201893658	28380	2.79462	2.04492
+../datasets/avg_overlapping_stdev//5517.241379.txt	Segment Tree	201893658	198100	2.05295	2.02812
+../datasets/avg_overlapping_stdev//6206.896552.txt	MavlyutovIndex_x1	201965129	39580	0.477844	0.659938
+../datasets/avg_overlapping_stdev//6206.896552.txt	NClist	201964951	3896	0.53156	4.36399
+../datasets/avg_overlapping_stdev//6206.896552.txt	Interval Tree	201965129	26560	0.264087	2.36934
+../datasets/avg_overlapping_stdev//6206.896552.txt	R-Tree8	201965129	36036	1.39262	5.3409
+../datasets/avg_overlapping_stdev//6206.896552.txt	R-Tree16	201965129	31284	1.55715	3.30666
+../datasets/avg_overlapping_stdev//6206.896552.txt	R-Tree32	201965129	29304	2.01742	2.56805
+../datasets/avg_overlapping_stdev//6206.896552.txt	R-Tree64	201965129	28380	2.77529	2.137
+../datasets/avg_overlapping_stdev//6206.896552.txt	Segment Tree	201965129	198232	2.11583	2.02652
+../datasets/avg_overlapping_stdev//6896.551724.txt	MavlyutovIndex_x1	201920597	39544	0.47547	0.671205
+../datasets/avg_overlapping_stdev//6896.551724.txt	NClist	201920421	3896	0.538425	4.38564
+../datasets/avg_overlapping_stdev//6896.551724.txt	Interval Tree	201920597	26136	0.263956	2.36604
+../datasets/avg_overlapping_stdev//6896.551724.txt	R-Tree8	201920597	36036	1.39192	5.34178
+../datasets/avg_overlapping_stdev//6896.551724.txt	R-Tree16	201920597	31284	1.5713	3.34712
+../datasets/avg_overlapping_stdev//6896.551724.txt	R-Tree32	201920597	29304	2.01981	2.60938
+../datasets/avg_overlapping_stdev//6896.551724.txt	R-Tree64	201920597	28380	2.85729	2.14376
+../datasets/avg_overlapping_stdev//6896.551724.txt	Segment Tree	201920598	198232	2.09332	2.04137
+../datasets/avg_overlapping_stdev//689.655172.txt	MavlyutovIndex_x1	201914013	39544	0.470977	0.627876
+../datasets/avg_overlapping_stdev//689.655172.txt	NClist	201913808	3796	0.518283	3.84543
+../datasets/avg_overlapping_stdev//689.655172.txt	Interval Tree	201914013	26340	0.259504	2.1314
+../datasets/avg_overlapping_stdev//689.655172.txt	R-Tree8	201914013	35640	1.35807	4.80201
+../datasets/avg_overlapping_stdev//689.655172.txt	R-Tree16	201914013	31152	1.52779	2.91526
+../datasets/avg_overlapping_stdev//689.655172.txt	R-Tree32	201914013	29172	2.04604	2.23706
+../datasets/avg_overlapping_stdev//689.655172.txt	R-Tree64	201914013	28248	2.87684	1.75748
+../datasets/avg_overlapping_stdev//689.655172.txt	Segment Tree	201914013	198232	2.07072	2.02613
+../datasets/avg_overlapping_stdev//7586.206897.txt	MavlyutovIndex_x1	201946923	39544	0.47419	0.659464
+../datasets/avg_overlapping_stdev//7586.206897.txt	NClist	201946740	3900	0.542554	4.47247
+../datasets/avg_overlapping_stdev//7586.206897.txt	Interval Tree	201946923	26304	0.258838	2.38749
+../datasets/avg_overlapping_stdev//7586.206897.txt	R-Tree8	201946923	36036	1.40508	5.37481
+../datasets/avg_overlapping_stdev//7586.206897.txt	R-Tree16	201946923	31284	1.58866	3.46022
+../datasets/avg_overlapping_stdev//7586.206897.txt	R-Tree32	201946923	29440	2.02987	2.74014
+../datasets/avg_overlapping_stdev//7586.206897.txt	R-Tree64	201946923	28380	2.80845	2.12444
+../datasets/avg_overlapping_stdev//7586.206897.txt	Segment Tree	201946923	198232	2.0611	2.05513
+../datasets/avg_overlapping_stdev//8275.862069.txt	MavlyutovIndex_x1	201829716	39580	0.483394	0.644079
+../datasets/avg_overlapping_stdev//8275.862069.txt	NClist	201829515	3900	0.536348	4.50729
+../datasets/avg_overlapping_stdev//8275.862069.txt	Interval Tree	201829716	26564	0.270365	2.44606
+../datasets/avg_overlapping_stdev//8275.862069.txt	R-Tree8	201829716	36036	1.41104	5.45328
+../datasets/avg_overlapping_stdev//8275.862069.txt	R-Tree16	201829716	31284	1.55321	3.41417
+../datasets/avg_overlapping_stdev//8275.862069.txt	R-Tree32	201829716	29436	2.06887	2.66122
+../datasets/avg_overlapping_stdev//8275.862069.txt	R-Tree64	201829716	28380	2.77658	2.22819
+../datasets/avg_overlapping_stdev//8275.862069.txt	Segment Tree	201829716	198232	2.0718	2.01744
+../datasets/avg_overlapping_stdev//8965.517241.txt	MavlyutovIndex_x1	201912651	39580	0.476191	0.67778
+../datasets/avg_overlapping_stdev//8965.517241.txt	NClist	201912474	3900	0.536694	4.5495
+../datasets/avg_overlapping_stdev//8965.517241.txt	Interval Tree	201912651	26752	0.26081	2.49271
+../datasets/avg_overlapping_stdev//8965.517241.txt	R-Tree8	201912651	36036	1.41041	5.43958
+../datasets/avg_overlapping_stdev//8965.517241.txt	R-Tree16	201912651	31416	1.55316	3.40266
+../datasets/avg_overlapping_stdev//8965.517241.txt	R-Tree32	201912651	29436	2.02732	2.65844
+../datasets/avg_overlapping_stdev//8965.517241.txt	R-Tree64	201912651	28380	2.83326	2.18849
+../datasets/avg_overlapping_stdev//8965.517241.txt	Segment Tree	201912651	198364	2.14779	2.03661
+../datasets/avg_overlapping_stdev//9655.172414.txt	MavlyutovIndex_x1	201903733	39580	0.480276	0.672977
+../datasets/avg_overlapping_stdev//9655.172414.txt	NClist	201903535	3900	0.540571	4.6856
+../datasets/avg_overlapping_stdev//9655.172414.txt	Interval Tree	201903733	26424	0.262414	2.52016
+../datasets/avg_overlapping_stdev//9655.172414.txt	R-Tree8	201903733	36036	1.41686	5.52995
+../datasets/avg_overlapping_stdev//9655.172414.txt	R-Tree16	201903733	31416	1.56504	3.47597
+../datasets/avg_overlapping_stdev//9655.172414.txt	R-Tree32	201903733	29304	2.0415	2.71583
+../datasets/avg_overlapping_stdev//9655.172414.txt	R-Tree64	201903733	28380	2.80538	2.25979
+../datasets/avg_overlapping_stdev//9655.172414.txt	Segment Tree	201903733	198364	2.09682	2.05366
+run5
+../datasets/avg_overlapping_stdev//0.000000.txt	MavlyutovIndex_x1	201905781	39580	0.471674	0.632808
+../datasets/avg_overlapping_stdev//0.000000.txt	NClist	201905613	0	0.353912	1.53512
+../datasets/avg_overlapping_stdev//0.000000.txt	Interval Tree	201905781	26556	0.263654	1.95638
+../datasets/avg_overlapping_stdev//0.000000.txt	R-Tree8	201905781	35376	1.37192	4.57229
+../datasets/avg_overlapping_stdev//0.000000.txt	R-Tree16	201905781	31288	1.59669	2.92585
+../datasets/avg_overlapping_stdev//0.000000.txt	R-Tree32	201905781	29436	2.14584	2.14444
+../datasets/avg_overlapping_stdev//0.000000.txt	R-Tree64	201905781	28512	3.0701	1.70871
+../datasets/avg_overlapping_stdev//0.000000.txt	Segment Tree	201905781	198364	2.07427	2.01042
+../datasets/avg_overlapping_stdev//10344.827586.txt	MavlyutovIndex_x1	201911761	39600	0.485415	0.672168
+../datasets/avg_overlapping_stdev//10344.827586.txt	NClist	201911558	3904	0.536409	4.63491
+../datasets/avg_overlapping_stdev//10344.827586.txt	Interval Tree	201911761	26752	0.266151	2.55816
+../datasets/avg_overlapping_stdev//10344.827586.txt	R-Tree8	201911761	36036	1.39967	5.57746
+../datasets/avg_overlapping_stdev//10344.827586.txt	R-Tree16	201911761	31420	1.57448	3.50237
+../datasets/avg_overlapping_stdev//10344.827586.txt	R-Tree32	201911761	29304	2.05743	2.73035
+../datasets/avg_overlapping_stdev//10344.827586.txt	R-Tree64	201911761	28512	2.82137	2.29635
+../datasets/avg_overlapping_stdev//10344.827586.txt	Segment Tree	201911761	198364	2.08671	2.05256
+../datasets/avg_overlapping_stdev//11034.482759.txt	MavlyutovIndex_x1	202017419	39544	0.481964	0.676661
+../datasets/avg_overlapping_stdev//11034.482759.txt	NClist	202017215	3904	0.535892	4.69451
+../datasets/avg_overlapping_stdev//11034.482759.txt	Interval Tree	202017419	26576	0.269024	2.53509
+../datasets/avg_overlapping_stdev//11034.482759.txt	R-Tree8	202017419	36036	1.38762	5.5697
+../datasets/avg_overlapping_stdev//11034.482759.txt	R-Tree16	202017419	31416	1.57131	3.47627
+../datasets/avg_overlapping_stdev//11034.482759.txt	R-Tree32	202017419	29304	2.05649	2.7613
+../datasets/avg_overlapping_stdev//11034.482759.txt	R-Tree64	202017419	28380	2.79524	2.28036
+../datasets/avg_overlapping_stdev//11034.482759.txt	Segment Tree	202017419	198232	2.05754	2.03571
+../datasets/avg_overlapping_stdev//11724.137931.txt	MavlyutovIndex_x1	201727690	39580	0.480538	0.676827
+../datasets/avg_overlapping_stdev//11724.137931.txt	NClist	201727499	3904	0.537197	4.74184
+../datasets/avg_overlapping_stdev//11724.137931.txt	Interval Tree	201727690	26444	0.262584	2.60622
+../datasets/avg_overlapping_stdev//11724.137931.txt	R-Tree8	201727690	36036	1.3977	5.63821
+../datasets/avg_overlapping_stdev//11724.137931.txt	R-Tree16	201727690	31416	1.57731	3.55353
+../datasets/avg_overlapping_stdev//11724.137931.txt	R-Tree32	201727690	29304	2.09157	2.79284
+../datasets/avg_overlapping_stdev//11724.137931.txt	R-Tree64	201727690	28380	2.80451	2.31352
+../datasets/avg_overlapping_stdev//11724.137931.txt	Segment Tree	201727690	197968	2.07041	2.01376
+../datasets/avg_overlapping_stdev//12413.793103.txt	MavlyutovIndex_x1	201805243	39544	0.481358	0.693421
+../datasets/avg_overlapping_stdev//12413.793103.txt	NClist	201805024	3904	0.539406	4.76231
+../datasets/avg_overlapping_stdev//12413.793103.txt	Interval Tree	201805243	26736	0.265543	2.6215
+../datasets/avg_overlapping_stdev//12413.793103.txt	R-Tree8	201805243	36036	1.39648	5.64472
+../datasets/avg_overlapping_stdev//12413.793103.txt	R-Tree16	201805243	31416	1.60727	3.5525
+../datasets/avg_overlapping_stdev//12413.793103.txt	R-Tree32	201805243	29436	2.06434	2.76271
+../datasets/avg_overlapping_stdev//12413.793103.txt	R-Tree64	201805243	28380	2.79922	2.32171
+../datasets/avg_overlapping_stdev//12413.793103.txt	Segment Tree	201805243	197704	2.09223	2.01681
+../datasets/avg_overlapping_stdev//13103.448276.txt	MavlyutovIndex_x1	201920016	39580	0.480154	0.706038
+../datasets/avg_overlapping_stdev//13103.448276.txt	NClist	201919814	3900	0.537374	4.82327
+../datasets/avg_overlapping_stdev//13103.448276.txt	Interval Tree	201920016	26528	0.268621	2.65535
+../datasets/avg_overlapping_stdev//13103.448276.txt	R-Tree8	201920016	36036	1.40086	5.73519
+../datasets/avg_overlapping_stdev//13103.448276.txt	R-Tree16	201920016	31416	1.56621	3.60254
+../datasets/avg_overlapping_stdev//13103.448276.txt	R-Tree32	201920016	29436	2.05731	2.85117
+../datasets/avg_overlapping_stdev//13103.448276.txt	R-Tree64	201920016	28512	2.80443	2.38849
+../datasets/avg_overlapping_stdev//13103.448276.txt	Segment Tree	201920016	197440	2.07831	2.02684
+../datasets/avg_overlapping_stdev//1379.310345.txt	MavlyutovIndex_x1	201902815	39544	0.47267	0.624574
+../datasets/avg_overlapping_stdev//1379.310345.txt	NClist	201902623	3856	0.528092	3.94207
+../datasets/avg_overlapping_stdev//1379.310345.txt	Interval Tree	201902815	26172	0.260929	2.03196
+../datasets/avg_overlapping_stdev//1379.310345.txt	R-Tree8	201902815	35772	1.37184	4.83822
+../datasets/avg_overlapping_stdev//1379.310345.txt	R-Tree16	201902815	31152	1.53489	2.98344
+../datasets/avg_overlapping_stdev//1379.310345.txt	R-Tree32	201902815	29308	2.01794	2.24414
+../datasets/avg_overlapping_stdev//1379.310345.txt	R-Tree64	201902815	28380	2.83243	1.83443
+../datasets/avg_overlapping_stdev//1379.310345.txt	Segment Tree	201902815	197968	2.08201	2.01588
+../datasets/avg_overlapping_stdev//2068.965517.txt	MavlyutovIndex_x1	201881761	39580	0.474651	0.623334
+../datasets/avg_overlapping_stdev//2068.965517.txt	NClist	201881589	3872	0.521604	4.02899
+../datasets/avg_overlapping_stdev//2068.965517.txt	Interval Tree	201881761	26448	0.261213	2.10206
+../datasets/avg_overlapping_stdev//2068.965517.txt	R-Tree8	201881761	35772	1.37672	4.93011
+../datasets/avg_overlapping_stdev//2068.965517.txt	R-Tree16	201881761	31288	1.55275	3.03939
+../datasets/avg_overlapping_stdev//2068.965517.txt	R-Tree32	201881761	29304	2.01631	2.34067
+../datasets/avg_overlapping_stdev//2068.965517.txt	R-Tree64	201881761	28116	2.84746	1.88439
+../datasets/avg_overlapping_stdev//2068.965517.txt	Segment Tree	201881761	198100	2.08079	2.00678
+../datasets/avg_overlapping_stdev//2758.620690.txt	MavlyutovIndex_x1	201891258	39544	0.473728	0.629082
+../datasets/avg_overlapping_stdev//2758.620690.txt	NClist	201891033	3880	0.527915	4.10516
+../datasets/avg_overlapping_stdev//2758.620690.txt	Interval Tree	201891258	26284	0.26301	2.10559
+../datasets/avg_overlapping_stdev//2758.620690.txt	R-Tree8	201891258	35904	1.37434	4.97099
+../datasets/avg_overlapping_stdev//2758.620690.txt	R-Tree16	201891258	31284	1.56002	3.11228
+../datasets/avg_overlapping_stdev//2758.620690.txt	R-Tree32	201891258	29304	1.99839	2.37626
+../datasets/avg_overlapping_stdev//2758.620690.txt	R-Tree64	201891258	28380	2.80812	1.92933
+../datasets/avg_overlapping_stdev//2758.620690.txt	Segment Tree	201891258	197968	2.07718	2.01987
+../datasets/avg_overlapping_stdev//3448.275862.txt	MavlyutovIndex_x1	201926465	39580	0.473912	0.650612
+../datasets/avg_overlapping_stdev//3448.275862.txt	NClist	201926245	3884	0.528036	4.13094
+../datasets/avg_overlapping_stdev//3448.275862.txt	Interval Tree	201926465	26384	0.258031	2.20508
+../datasets/avg_overlapping_stdev//3448.275862.txt	R-Tree8	201926465	35904	1.39831	5.04743
+../datasets/avg_overlapping_stdev//3448.275862.txt	R-Tree16	201926465	31284	1.57318	3.15034
+../datasets/avg_overlapping_stdev//3448.275862.txt	R-Tree32	201926465	29304	2.01714	2.43204
+../datasets/avg_overlapping_stdev//3448.275862.txt	R-Tree64	201926465	28248	2.77878	2.01096
+../datasets/avg_overlapping_stdev//3448.275862.txt	Segment Tree	201926465	197968	2.36835	2.01916
+../datasets/avg_overlapping_stdev//4137.931034.txt	MavlyutovIndex_x1	201923128	39580	0.472766	0.630052
+../datasets/avg_overlapping_stdev//4137.931034.txt	NClist	201922927	3888	0.536872	4.18871
+../datasets/avg_overlapping_stdev//4137.931034.txt	Interval Tree	201923128	26516	0.262955	2.21436
+../datasets/avg_overlapping_stdev//4137.931034.txt	R-Tree8	201923128	35904	1.38616	5.13325
+../datasets/avg_overlapping_stdev//4137.931034.txt	R-Tree16	201923128	31284	1.53485	3.18434
+../datasets/avg_overlapping_stdev//4137.931034.txt	R-Tree32	201923128	29304	2.01858	2.44854
+../datasets/avg_overlapping_stdev//4137.931034.txt	R-Tree64	201923128	28380	2.82837	2.03098
+../datasets/avg_overlapping_stdev//4137.931034.txt	Segment Tree	201923128	197968	2.08638	2.02964
+../datasets/avg_overlapping_stdev//4827.586207.txt	MavlyutovIndex_x1	201920557	39580	0.474543	0.636935
+../datasets/avg_overlapping_stdev//4827.586207.txt	NClist	201920358	3892	0.536488	4.25034
+../datasets/avg_overlapping_stdev//4827.586207.txt	Interval Tree	201920557	26580	0.267678	2.2617
+../datasets/avg_overlapping_stdev//4827.586207.txt	R-Tree8	201920557	35904	1.3897	5.22777
+../datasets/avg_overlapping_stdev//4827.586207.txt	R-Tree16	201920557	31284	1.56535	3.22779
+../datasets/avg_overlapping_stdev//4827.586207.txt	R-Tree32	201920557	29304	2.00891	2.48337
+../datasets/avg_overlapping_stdev//4827.586207.txt	R-Tree64	201920557	28248	2.79456	2.04411
+../datasets/avg_overlapping_stdev//4827.586207.txt	Segment Tree	201920557	198100	2.08352	2.03553
+../datasets/avg_overlapping_stdev//5517.241379.txt	MavlyutovIndex_x1	201893658	39580	0.473353	0.638653
+../datasets/avg_overlapping_stdev//5517.241379.txt	NClist	201893452	3892	0.532831	4.29364
+../datasets/avg_overlapping_stdev//5517.241379.txt	Interval Tree	201893658	26556	0.263358	2.30628
+../datasets/avg_overlapping_stdev//5517.241379.txt	R-Tree8	201893658	36036	1.37462	5.28453
+../datasets/avg_overlapping_stdev//5517.241379.txt	R-Tree16	201893658	31284	1.95104	3.2928
+../datasets/avg_overlapping_stdev//5517.241379.txt	R-Tree32	201893658	29304	2.04802	2.51008
+../datasets/avg_overlapping_stdev//5517.241379.txt	R-Tree64	201893658	28380	3.25403	2.0823
+../datasets/avg_overlapping_stdev//5517.241379.txt	Segment Tree	201893658	198100	2.08337	2.01354
+../datasets/avg_overlapping_stdev//6206.896552.txt	MavlyutovIndex_x1	201965129	39580	0.489375	0.64821
+../datasets/avg_overlapping_stdev//6206.896552.txt	NClist	201964951	3896	0.54073	4.34794
+../datasets/avg_overlapping_stdev//6206.896552.txt	Interval Tree	201965129	26560	0.271765	2.3557
+../datasets/avg_overlapping_stdev//6206.896552.txt	R-Tree8	201965129	36036	1.40324	5.39455
+../datasets/avg_overlapping_stdev//6206.896552.txt	R-Tree16	201965129	31284	1.54521	3.32314
+../datasets/avg_overlapping_stdev//6206.896552.txt	R-Tree32	201965129	29304	2.25115	2.57879
+../datasets/avg_overlapping_stdev//6206.896552.txt	R-Tree64	201965129	28380	2.78956	2.11352
+../datasets/avg_overlapping_stdev//6206.896552.txt	Segment Tree	201965129	198232	2.08759	2.03264
+../datasets/avg_overlapping_stdev//6896.551724.txt	MavlyutovIndex_x1	201920597	39544	0.477766	0.641456
+../datasets/avg_overlapping_stdev//6896.551724.txt	NClist	201920421	3896	0.541454	4.40868
+../datasets/avg_overlapping_stdev//6896.551724.txt	Interval Tree	201920597	26136	0.263909	2.34422
+../datasets/avg_overlapping_stdev//6896.551724.txt	R-Tree8	201920597	36036	1.40138	5.34778
+../datasets/avg_overlapping_stdev//6896.551724.txt	R-Tree16	201920597	31284	1.54115	3.35677
+../datasets/avg_overlapping_stdev//6896.551724.txt	R-Tree32	201920597	29304	2.0329	2.59321
+../datasets/avg_overlapping_stdev//6896.551724.txt	R-Tree64	201920597	28380	2.81619	2.14562
+../datasets/avg_overlapping_stdev//6896.551724.txt	Segment Tree	201920598	198232	2.05747	2.02124
+../datasets/avg_overlapping_stdev//689.655172.txt	MavlyutovIndex_x1	201914013	39544	0.481306	0.609672
+../datasets/avg_overlapping_stdev//689.655172.txt	NClist	201913808	3796	0.518536	3.85171
+../datasets/avg_overlapping_stdev//689.655172.txt	Interval Tree	201914013	26340	0.258994	2.01392
+../datasets/avg_overlapping_stdev//689.655172.txt	R-Tree8	201914013	35640	1.36971	4.73023
+../datasets/avg_overlapping_stdev//689.655172.txt	R-Tree16	201914013	31152	1.52399	2.91427
+../datasets/avg_overlapping_stdev//689.655172.txt	R-Tree32	201914013	29172	2.0335	2.2292
+../datasets/avg_overlapping_stdev//689.655172.txt	R-Tree64	201914013	28248	2.88311	1.75597
+../datasets/avg_overlapping_stdev//689.655172.txt	Segment Tree	201914013	198232	2.11561	2.00432
+../datasets/avg_overlapping_stdev//7586.206897.txt	MavlyutovIndex_x1	201946923	39544	0.476627	0.653652
+../datasets/avg_overlapping_stdev//7586.206897.txt	NClist	201946740	3900	0.540993	4.45157
+../datasets/avg_overlapping_stdev//7586.206897.txt	Interval Tree	201946923	26304	0.261283	2.40626
+../datasets/avg_overlapping_stdev//7586.206897.txt	R-Tree8	201946923	36036	1.38893	5.36379
+../datasets/avg_overlapping_stdev//7586.206897.txt	R-Tree16	201946923	31284	1.54441	3.36089
+../datasets/avg_overlapping_stdev//7586.206897.txt	R-Tree32	201946923	29440	2.05038	2.58409
+../datasets/avg_overlapping_stdev//7586.206897.txt	R-Tree64	201946923	28380	2.80871	2.13292
+../datasets/avg_overlapping_stdev//7586.206897.txt	Segment Tree	201946923	198232	2.06646	2.02339
+../datasets/avg_overlapping_stdev//8275.862069.txt	MavlyutovIndex_x1	201829716	39580	0.476655	0.648383
+../datasets/avg_overlapping_stdev//8275.862069.txt	NClist	201829515	3900	0.538808	4.49769
+../datasets/avg_overlapping_stdev//8275.862069.txt	Interval Tree	201829716	26564	0.260266	2.46064
+../datasets/avg_overlapping_stdev//8275.862069.txt	R-Tree8	201829716	36036	1.40048	5.42825
+../datasets/avg_overlapping_stdev//8275.862069.txt	R-Tree16	201829716	31284	1.56956	3.39825
+../datasets/avg_overlapping_stdev//8275.862069.txt	R-Tree32	201829716	29436	2.056	2.66521
+../datasets/avg_overlapping_stdev//8275.862069.txt	R-Tree64	201829716	28380	2.76174	2.19328
+../datasets/avg_overlapping_stdev//8275.862069.txt	Segment Tree	201829716	198232	2.08327	2.01916
+../datasets/avg_overlapping_stdev//8965.517241.txt	MavlyutovIndex_x1	201912651	39580	0.476439	0.660266
+../datasets/avg_overlapping_stdev//8965.517241.txt	NClist	201912474	3900	0.534065	4.53975
+../datasets/avg_overlapping_stdev//8965.517241.txt	Interval Tree	201912651	26752	0.263521	2.48199
+../datasets/avg_overlapping_stdev//8965.517241.txt	R-Tree8	201912651	36036	1.40053	5.45033
+../datasets/avg_overlapping_stdev//8965.517241.txt	R-Tree16	201912651	31416	1.54951	3.40483
+../datasets/avg_overlapping_stdev//8965.517241.txt	R-Tree32	201912651	29436	2.02656	2.68985
+../datasets/avg_overlapping_stdev//8965.517241.txt	R-Tree64	201912651	28380	2.82944	2.2142
+../datasets/avg_overlapping_stdev//8965.517241.txt	Segment Tree	201912651	198364	2.08321	2.01463
+../datasets/avg_overlapping_stdev//9655.172414.txt	MavlyutovIndex_x1	201903733	39580	0.481273	0.801499
+../datasets/avg_overlapping_stdev//9655.172414.txt	NClist	201903535	3900	0.541036	4.60911
+../datasets/avg_overlapping_stdev//9655.172414.txt	Interval Tree	201903733	26424	0.262029	2.51077
+../datasets/avg_overlapping_stdev//9655.172414.txt	R-Tree8	201903733	36036	1.39479	5.54043
+../datasets/avg_overlapping_stdev//9655.172414.txt	R-Tree16	201903733	31416	1.5598	3.46339
+../datasets/avg_overlapping_stdev//9655.172414.txt	R-Tree32	201903733	29304	2.07369	2.72819
+../datasets/avg_overlapping_stdev//9655.172414.txt	R-Tree64	201903733	28380	2.79678	2.25256
+../datasets/avg_overlapping_stdev//9655.172414.txt	Segment Tree	201903733	198364	2.0811	2.02924
+run6
+../datasets/avg_overlapping_stdev//0.000000.txt	MavlyutovIndex_x1	201905781	39580	0.473845	0.619918
+../datasets/avg_overlapping_stdev//0.000000.txt	NClist	201905613	0	0.351716	1.53577
+../datasets/avg_overlapping_stdev//0.000000.txt	Interval Tree	201905781	26556	0.261753	1.96568
+../datasets/avg_overlapping_stdev//0.000000.txt	R-Tree8	201905781	35376	1.38681	4.75838
+../datasets/avg_overlapping_stdev//0.000000.txt	R-Tree16	201905781	31288	1.58702	2.85783
+../datasets/avg_overlapping_stdev//0.000000.txt	R-Tree32	201905781	29436	2.13268	2.15931
+../datasets/avg_overlapping_stdev//0.000000.txt	R-Tree64	201905781	28512	3.02575	1.72915
+../datasets/avg_overlapping_stdev//0.000000.txt	Segment Tree	201905781	198364	2.07796	1.99646
+../datasets/avg_overlapping_stdev//10344.827586.txt	MavlyutovIndex_x1	201911761	39600	0.481149	0.668006
+../datasets/avg_overlapping_stdev//10344.827586.txt	NClist	201911558	3904	0.537858	4.66233
+../datasets/avg_overlapping_stdev//10344.827586.txt	Interval Tree	201911761	26752	0.275061	2.55508
+../datasets/avg_overlapping_stdev//10344.827586.txt	R-Tree8	201911761	36036	1.39917	5.60435
+../datasets/avg_overlapping_stdev//10344.827586.txt	R-Tree16	201911761	31420	1.59553	3.50815
+../datasets/avg_overlapping_stdev//10344.827586.txt	R-Tree32	201911761	29304	2.09428	2.75408
+../datasets/avg_overlapping_stdev//10344.827586.txt	R-Tree64	201911761	28512	2.81971	2.27691
+../datasets/avg_overlapping_stdev//10344.827586.txt	Segment Tree	201911761	198364	2.07875	1.99697
+../datasets/avg_overlapping_stdev//11034.482759.txt	MavlyutovIndex_x1	202017419	39544	0.480689	0.670034
+../datasets/avg_overlapping_stdev//11034.482759.txt	NClist	202017215	3904	0.542956	4.68664
+../datasets/avg_overlapping_stdev//11034.482759.txt	Interval Tree	202017419	26576	0.266553	2.52888
+../datasets/avg_overlapping_stdev//11034.482759.txt	R-Tree8	202017419	36036	1.38851	5.56452
+../datasets/avg_overlapping_stdev//11034.482759.txt	R-Tree16	202017419	31416	1.57849	3.48396
+../datasets/avg_overlapping_stdev//11034.482759.txt	R-Tree32	202017419	29304	2.04024	2.72003
+../datasets/avg_overlapping_stdev//11034.482759.txt	R-Tree64	202017419	28380	2.80568	2.26057
+../datasets/avg_overlapping_stdev//11034.482759.txt	Segment Tree	202017419	198232	2.0841	2.00451
+../datasets/avg_overlapping_stdev//11724.137931.txt	MavlyutovIndex_x1	201727690	39580	0.47938	0.689716
+../datasets/avg_overlapping_stdev//11724.137931.txt	NClist	201727499	3904	0.545633	4.72113
+../datasets/avg_overlapping_stdev//11724.137931.txt	Interval Tree	201727690	26444	0.265852	2.56633
+../datasets/avg_overlapping_stdev//11724.137931.txt	R-Tree8	201727690	36036	1.39455	5.65383
+../datasets/avg_overlapping_stdev//11724.137931.txt	R-Tree16	201727690	31416	1.55869	3.57795
+../datasets/avg_overlapping_stdev//11724.137931.txt	R-Tree32	201727690	29304	2.08219	2.78658
+../datasets/avg_overlapping_stdev//11724.137931.txt	R-Tree64	201727690	28380	2.79711	2.32307
+../datasets/avg_overlapping_stdev//11724.137931.txt	Segment Tree	201727690	197968	2.06636	2.02412
+../datasets/avg_overlapping_stdev//12413.793103.txt	MavlyutovIndex_x1	201805243	39544	0.480754	0.702359
+../datasets/avg_overlapping_stdev//12413.793103.txt	NClist	201805024	3904	0.539447	4.7874
+../datasets/avg_overlapping_stdev//12413.793103.txt	Interval Tree	201805243	26736	0.26649	2.62135
+../datasets/avg_overlapping_stdev//12413.793103.txt	R-Tree8	201805243	36036	1.39464	5.69064
+../datasets/avg_overlapping_stdev//12413.793103.txt	R-Tree16	201805243	31416	1.59468	3.58134
+../datasets/avg_overlapping_stdev//12413.793103.txt	R-Tree32	201805243	29436	2.07353	2.82451
+../datasets/avg_overlapping_stdev//12413.793103.txt	R-Tree64	201805243	28380	2.79466	2.36816
+../datasets/avg_overlapping_stdev//12413.793103.txt	Segment Tree	201805243	197704	2.08903	2.02591
+../datasets/avg_overlapping_stdev//13103.448276.txt	MavlyutovIndex_x1	201920016	39580	0.487509	0.702984
+../datasets/avg_overlapping_stdev//13103.448276.txt	NClist	201919814	3900	0.542775	4.82352
+../datasets/avg_overlapping_stdev//13103.448276.txt	Interval Tree	201920016	26528	0.2655	2.66926
+../datasets/avg_overlapping_stdev//13103.448276.txt	R-Tree8	201920016	36036	1.41733	5.72269
+../datasets/avg_overlapping_stdev//13103.448276.txt	R-Tree16	201920016	31416	1.58607	3.61791
+../datasets/avg_overlapping_stdev//13103.448276.txt	R-Tree32	201920016	29436	2.04539	2.85163
+../datasets/avg_overlapping_stdev//13103.448276.txt	R-Tree64	201920016	28512	2.7892	2.36893
+../datasets/avg_overlapping_stdev//13103.448276.txt	Segment Tree	201920016	197440	2.05808	2.01774
+../datasets/avg_overlapping_stdev//1379.310345.txt	MavlyutovIndex_x1	201902815	39544	0.480705	0.621205
+../datasets/avg_overlapping_stdev//1379.310345.txt	NClist	201902623	3856	0.520261	3.96513
+../datasets/avg_overlapping_stdev//1379.310345.txt	Interval Tree	201902815	26172	0.261342	2.01639
+../datasets/avg_overlapping_stdev//1379.310345.txt	R-Tree8	201902815	35772	1.37184	4.87398
+../datasets/avg_overlapping_stdev//1379.310345.txt	R-Tree16	201902815	31152	1.53285	3.00319
+../datasets/avg_overlapping_stdev//1379.310345.txt	R-Tree32	201902815	29308	2.02478	2.27622
+../datasets/avg_overlapping_stdev//1379.310345.txt	R-Tree64	201902815	28380	2.83125	1.86188
+../datasets/avg_overlapping_stdev//1379.310345.txt	Segment Tree	201902815	197968	2.07917	2.01547
+../datasets/avg_overlapping_stdev//2068.965517.txt	MavlyutovIndex_x1	201881761	39580	0.478466	0.634547
+../datasets/avg_overlapping_stdev//2068.965517.txt	NClist	201881589	3872	0.525596	4.02328
+../datasets/avg_overlapping_stdev//2068.965517.txt	Interval Tree	201881761	26448	0.261339	2.12131
+../datasets/avg_overlapping_stdev//2068.965517.txt	R-Tree8	201881761	35772	1.38523	4.92168
+../datasets/avg_overlapping_stdev//2068.965517.txt	R-Tree16	201881761	31288	1.54759	3.05643
+../datasets/avg_overlapping_stdev//2068.965517.txt	R-Tree32	201881761	29304	2.01342	2.34686
+../datasets/avg_overlapping_stdev//2068.965517.txt	R-Tree64	201881761	28116	2.82863	1.88427
+../datasets/avg_overlapping_stdev//2068.965517.txt	Segment Tree	201881761	198100	2.06466	2.02885
+../datasets/avg_overlapping_stdev//2758.620690.txt	MavlyutovIndex_x1	201891258	39544	0.473778	0.623761
+../datasets/avg_overlapping_stdev//2758.620690.txt	NClist	201891033	3880	0.527871	4.07728
+../datasets/avg_overlapping_stdev//2758.620690.txt	Interval Tree	201891258	26284	0.277187	2.15535
+../datasets/avg_overlapping_stdev//2758.620690.txt	R-Tree8	201891258	35904	1.37995	4.82454
+../datasets/avg_overlapping_stdev//2758.620690.txt	R-Tree16	201891258	31284	1.55039	3.10699
+../datasets/avg_overlapping_stdev//2758.620690.txt	R-Tree32	201891258	29304	2.00007	2.3667
+../datasets/avg_overlapping_stdev//2758.620690.txt	R-Tree64	201891258	28380	2.8465	1.9186
+../datasets/avg_overlapping_stdev//2758.620690.txt	Segment Tree	201891258	197968	2.08372	2.01245
+../datasets/avg_overlapping_stdev//3448.275862.txt	MavlyutovIndex_x1	201926465	39580	0.474934	0.612975
+../datasets/avg_overlapping_stdev//3448.275862.txt	NClist	201926245	3884	0.532333	4.13867
+../datasets/avg_overlapping_stdev//3448.275862.txt	Interval Tree	201926465	26384	0.261218	2.18075
+../datasets/avg_overlapping_stdev//3448.275862.txt	R-Tree8	201926465	35904	1.392	5.15223
+../datasets/avg_overlapping_stdev//3448.275862.txt	R-Tree16	201926465	31284	1.53762	3.18816
+../datasets/avg_overlapping_stdev//3448.275862.txt	R-Tree32	201926465	29304	2.01983	2.40908
+../datasets/avg_overlapping_stdev//3448.275862.txt	R-Tree64	201926465	28248	2.77858	1.97612
+../datasets/avg_overlapping_stdev//3448.275862.txt	Segment Tree	201926465	197968	2.06503	2.02949
+../datasets/avg_overlapping_stdev//4137.931034.txt	MavlyutovIndex_x1	201923128	39580	0.472332	0.634236
+../datasets/avg_overlapping_stdev//4137.931034.txt	NClist	201922927	3888	0.529702	4.19461
+../datasets/avg_overlapping_stdev//4137.931034.txt	Interval Tree	201923128	26516	0.261387	2.21986
+../datasets/avg_overlapping_stdev//4137.931034.txt	R-Tree8	201923128	35904	1.38593	5.09768
+../datasets/avg_overlapping_stdev//4137.931034.txt	R-Tree16	201923128	31284	1.53685	3.14245
+../datasets/avg_overlapping_stdev//4137.931034.txt	R-Tree32	201923128	29304	2.03331	2.4261
+../datasets/avg_overlapping_stdev//4137.931034.txt	R-Tree64	201923128	28380	2.95936	1.98442
+../datasets/avg_overlapping_stdev//4137.931034.txt	Segment Tree	201923128	197968	2.13395	2.04228
+../datasets/avg_overlapping_stdev//4827.586207.txt	MavlyutovIndex_x1	201920557	39580	0.474177	0.642895
+../datasets/avg_overlapping_stdev//4827.586207.txt	NClist	201920358	3892	0.534628	4.25317
+../datasets/avg_overlapping_stdev//4827.586207.txt	Interval Tree	201920557	26580	0.262039	2.2565
+../datasets/avg_overlapping_stdev//4827.586207.txt	R-Tree8	201920557	35904	1.40985	5.18032
+../datasets/avg_overlapping_stdev//4827.586207.txt	R-Tree16	201920557	31284	1.55899	3.25417
+../datasets/avg_overlapping_stdev//4827.586207.txt	R-Tree32	201920557	29304	2.01789	2.48332
+../datasets/avg_overlapping_stdev//4827.586207.txt	R-Tree64	201920557	28248	2.80072	2.05283
+../datasets/avg_overlapping_stdev//4827.586207.txt	Segment Tree	201920557	198100	2.05901	2.01412
+../datasets/avg_overlapping_stdev//5517.241379.txt	MavlyutovIndex_x1	201893658	39580	0.474012	0.637638
+../datasets/avg_overlapping_stdev//5517.241379.txt	NClist	201893452	3892	0.536412	4.38754
+../datasets/avg_overlapping_stdev//5517.241379.txt	Interval Tree	201893658	26556	0.261284	2.44549
+../datasets/avg_overlapping_stdev//5517.241379.txt	R-Tree8	201893658	36036	1.37761	5.21051
+../datasets/avg_overlapping_stdev//5517.241379.txt	R-Tree16	201893658	31284	1.54776	3.24326
+../datasets/avg_overlapping_stdev//5517.241379.txt	R-Tree32	201893658	29304	2.08365	2.5089
+../datasets/avg_overlapping_stdev//5517.241379.txt	R-Tree64	201893658	28380	2.80046	2.08702
+../datasets/avg_overlapping_stdev//5517.241379.txt	Segment Tree	201893658	198100	2.04701	2.03033
+../datasets/avg_overlapping_stdev//6206.896552.txt	MavlyutovIndex_x1	201965129	39580	0.479117	0.626101
+../datasets/avg_overlapping_stdev//6206.896552.txt	NClist	201964951	3896	0.537143	4.36358
+../datasets/avg_overlapping_stdev//6206.896552.txt	Interval Tree	201965129	26560	0.262418	2.3568
+../datasets/avg_overlapping_stdev//6206.896552.txt	R-Tree8	201965129	36036	1.40923	5.38286
+../datasets/avg_overlapping_stdev//6206.896552.txt	R-Tree16	201965129	31284	1.54416	3.50581
+../datasets/avg_overlapping_stdev//6206.896552.txt	R-Tree32	201965129	29304	2.01285	2.56178
+../datasets/avg_overlapping_stdev//6206.896552.txt	R-Tree64	201965129	28380	2.78418	2.12632
+../datasets/avg_overlapping_stdev//6206.896552.txt	Segment Tree	201965129	198232	2.05553	2.02811
+../datasets/avg_overlapping_stdev//6896.551724.txt	MavlyutovIndex_x1	201920597	39544	0.478726	0.645766
+../datasets/avg_overlapping_stdev//6896.551724.txt	NClist	201920421	3896	0.534269	4.38602
+../datasets/avg_overlapping_stdev//6896.551724.txt	Interval Tree	201920597	26136	0.259748	2.36802
+../datasets/avg_overlapping_stdev//6896.551724.txt	R-Tree8	201920597	36036	1.39002	5.35888
+../datasets/avg_overlapping_stdev//6896.551724.txt	R-Tree16	201920597	31284	1.56371	3.33305
+../datasets/avg_overlapping_stdev//6896.551724.txt	R-Tree32	201920597	29304	2.02526	2.59013
+../datasets/avg_overlapping_stdev//6896.551724.txt	R-Tree64	201920597	28380	2.84014	2.32909
+../datasets/avg_overlapping_stdev//6896.551724.txt	Segment Tree	201920598	198232	2.09543	2.04696
+../datasets/avg_overlapping_stdev//689.655172.txt	MavlyutovIndex_x1	201914013	39544	0.47257	0.61809
+../datasets/avg_overlapping_stdev//689.655172.txt	NClist	201913808	3796	0.509773	3.83396
+../datasets/avg_overlapping_stdev//689.655172.txt	Interval Tree	201914013	26340	0.258142	2.01579
+../datasets/avg_overlapping_stdev//689.655172.txt	R-Tree8	201914013	35640	1.36998	4.74194
+../datasets/avg_overlapping_stdev//689.655172.txt	R-Tree16	201914013	31152	1.52285	2.93822
+../datasets/avg_overlapping_stdev//689.655172.txt	R-Tree32	201914013	29172	2.06672	2.2095
+../datasets/avg_overlapping_stdev//689.655172.txt	R-Tree64	201914013	28248	2.88972	1.77738
+../datasets/avg_overlapping_stdev//689.655172.txt	Segment Tree	201914013	198232	2.08684	2.01099
+../datasets/avg_overlapping_stdev//7586.206897.txt	MavlyutovIndex_x1	201946923	39544	0.478742	0.658428
+../datasets/avg_overlapping_stdev//7586.206897.txt	NClist	201946740	3900	0.539632	4.5368
+../datasets/avg_overlapping_stdev//7586.206897.txt	Interval Tree	201946923	26304	0.261752	2.39005
+../datasets/avg_overlapping_stdev//7586.206897.txt	R-Tree8	201946923	36036	1.42146	5.37606
+../datasets/avg_overlapping_stdev//7586.206897.txt	R-Tree16	201946923	31284	1.55735	3.33795
+../datasets/avg_overlapping_stdev//7586.206897.txt	R-Tree32	201946923	29440	2.04952	2.59272
+../datasets/avg_overlapping_stdev//7586.206897.txt	R-Tree64	201946923	28380	2.81073	2.1449
+../datasets/avg_overlapping_stdev//7586.206897.txt	Segment Tree	201946923	198232	2.09755	2.02831
+../datasets/avg_overlapping_stdev//8275.862069.txt	MavlyutovIndex_x1	201829716	39580	0.484191	0.662783
+../datasets/avg_overlapping_stdev//8275.862069.txt	NClist	201829515	3900	0.541357	4.49903
+../datasets/avg_overlapping_stdev//8275.862069.txt	Interval Tree	201829716	26564	0.258928	2.44647
+../datasets/avg_overlapping_stdev//8275.862069.txt	R-Tree8	201829716	36036	1.40311	5.5291
+../datasets/avg_overlapping_stdev//8275.862069.txt	R-Tree16	201829716	31284	1.59859	3.41378
+../datasets/avg_overlapping_stdev//8275.862069.txt	R-Tree32	201829716	29436	2.04707	2.64399
+../datasets/avg_overlapping_stdev//8275.862069.txt	R-Tree64	201829716	28380	2.77646	2.19718
+../datasets/avg_overlapping_stdev//8275.862069.txt	Segment Tree	201829716	198232	2.08356	2.0552
+../datasets/avg_overlapping_stdev//8965.517241.txt	MavlyutovIndex_x1	201912651	39580	0.477522	0.654871
+../datasets/avg_overlapping_stdev//8965.517241.txt	NClist	201912474	3900	0.536011	4.54055
+../datasets/avg_overlapping_stdev//8965.517241.txt	Interval Tree	201912651	26752	0.260198	2.45544
+../datasets/avg_overlapping_stdev//8965.517241.txt	R-Tree8	201912651	36036	1.39036	5.4404
+../datasets/avg_overlapping_stdev//8965.517241.txt	R-Tree16	201912651	31416	1.55116	3.40166
+../datasets/avg_overlapping_stdev//8965.517241.txt	R-Tree32	201912651	29436	2.03298	2.66139
+../datasets/avg_overlapping_stdev//8965.517241.txt	R-Tree64	201912651	28380	2.84909	2.18019
+../datasets/avg_overlapping_stdev//8965.517241.txt	Segment Tree	201912651	198364	2.09421	2.01996
+../datasets/avg_overlapping_stdev//9655.172414.txt	MavlyutovIndex_x1	201903733	39580	0.484562	0.672832
+../datasets/avg_overlapping_stdev//9655.172414.txt	NClist	201903535	3900	0.540859	4.60521
+../datasets/avg_overlapping_stdev//9655.172414.txt	Interval Tree	201903733	26424	0.261488	2.53013
+../datasets/avg_overlapping_stdev//9655.172414.txt	R-Tree8	201903733	36036	1.40531	5.53842
+../datasets/avg_overlapping_stdev//9655.172414.txt	R-Tree16	201903733	31416	1.56022	3.46898
+../datasets/avg_overlapping_stdev//9655.172414.txt	R-Tree32	201903733	29304	2.0333	2.72248
+../datasets/avg_overlapping_stdev//9655.172414.txt	R-Tree64	201903733	28380	2.84563	2.2493
+../datasets/avg_overlapping_stdev//9655.172414.txt	Segment Tree	201903733	198364	2.02847	2.06851
+run7
+../datasets/avg_overlapping_stdev//0.000000.txt	MavlyutovIndex_x1	201905781	39580	0.480111	0.605011
+../datasets/avg_overlapping_stdev//0.000000.txt	NClist	201905613	0	0.354567	1.73005
+../datasets/avg_overlapping_stdev//0.000000.txt	Interval Tree	201905781	26556	0.264975	1.96326
+../datasets/avg_overlapping_stdev//0.000000.txt	R-Tree8	201905781	35376	1.36439	4.57976
+../datasets/avg_overlapping_stdev//0.000000.txt	R-Tree16	201905781	31288	1.59651	2.79332
+../datasets/avg_overlapping_stdev//0.000000.txt	R-Tree32	201905781	29436	2.15283	2.1387
+../datasets/avg_overlapping_stdev//0.000000.txt	R-Tree64	201905781	28512	3.01975	1.72336
+../datasets/avg_overlapping_stdev//0.000000.txt	Segment Tree	201905781	198364	2.08681	1.98917
+../datasets/avg_overlapping_stdev//10344.827586.txt	MavlyutovIndex_x1	201911761	39600	0.480151	0.672306
+../datasets/avg_overlapping_stdev//10344.827586.txt	NClist	201911558	3904	0.545258	4.64647
+../datasets/avg_overlapping_stdev//10344.827586.txt	Interval Tree	201911761	26752	0.263255	2.542
+../datasets/avg_overlapping_stdev//10344.827586.txt	R-Tree8	201911761	36036	1.4073	5.57375
+../datasets/avg_overlapping_stdev//10344.827586.txt	R-Tree16	201911761	31420	1.78109	3.50261
+../datasets/avg_overlapping_stdev//10344.827586.txt	R-Tree32	201911761	29304	2.04779	2.73508
+../datasets/avg_overlapping_stdev//10344.827586.txt	R-Tree64	201911761	28512	2.81124	2.27163
+../datasets/avg_overlapping_stdev//10344.827586.txt	Segment Tree	201911761	198364	2.06251	2.01803
+../datasets/avg_overlapping_stdev//11034.482759.txt	MavlyutovIndex_x1	202017419	39544	0.483537	0.662237
+../datasets/avg_overlapping_stdev//11034.482759.txt	NClist	202017215	3904	0.536442	4.70729
+../datasets/avg_overlapping_stdev//11034.482759.txt	Interval Tree	202017419	26576	0.272081	2.54047
+../datasets/avg_overlapping_stdev//11034.482759.txt	R-Tree8	202017419	36036	1.3969	5.60192
+../datasets/avg_overlapping_stdev//11034.482759.txt	R-Tree16	202017419	31416	1.56626	3.50927
+../datasets/avg_overlapping_stdev//11034.482759.txt	R-Tree32	202017419	29304	2.16691	2.72105
+../datasets/avg_overlapping_stdev//11034.482759.txt	R-Tree64	202017419	28380	3.01867	2.25703
+../datasets/avg_overlapping_stdev//11034.482759.txt	Segment Tree	202017419	198232	2.08828	2.0359
+../datasets/avg_overlapping_stdev//11724.137931.txt	MavlyutovIndex_x1	201727690	39580	0.483273	0.701786
+../datasets/avg_overlapping_stdev//11724.137931.txt	NClist	201727499	3904	0.539486	4.72983
+../datasets/avg_overlapping_stdev//11724.137931.txt	Interval Tree	201727690	26444	0.263993	2.59712
+../datasets/avg_overlapping_stdev//11724.137931.txt	R-Tree8	201727690	36036	1.3963	5.66523
+../datasets/avg_overlapping_stdev//11724.137931.txt	R-Tree16	201727690	31416	1.5649	3.55708
+../datasets/avg_overlapping_stdev//11724.137931.txt	R-Tree32	201727690	29304	2.0672	2.8043
+../datasets/avg_overlapping_stdev//11724.137931.txt	R-Tree64	201727690	28380	2.79053	2.34444
+../datasets/avg_overlapping_stdev//11724.137931.txt	Segment Tree	201727690	197968	2.19779	2.043
+../datasets/avg_overlapping_stdev//12413.793103.txt	MavlyutovIndex_x1	201805243	39544	0.583367	0.735407
+../datasets/avg_overlapping_stdev//12413.793103.txt	NClist	201805024	3904	0.535742	4.77714
+../datasets/avg_overlapping_stdev//12413.793103.txt	Interval Tree	201805243	26736	0.267736	2.6035
+../datasets/avg_overlapping_stdev//12413.793103.txt	R-Tree8	201805243	36036	1.40364	5.63362
+../datasets/avg_overlapping_stdev//12413.793103.txt	R-Tree16	201805243	31416	1.59111	3.54016
+../datasets/avg_overlapping_stdev//12413.793103.txt	R-Tree32	201805243	29436	2.06713	2.79212
+../datasets/avg_overlapping_stdev//12413.793103.txt	R-Tree64	201805243	28380	2.79801	2.30525
+../datasets/avg_overlapping_stdev//12413.793103.txt	Segment Tree	201805243	197704	2.16059	2.02388
+../datasets/avg_overlapping_stdev//13103.448276.txt	MavlyutovIndex_x1	201920016	39580	0.486295	0.709378
+../datasets/avg_overlapping_stdev//13103.448276.txt	NClist	201919814	3900	0.538862	4.83699
+../datasets/avg_overlapping_stdev//13103.448276.txt	Interval Tree	201920016	26528	0.262797	2.64636
+../datasets/avg_overlapping_stdev//13103.448276.txt	R-Tree8	201920016	36036	1.42013	5.72655
+../datasets/avg_overlapping_stdev//13103.448276.txt	R-Tree16	201920016	31416	1.56884	3.62485
+../datasets/avg_overlapping_stdev//13103.448276.txt	R-Tree32	201920016	29436	2.0435	2.83136
+../datasets/avg_overlapping_stdev//13103.448276.txt	R-Tree64	201920016	28512	2.83674	2.36342
+../datasets/avg_overlapping_stdev//13103.448276.txt	Segment Tree	201920016	197440	2.08614	2.03659
+../datasets/avg_overlapping_stdev//1379.310345.txt	MavlyutovIndex_x1	201902815	39544	0.47237	0.625668
+../datasets/avg_overlapping_stdev//1379.310345.txt	NClist	201902623	3856	0.524077	3.96591
+../datasets/avg_overlapping_stdev//1379.310345.txt	Interval Tree	201902815	26172	0.260409	2.03438
+../datasets/avg_overlapping_stdev//1379.310345.txt	R-Tree8	201902815	35772	1.36521	4.79909
+../datasets/avg_overlapping_stdev//1379.310345.txt	R-Tree16	201902815	31152	1.54011	2.95279
+../datasets/avg_overlapping_stdev//1379.310345.txt	R-Tree32	201902815	29308	2.0283	2.23865
+../datasets/avg_overlapping_stdev//1379.310345.txt	R-Tree64	201902815	28380	2.81705	1.7911
+../datasets/avg_overlapping_stdev//1379.310345.txt	Segment Tree	201902815	197968	2.07667	2.01634
+../datasets/avg_overlapping_stdev//2068.965517.txt	MavlyutovIndex_x1	201881761	39580	0.479345	0.618647
+../datasets/avg_overlapping_stdev//2068.965517.txt	NClist	201881589	3872	0.525975	4.038
+../datasets/avg_overlapping_stdev//2068.965517.txt	Interval Tree	201881761	26448	0.264951	2.10013
+../datasets/avg_overlapping_stdev//2068.965517.txt	R-Tree8	201881761	35772	1.38916	4.92426
+../datasets/avg_overlapping_stdev//2068.965517.txt	R-Tree16	201881761	31288	1.53972	3.06216
+../datasets/avg_overlapping_stdev//2068.965517.txt	R-Tree32	201881761	29304	2.01995	2.33817
+../datasets/avg_overlapping_stdev//2068.965517.txt	R-Tree64	201881761	28116	2.87553	1.91234
+../datasets/avg_overlapping_stdev//2068.965517.txt	Segment Tree	201881761	198100	2.06897	2.25587
+../datasets/avg_overlapping_stdev//2758.620690.txt	MavlyutovIndex_x1	201891258	39544	0.474511	0.626298
+../datasets/avg_overlapping_stdev//2758.620690.txt	NClist	201891033	3880	0.529517	4.07503
+../datasets/avg_overlapping_stdev//2758.620690.txt	Interval Tree	201891258	26284	0.25984	2.16708
+../datasets/avg_overlapping_stdev//2758.620690.txt	R-Tree8	201891258	35904	1.38645	4.93605
+../datasets/avg_overlapping_stdev//2758.620690.txt	R-Tree16	201891258	31284	1.53161	3.07956
+../datasets/avg_overlapping_stdev//2758.620690.txt	R-Tree32	201891258	29304	1.99458	2.35165
+../datasets/avg_overlapping_stdev//2758.620690.txt	R-Tree64	201891258	28380	2.8031	1.90539
+../datasets/avg_overlapping_stdev//2758.620690.txt	Segment Tree	201891258	197968	2.10004	2.02412
+../datasets/avg_overlapping_stdev//3448.275862.txt	MavlyutovIndex_x1	201926465	39580	0.474282	0.630541
+../datasets/avg_overlapping_stdev//3448.275862.txt	NClist	201926245	3884	0.529974	4.14818
+../datasets/avg_overlapping_stdev//3448.275862.txt	Interval Tree	201926465	26384	0.262275	2.19928
+../datasets/avg_overlapping_stdev//3448.275862.txt	R-Tree8	201926465	35904	1.42559	5.1068
+../datasets/avg_overlapping_stdev//3448.275862.txt	R-Tree16	201926465	31284	1.5391	3.14135
+../datasets/avg_overlapping_stdev//3448.275862.txt	R-Tree32	201926465	29304	2.01998	2.41808
+../datasets/avg_overlapping_stdev//3448.275862.txt	R-Tree64	201926465	28248	2.78625	1.97757
+../datasets/avg_overlapping_stdev//3448.275862.txt	Segment Tree	201926465	197968	2.0575	2.01168
+../datasets/avg_overlapping_stdev//4137.931034.txt	MavlyutovIndex_x1	201923128	39580	0.474903	0.640525
+../datasets/avg_overlapping_stdev//4137.931034.txt	NClist	201922927	3888	0.530337	4.20294
+../datasets/avg_overlapping_stdev//4137.931034.txt	Interval Tree	201923128	26516	0.258888	2.22569
+../datasets/avg_overlapping_stdev//4137.931034.txt	R-Tree8	201923128	35904	1.37979	5.0826
+../datasets/avg_overlapping_stdev//4137.931034.txt	R-Tree16	201923128	31284	1.53627	3.16938
+../datasets/avg_overlapping_stdev//4137.931034.txt	R-Tree32	201923128	29304	2.04002	2.42617
+../datasets/avg_overlapping_stdev//4137.931034.txt	R-Tree64	201923128	28380	2.8381	1.98238
+../datasets/avg_overlapping_stdev//4137.931034.txt	Segment Tree	201923128	197968	2.10586	2.03039
+../datasets/avg_overlapping_stdev//4827.586207.txt	MavlyutovIndex_x1	201920557	39580	0.473235	0.647965
+../datasets/avg_overlapping_stdev//4827.586207.txt	NClist	201920358	3892	0.534686	4.26582
+../datasets/avg_overlapping_stdev//4827.586207.txt	Interval Tree	201920557	26580	0.264195	2.2735
+../datasets/avg_overlapping_stdev//4827.586207.txt	R-Tree8	201920557	35904	1.37942	5.21348
+../datasets/avg_overlapping_stdev//4827.586207.txt	R-Tree16	201920557	31284	1.53698	3.23428
+../datasets/avg_overlapping_stdev//4827.586207.txt	R-Tree32	201920557	29304	2.01416	2.5036
+../datasets/avg_overlapping_stdev//4827.586207.txt	R-Tree64	201920557	28248	2.8076	2.06962
+../datasets/avg_overlapping_stdev//4827.586207.txt	Segment Tree	201920557	198100	2.06005	2.03035
+../datasets/avg_overlapping_stdev//5517.241379.txt	MavlyutovIndex_x1	201893658	39580	0.475614	0.637248
+../datasets/avg_overlapping_stdev//5517.241379.txt	NClist	201893452	3892	0.533408	4.27939
+../datasets/avg_overlapping_stdev//5517.241379.txt	Interval Tree	201893658	26556	0.259151	2.2907
+../datasets/avg_overlapping_stdev//5517.241379.txt	R-Tree8	201893658	36036	1.38046	5.18556
+../datasets/avg_overlapping_stdev//5517.241379.txt	R-Tree16	201893658	31284	1.55909	3.23529
+../datasets/avg_overlapping_stdev//5517.241379.txt	R-Tree32	201893658	29304	2.0771	2.49503
+../datasets/avg_overlapping_stdev//5517.241379.txt	R-Tree64	201893658	28380	2.80339	2.05116
+../datasets/avg_overlapping_stdev//5517.241379.txt	Segment Tree	201893658	198100	2.14751	2.04391
+../datasets/avg_overlapping_stdev//6206.896552.txt	MavlyutovIndex_x1	201965129	39580	0.475984	0.631138
+../datasets/avg_overlapping_stdev//6206.896552.txt	NClist	201964951	3896	0.536637	4.3916
+../datasets/avg_overlapping_stdev//6206.896552.txt	Interval Tree	201965129	26560	0.282287	2.32958
+../datasets/avg_overlapping_stdev//6206.896552.txt	R-Tree8	201965129	36036	1.42745	5.3209
+../datasets/avg_overlapping_stdev//6206.896552.txt	R-Tree16	201965129	31284	1.54843	3.30401
+../datasets/avg_overlapping_stdev//6206.896552.txt	R-Tree32	201965129	29304	2.01719	2.55432
+../datasets/avg_overlapping_stdev//6206.896552.txt	R-Tree64	201965129	28380	2.77018	2.13623
+../datasets/avg_overlapping_stdev//6206.896552.txt	Segment Tree	201965129	198232	2.10307	2.0239
+../datasets/avg_overlapping_stdev//6896.551724.txt	MavlyutovIndex_x1	201920597	39544	0.476957	0.658363
+../datasets/avg_overlapping_stdev//6896.551724.txt	NClist	201920421	3896	0.535572	4.38448
+../datasets/avg_overlapping_stdev//6896.551724.txt	Interval Tree	201920597	26136	0.259946	2.37008
+../datasets/avg_overlapping_stdev//6896.551724.txt	R-Tree8	201920597	36036	1.38856	5.29733
+../datasets/avg_overlapping_stdev//6896.551724.txt	R-Tree16	201920597	31284	1.56012	3.30049
+../datasets/avg_overlapping_stdev//6896.551724.txt	R-Tree32	201920597	29304	2.02283	2.56266
+../datasets/avg_overlapping_stdev//6896.551724.txt	R-Tree64	201920597	28380	2.80901	2.10007
+../datasets/avg_overlapping_stdev//6896.551724.txt	Segment Tree	201920598	198232	2.11358	2.04248
+../datasets/avg_overlapping_stdev//689.655172.txt	MavlyutovIndex_x1	201914013	39544	0.475469	0.625467
+../datasets/avg_overlapping_stdev//689.655172.txt	NClist	201913808	3796	0.511783	3.85165
+../datasets/avg_overlapping_stdev//689.655172.txt	Interval Tree	201914013	26340	0.25753	2.00708
+../datasets/avg_overlapping_stdev//689.655172.txt	R-Tree8	201914013	35640	1.35558	4.79287
+../datasets/avg_overlapping_stdev//689.655172.txt	R-Tree16	201914013	31152	1.53637	2.9232
+../datasets/avg_overlapping_stdev//689.655172.txt	R-Tree32	201914013	29172	2.07404	2.24443
+../datasets/avg_overlapping_stdev//689.655172.txt	R-Tree64	201914013	28248	2.89751	1.80233
+../datasets/avg_overlapping_stdev//689.655172.txt	Segment Tree	201914013	198232	2.09005	2.01901
+../datasets/avg_overlapping_stdev//7586.206897.txt	MavlyutovIndex_x1	201946923	39544	0.479087	0.63916
+../datasets/avg_overlapping_stdev//7586.206897.txt	NClist	201946740	3900	0.53416	4.45415
+../datasets/avg_overlapping_stdev//7586.206897.txt	Interval Tree	201946923	26304	0.2608	2.3944
+../datasets/avg_overlapping_stdev//7586.206897.txt	R-Tree8	201946923	36036	1.39179	5.34006
+../datasets/avg_overlapping_stdev//7586.206897.txt	R-Tree16	201946923	31284	1.55694	3.33278
+../datasets/avg_overlapping_stdev//7586.206897.txt	R-Tree32	201946923	29440	2.03522	2.6243
+../datasets/avg_overlapping_stdev//7586.206897.txt	R-Tree64	201946923	28380	2.81295	2.13896
+../datasets/avg_overlapping_stdev//7586.206897.txt	Segment Tree	201946923	198232	2.09308	2.05027
+../datasets/avg_overlapping_stdev//8275.862069.txt	MavlyutovIndex_x1	201829716	39580	0.477137	0.638191
+../datasets/avg_overlapping_stdev//8275.862069.txt	NClist	201829515	3900	0.533855	4.51269
+../datasets/avg_overlapping_stdev//8275.862069.txt	Interval Tree	201829716	26564	0.264238	2.445
+../datasets/avg_overlapping_stdev//8275.862069.txt	R-Tree8	201829716	36036	1.40646	5.45503
+../datasets/avg_overlapping_stdev//8275.862069.txt	R-Tree16	201829716	31284	1.55556	3.43909
+../datasets/avg_overlapping_stdev//8275.862069.txt	R-Tree32	201829716	29436	2.05817	2.64863
+../datasets/avg_overlapping_stdev//8275.862069.txt	R-Tree64	201829716	28380	2.76549	2.20246
+../datasets/avg_overlapping_stdev//8275.862069.txt	Segment Tree	201829716	198232	2.09398	2.02423
+../datasets/avg_overlapping_stdev//8965.517241.txt	MavlyutovIndex_x1	201912651	39580	0.48683	0.662169
+../datasets/avg_overlapping_stdev//8965.517241.txt	NClist	201912474	3900	0.543059	4.55156
+../datasets/avg_overlapping_stdev//8965.517241.txt	Interval Tree	201912651	26752	0.265642	2.48061
+../datasets/avg_overlapping_stdev//8965.517241.txt	R-Tree8	201912651	36036	1.39141	5.44675
+../datasets/avg_overlapping_stdev//8965.517241.txt	R-Tree16	201912651	31416	1.56377	3.5621
+../datasets/avg_overlapping_stdev//8965.517241.txt	R-Tree32	201912651	29436	2.03311	2.63686
+../datasets/avg_overlapping_stdev//8965.517241.txt	R-Tree64	201912651	28380	2.82082	2.17965
+../datasets/avg_overlapping_stdev//8965.517241.txt	Segment Tree	201912651	198364	2.05121	2.01081
+../datasets/avg_overlapping_stdev//9655.172414.txt	MavlyutovIndex_x1	201903733	39580	0.479347	0.676055
+../datasets/avg_overlapping_stdev//9655.172414.txt	NClist	201903535	3900	0.53301	4.60954
+../datasets/avg_overlapping_stdev//9655.172414.txt	Interval Tree	201903733	26424	0.270003	2.53415
+../datasets/avg_overlapping_stdev//9655.172414.txt	R-Tree8	201903733	36036	1.4266	5.50802
+../datasets/avg_overlapping_stdev//9655.172414.txt	R-Tree16	201903733	31416	1.54972	3.50022
+../datasets/avg_overlapping_stdev//9655.172414.txt	R-Tree32	201903733	29304	2.03151	2.70295
+../datasets/avg_overlapping_stdev//9655.172414.txt	R-Tree64	201903733	28380	2.79735	2.38734
+../datasets/avg_overlapping_stdev//9655.172414.txt	Segment Tree	201903733	198364	2.08333	2.03877
+run8
+../datasets/avg_overlapping_stdev//0.000000.txt	MavlyutovIndex_x1	201905781	39580	0.470558	0.628052
+../datasets/avg_overlapping_stdev//0.000000.txt	NClist	201905613	0	0.355535	1.54386
+../datasets/avg_overlapping_stdev//0.000000.txt	Interval Tree	201905781	26556	0.258127	1.96942
+../datasets/avg_overlapping_stdev//0.000000.txt	R-Tree8	201905781	35376	1.38459	4.58372
+../datasets/avg_overlapping_stdev//0.000000.txt	R-Tree16	201905781	31288	1.59325	2.80862
+../datasets/avg_overlapping_stdev//0.000000.txt	R-Tree32	201905781	29436	2.1542	2.13863
+../datasets/avg_overlapping_stdev//0.000000.txt	R-Tree64	201905781	28512	3.02668	1.6918
+../datasets/avg_overlapping_stdev//0.000000.txt	Segment Tree	201905781	198364	2.08927	2.00571
+../datasets/avg_overlapping_stdev//10344.827586.txt	MavlyutovIndex_x1	201911761	39600	0.481354	0.680833
+../datasets/avg_overlapping_stdev//10344.827586.txt	NClist	201911558	3904	0.541289	4.73841
+../datasets/avg_overlapping_stdev//10344.827586.txt	Interval Tree	201911761	26752	0.266251	2.71203
+../datasets/avg_overlapping_stdev//10344.827586.txt	R-Tree8	201911761	36036	1.39432	5.66419
+../datasets/avg_overlapping_stdev//10344.827586.txt	R-Tree16	201911761	31420	1.57579	3.57588
+../datasets/avg_overlapping_stdev//10344.827586.txt	R-Tree32	201911761	29304	2.0779	2.79059
+../datasets/avg_overlapping_stdev//10344.827586.txt	R-Tree64	201911761	28512	2.83304	2.33858
+../datasets/avg_overlapping_stdev//10344.827586.txt	Segment Tree	201911761	198364	2.29258	2.95784
+../datasets/avg_overlapping_stdev//11034.482759.txt	MavlyutovIndex_x1	202017419	39544	0.530777	0.816497
+../datasets/avg_overlapping_stdev//11034.482759.txt	NClist	202017215	3904	0.62829	5.09305
+../datasets/avg_overlapping_stdev//11034.482759.txt	Interval Tree	202017419	26576	0.273955	2.68809
+../datasets/avg_overlapping_stdev//11034.482759.txt	R-Tree8	202017419	36036	1.41574	5.67744
+../datasets/avg_overlapping_stdev//11034.482759.txt	R-Tree16	202017419	31416	1.57833	3.55353
+../datasets/avg_overlapping_stdev//11034.482759.txt	R-Tree32	202017419	29304	2.0552	2.76707
+../datasets/avg_overlapping_stdev//11034.482759.txt	R-Tree64	202017419	28380	2.86816	2.30279
+../datasets/avg_overlapping_stdev//11034.482759.txt	Segment Tree	202017419	198232	2.07329	2.05475
+../datasets/avg_overlapping_stdev//11724.137931.txt	MavlyutovIndex_x1	201727690	39580	0.481057	0.684606
+../datasets/avg_overlapping_stdev//11724.137931.txt	NClist	201727499	3904	0.539168	4.77341
+../datasets/avg_overlapping_stdev//11724.137931.txt	Interval Tree	201727690	26444	0.264179	2.57503
+../datasets/avg_overlapping_stdev//11724.137931.txt	R-Tree8	201727690	36036	1.38708	5.64588
+../datasets/avg_overlapping_stdev//11724.137931.txt	R-Tree16	201727690	31416	1.5511	3.55619
+../datasets/avg_overlapping_stdev//11724.137931.txt	R-Tree32	201727690	29304	2.08019	2.77155
+../datasets/avg_overlapping_stdev//11724.137931.txt	R-Tree64	201727690	28380	2.77119	2.31408
+../datasets/avg_overlapping_stdev//11724.137931.txt	Segment Tree	201727690	197968	2.05489	2.01087
+../datasets/avg_overlapping_stdev//12413.793103.txt	MavlyutovIndex_x1	201805243	39544	0.479684	0.691669
+../datasets/avg_overlapping_stdev//12413.793103.txt	NClist	201805024	3904	0.536398	4.77615
+../datasets/avg_overlapping_stdev//12413.793103.txt	Interval Tree	201805243	26736	0.264077	2.60367
+../datasets/avg_overlapping_stdev//12413.793103.txt	R-Tree8	201805243	36036	1.38492	5.63377
+../datasets/avg_overlapping_stdev//12413.793103.txt	R-Tree16	201805243	31416	1.57514	3.53723
+../datasets/avg_overlapping_stdev//12413.793103.txt	R-Tree32	201805243	29436	2.05151	2.77624
+../datasets/avg_overlapping_stdev//12413.793103.txt	R-Tree64	201805243	28380	2.78576	2.34554
+../datasets/avg_overlapping_stdev//12413.793103.txt	Segment Tree	201805243	197704	2.03811	1.99473
+../datasets/avg_overlapping_stdev//13103.448276.txt	MavlyutovIndex_x1	201920016	39580	0.481583	0.697354
+../datasets/avg_overlapping_stdev//13103.448276.txt	NClist	201919814	3900	0.535808	4.81351
+../datasets/avg_overlapping_stdev//13103.448276.txt	Interval Tree	201920016	26528	0.265179	2.6256
+../datasets/avg_overlapping_stdev//13103.448276.txt	R-Tree8	201920016	36036	1.38903	5.70655
+../datasets/avg_overlapping_stdev//13103.448276.txt	R-Tree16	201920016	31416	1.54797	3.60686
+../datasets/avg_overlapping_stdev//13103.448276.txt	R-Tree32	201920016	29436	2.04046	2.85716
+../datasets/avg_overlapping_stdev//13103.448276.txt	R-Tree64	201920016	28512	2.78654	2.37894
+../datasets/avg_overlapping_stdev//13103.448276.txt	Segment Tree	201920016	197440	2.09164	2.01768
+../datasets/avg_overlapping_stdev//1379.310345.txt	MavlyutovIndex_x1	201902815	39544	0.476714	0.621603
+../datasets/avg_overlapping_stdev//1379.310345.txt	NClist	201902623	3856	0.518851	4.03616
+../datasets/avg_overlapping_stdev//1379.310345.txt	Interval Tree	201902815	26172	0.261091	2.01563
+../datasets/avg_overlapping_stdev//1379.310345.txt	R-Tree8	201902815	35772	1.35529	4.83959
+../datasets/avg_overlapping_stdev//1379.310345.txt	R-Tree16	201902815	31152	1.52154	2.97892
+../datasets/avg_overlapping_stdev//1379.310345.txt	R-Tree32	201902815	29308	2.03687	2.2763
+../datasets/avg_overlapping_stdev//1379.310345.txt	R-Tree64	201902815	28380	2.82425	1.85527
+../datasets/avg_overlapping_stdev//1379.310345.txt	Segment Tree	201902815	197968	2.06919	2.02622
+../datasets/avg_overlapping_stdev//2068.965517.txt	MavlyutovIndex_x1	201881761	39580	0.481118	0.645218
+../datasets/avg_overlapping_stdev//2068.965517.txt	NClist	201881589	3872	0.524337	4.03491
+../datasets/avg_overlapping_stdev//2068.965517.txt	Interval Tree	201881761	26448	0.263312	2.08398
+../datasets/avg_overlapping_stdev//2068.965517.txt	R-Tree8	201881761	35772	1.36079	4.92936
+../datasets/avg_overlapping_stdev//2068.965517.txt	R-Tree16	201881761	31288	1.5309	3.05989
+../datasets/avg_overlapping_stdev//2068.965517.txt	R-Tree32	201881761	29304	2.04318	2.3448
+../datasets/avg_overlapping_stdev//2068.965517.txt	R-Tree64	201881761	28116	2.82765	1.88086
+../datasets/avg_overlapping_stdev//2068.965517.txt	Segment Tree	201881761	198100	2.04571	2.0018
+../datasets/avg_overlapping_stdev//2758.620690.txt	MavlyutovIndex_x1	201891258	39544	0.47514	0.620338
+../datasets/avg_overlapping_stdev//2758.620690.txt	NClist	201891033	3880	0.529359	4.08547
+../datasets/avg_overlapping_stdev//2758.620690.txt	Interval Tree	201891258	26284	0.262202	2.12164
+../datasets/avg_overlapping_stdev//2758.620690.txt	R-Tree8	201891258	35904	1.36507	4.98339
+../datasets/avg_overlapping_stdev//2758.620690.txt	R-Tree16	201891258	31284	1.52625	3.10497
+../datasets/avg_overlapping_stdev//2758.620690.txt	R-Tree32	201891258	29304	2.02237	2.34873
+../datasets/avg_overlapping_stdev//2758.620690.txt	R-Tree64	201891258	28380	2.79453	1.91341
+../datasets/avg_overlapping_stdev//2758.620690.txt	Segment Tree	201891258	197968	2.16984	2.00578
+../datasets/avg_overlapping_stdev//3448.275862.txt	MavlyutovIndex_x1	201926465	39580	0.488557	0.617054
+../datasets/avg_overlapping_stdev//3448.275862.txt	NClist	201926245	3884	0.528929	4.12944
+../datasets/avg_overlapping_stdev//3448.275862.txt	Interval Tree	201926465	26384	0.262077	2.16146
+../datasets/avg_overlapping_stdev//3448.275862.txt	R-Tree8	201926465	35904	1.36644	5.05404
+../datasets/avg_overlapping_stdev//3448.275862.txt	R-Tree16	201926465	31284	1.52373	3.13513
+../datasets/avg_overlapping_stdev//3448.275862.txt	R-Tree32	201926465	29304	2.00049	2.39989
+../datasets/avg_overlapping_stdev//3448.275862.txt	R-Tree64	201926465	28248	2.75759	1.96792
+../datasets/avg_overlapping_stdev//3448.275862.txt	Segment Tree	201926465	197968	2.06378	2.01195
+../datasets/avg_overlapping_stdev//4137.931034.txt	MavlyutovIndex_x1	201923128	39580	0.474601	0.627151
+../datasets/avg_overlapping_stdev//4137.931034.txt	NClist	201922927	3888	0.531271	4.20279
+../datasets/avg_overlapping_stdev//4137.931034.txt	Interval Tree	201923128	26516	0.259823	2.23443
+../datasets/avg_overlapping_stdev//4137.931034.txt	R-Tree8	201923128	35904	1.37251	5.25073
+../datasets/avg_overlapping_stdev//4137.931034.txt	R-Tree16	201923128	31284	1.51977	3.18367
+../datasets/avg_overlapping_stdev//4137.931034.txt	R-Tree32	201923128	29304	2.00254	2.4353
+../datasets/avg_overlapping_stdev//4137.931034.txt	R-Tree64	201923128	28380	2.81657	2.00505
+../datasets/avg_overlapping_stdev//4137.931034.txt	Segment Tree	201923128	197968	2.06701	2.00876
+../datasets/avg_overlapping_stdev//4827.586207.txt	MavlyutovIndex_x1	201920557	39580	0.475042	0.630325
+../datasets/avg_overlapping_stdev//4827.586207.txt	NClist	201920358	3892	0.529652	4.24076
+../datasets/avg_overlapping_stdev//4827.586207.txt	Interval Tree	201920557	26580	0.259117	2.24597
+../datasets/avg_overlapping_stdev//4827.586207.txt	R-Tree8	201920557	35904	1.36796	5.20968
+../datasets/avg_overlapping_stdev//4827.586207.txt	R-Tree16	201920557	31284	1.53366	3.23976
+../datasets/avg_overlapping_stdev//4827.586207.txt	R-Tree32	201920557	29304	2.01194	2.65231
+../datasets/avg_overlapping_stdev//4827.586207.txt	R-Tree64	201920557	28248	2.774	2.04328
+../datasets/avg_overlapping_stdev//4827.586207.txt	Segment Tree	201920557	198100	2.06063	2.01066
+../datasets/avg_overlapping_stdev//5517.241379.txt	MavlyutovIndex_x1	201893658	39580	0.475783	0.632163
+../datasets/avg_overlapping_stdev//5517.241379.txt	NClist	201893452	3892	0.536292	4.32772
+../datasets/avg_overlapping_stdev//5517.241379.txt	Interval Tree	201893658	26556	0.262122	2.28621
+../datasets/avg_overlapping_stdev//5517.241379.txt	R-Tree8	201893658	36036	1.37628	5.25778
+../datasets/avg_overlapping_stdev//5517.241379.txt	R-Tree16	201893658	31284	1.53744	3.27266
+../datasets/avg_overlapping_stdev//5517.241379.txt	R-Tree32	201893658	29304	2.02866	2.50726
+../datasets/avg_overlapping_stdev//5517.241379.txt	R-Tree64	201893658	28380	2.78592	2.0716
+../datasets/avg_overlapping_stdev//5517.241379.txt	Segment Tree	201893658	198100	2.171	2.01398
+../datasets/avg_overlapping_stdev//6206.896552.txt	MavlyutovIndex_x1	201965129	39580	0.477441	0.802293
+../datasets/avg_overlapping_stdev//6206.896552.txt	NClist	201964951	3896	0.535017	4.33981
+../datasets/avg_overlapping_stdev//6206.896552.txt	Interval Tree	201965129	26560	0.261574	2.32325
+../datasets/avg_overlapping_stdev//6206.896552.txt	R-Tree8	201965129	36036	1.37613	5.28948
+../datasets/avg_overlapping_stdev//6206.896552.txt	R-Tree16	201965129	31284	1.53679	3.31104
+../datasets/avg_overlapping_stdev//6206.896552.txt	R-Tree32	201965129	29304	2.00299	2.55425
+../datasets/avg_overlapping_stdev//6206.896552.txt	R-Tree64	201965129	28380	2.76068	2.11147
+../datasets/avg_overlapping_stdev//6206.896552.txt	Segment Tree	201965129	198232	2.06157	2.01063
+../datasets/avg_overlapping_stdev//6896.551724.txt	MavlyutovIndex_x1	201920597	39544	0.475218	0.636344
+../datasets/avg_overlapping_stdev//6896.551724.txt	NClist	201920421	3896	0.538945	4.40407
+../datasets/avg_overlapping_stdev//6896.551724.txt	Interval Tree	201920597	26136	0.261318	2.36664
+../datasets/avg_overlapping_stdev//6896.551724.txt	R-Tree8	201920597	36036	1.38237	5.48245
+../datasets/avg_overlapping_stdev//6896.551724.txt	R-Tree16	201920597	31284	1.5416	3.34387
+../datasets/avg_overlapping_stdev//6896.551724.txt	R-Tree32	201920597	29304	2.01259	2.58093
+../datasets/avg_overlapping_stdev//6896.551724.txt	R-Tree64	201920597	28380	3.0385	2.13353
+../datasets/avg_overlapping_stdev//6896.551724.txt	Segment Tree	201920598	198232	2.05814	2.01596
+../datasets/avg_overlapping_stdev//689.655172.txt	MavlyutovIndex_x1	201914013	39544	0.476204	0.617047
+../datasets/avg_overlapping_stdev//689.655172.txt	NClist	201913808	3796	0.50918	3.82962
+../datasets/avg_overlapping_stdev//689.655172.txt	Interval Tree	201914013	26340	0.260624	1.98528
+../datasets/avg_overlapping_stdev//689.655172.txt	R-Tree8	201914013	35640	1.34763	4.72935
+../datasets/avg_overlapping_stdev//689.655172.txt	R-Tree16	201914013	31152	1.5128	3.33506
+../datasets/avg_overlapping_stdev//689.655172.txt	R-Tree32	201914013	29172	2.22453	3.00931
+../datasets/avg_overlapping_stdev//689.655172.txt	R-Tree64	201914013	28248	3.00775	1.78456
+../datasets/avg_overlapping_stdev//689.655172.txt	Segment Tree	201914013	198232	2.07445	1.99295
+../datasets/avg_overlapping_stdev//7586.206897.txt	MavlyutovIndex_x1	201946923	39544	0.474713	0.660246
+../datasets/avg_overlapping_stdev//7586.206897.txt	NClist	201946740	3900	0.540749	4.45086
+../datasets/avg_overlapping_stdev//7586.206897.txt	Interval Tree	201946923	26304	0.260605	2.41043
+../datasets/avg_overlapping_stdev//7586.206897.txt	R-Tree8	201946923	36036	1.38695	5.38366
+../datasets/avg_overlapping_stdev//7586.206897.txt	R-Tree16	201946923	31284	1.56273	3.38479
+../datasets/avg_overlapping_stdev//7586.206897.txt	R-Tree32	201946923	29440	2.04482	2.63315
+../datasets/avg_overlapping_stdev//7586.206897.txt	R-Tree64	201946923	28380	2.81285	2.17074
+../datasets/avg_overlapping_stdev//7586.206897.txt	Segment Tree	201946923	198232	2.10175	2.03561
+../datasets/avg_overlapping_stdev//8275.862069.txt	MavlyutovIndex_x1	201829716	39580	0.476568	0.647268
+../datasets/avg_overlapping_stdev//8275.862069.txt	NClist	201829515	3900	0.53555	4.50198
+../datasets/avg_overlapping_stdev//8275.862069.txt	Interval Tree	201829716	26564	0.264105	2.46181
+../datasets/avg_overlapping_stdev//8275.862069.txt	R-Tree8	201829716	36036	1.41489	5.44263
+../datasets/avg_overlapping_stdev//8275.862069.txt	R-Tree16	201829716	31284	1.55661	3.42315
+../datasets/avg_overlapping_stdev//8275.862069.txt	R-Tree32	201829716	29436	2.05124	2.66071
+../datasets/avg_overlapping_stdev//8275.862069.txt	R-Tree64	201829716	28380	2.77436	2.1923
+../datasets/avg_overlapping_stdev//8275.862069.txt	Segment Tree	201829716	198232	2.07958	2.04224
+../datasets/avg_overlapping_stdev//8965.517241.txt	MavlyutovIndex_x1	201912651	39580	0.479925	0.668636
+../datasets/avg_overlapping_stdev//8965.517241.txt	NClist	201912474	3900	0.551579	4.55562
+../datasets/avg_overlapping_stdev//8965.517241.txt	Interval Tree	201912651	26752	0.26177	2.44731
+../datasets/avg_overlapping_stdev//8965.517241.txt	R-Tree8	201912651	36036	1.38599	5.49258
+../datasets/avg_overlapping_stdev//8965.517241.txt	R-Tree16	201912651	31416	1.57115	3.42835
+../datasets/avg_overlapping_stdev//8965.517241.txt	R-Tree32	201912651	29436	2.04251	2.67139
+../datasets/avg_overlapping_stdev//8965.517241.txt	R-Tree64	201912651	28380	2.83318	2.21752
+../datasets/avg_overlapping_stdev//8965.517241.txt	Segment Tree	201912651	198364	2.06031	2.0308
+../datasets/avg_overlapping_stdev//9655.172414.txt	MavlyutovIndex_x1	201903733	39580	0.480128	0.656606
+../datasets/avg_overlapping_stdev//9655.172414.txt	NClist	201903535	3900	0.533949	4.58623
+../datasets/avg_overlapping_stdev//9655.172414.txt	Interval Tree	201903733	26424	0.278326	2.50247
+../datasets/avg_overlapping_stdev//9655.172414.txt	R-Tree8	201903733	36036	1.41464	5.51848
+../datasets/avg_overlapping_stdev//9655.172414.txt	R-Tree16	201903733	31416	1.54677	3.53606
+../datasets/avg_overlapping_stdev//9655.172414.txt	R-Tree32	201903733	29304	2.03428	2.70533
+../datasets/avg_overlapping_stdev//9655.172414.txt	R-Tree64	201903733	28380	2.80853	2.26226
+../datasets/avg_overlapping_stdev//9655.172414.txt	Segment Tree	201903733	198364	2.07848	2.06318
+run9
+../datasets/avg_overlapping_stdev//0.000000.txt	MavlyutovIndex_x1	201905781	39580	0.471243	0.622686
+../datasets/avg_overlapping_stdev//0.000000.txt	NClist	201905613	0	0.356613	1.52667
+../datasets/avg_overlapping_stdev//0.000000.txt	Interval Tree	201905781	26556	0.259313	1.98326
+../datasets/avg_overlapping_stdev//0.000000.txt	R-Tree8	201905781	35376	1.38066	4.59096
+../datasets/avg_overlapping_stdev//0.000000.txt	R-Tree16	201905781	31288	1.60308	2.82904
+../datasets/avg_overlapping_stdev//0.000000.txt	R-Tree32	201905781	29436	2.13606	2.16916
+../datasets/avg_overlapping_stdev//0.000000.txt	R-Tree64	201905781	28512	3.02584	1.82515
+../datasets/avg_overlapping_stdev//0.000000.txt	Segment Tree	201905781	198364	2.05944	2.22728
+../datasets/avg_overlapping_stdev//10344.827586.txt	MavlyutovIndex_x1	201911761	39600	0.478005	0.674519
+../datasets/avg_overlapping_stdev//10344.827586.txt	NClist	201911558	3904	0.537659	4.65729
+../datasets/avg_overlapping_stdev//10344.827586.txt	Interval Tree	201911761	26752	0.274257	2.54745
+../datasets/avg_overlapping_stdev//10344.827586.txt	R-Tree8	201911761	36036	1.40314	5.57398
+../datasets/avg_overlapping_stdev//10344.827586.txt	R-Tree16	201911761	31420	1.56724	3.51735
+../datasets/avg_overlapping_stdev//10344.827586.txt	R-Tree32	201911761	29304	2.07063	2.73607
+../datasets/avg_overlapping_stdev//10344.827586.txt	R-Tree64	201911761	28512	2.82549	2.28948
+../datasets/avg_overlapping_stdev//10344.827586.txt	Segment Tree	201911761	198364	2.0708	2.02502
+../datasets/avg_overlapping_stdev//11034.482759.txt	MavlyutovIndex_x1	202017419	39544	0.477392	0.686523
+../datasets/avg_overlapping_stdev//11034.482759.txt	NClist	202017215	3904	0.538369	4.7833
+../datasets/avg_overlapping_stdev//11034.482759.txt	Interval Tree	202017419	26576	0.274688	2.60007
+../datasets/avg_overlapping_stdev//11034.482759.txt	R-Tree8	202017419	36036	1.39336	5.63432
+../datasets/avg_overlapping_stdev//11034.482759.txt	R-Tree16	202017419	31416	1.56869	3.51934
+../datasets/avg_overlapping_stdev//11034.482759.txt	R-Tree32	202017419	29304	2.04746	2.76351
+../datasets/avg_overlapping_stdev//11034.482759.txt	R-Tree64	202017419	28380	2.83694	2.28723
+../datasets/avg_overlapping_stdev//11034.482759.txt	Segment Tree	202017419	198232	2.07136	2.06367
+../datasets/avg_overlapping_stdev//11724.137931.txt	MavlyutovIndex_x1	201727690	39580	0.501335	0.674797
+../datasets/avg_overlapping_stdev//11724.137931.txt	NClist	201727499	3904	0.537198	4.73952
+../datasets/avg_overlapping_stdev//11724.137931.txt	Interval Tree	201727690	26444	0.263491	2.60111
+../datasets/avg_overlapping_stdev//11724.137931.txt	R-Tree8	201727690	36036	1.39711	5.66748
+../datasets/avg_overlapping_stdev//11724.137931.txt	R-Tree16	201727690	31416	1.59918	3.56833
+../datasets/avg_overlapping_stdev//11724.137931.txt	R-Tree32	201727690	29304	2.06645	2.80776
+../datasets/avg_overlapping_stdev//11724.137931.txt	R-Tree64	201727690	28380	2.80581	2.32276
+../datasets/avg_overlapping_stdev//11724.137931.txt	Segment Tree	201727690	197968	2.13579	2.04038
+../datasets/avg_overlapping_stdev//12413.793103.txt	MavlyutovIndex_x1	201805243	39544	0.479528	0.700575
+../datasets/avg_overlapping_stdev//12413.793103.txt	NClist	201805024	3904	0.541168	4.81239
+../datasets/avg_overlapping_stdev//12413.793103.txt	Interval Tree	201805243	26736	0.266496	2.62778
+../datasets/avg_overlapping_stdev//12413.793103.txt	R-Tree8	201805243	36036	1.41128	5.71349
+../datasets/avg_overlapping_stdev//12413.793103.txt	R-Tree16	201805243	31416	1.59622	3.62307
+../datasets/avg_overlapping_stdev//12413.793103.txt	R-Tree32	201805243	29436	2.10839	2.82086
+../datasets/avg_overlapping_stdev//12413.793103.txt	R-Tree64	201805243	28380	2.8207	2.35646
+../datasets/avg_overlapping_stdev//12413.793103.txt	Segment Tree	201805243	197704	2.05725	2.04302
+../datasets/avg_overlapping_stdev//13103.448276.txt	MavlyutovIndex_x1	201920016	39580	0.484126	0.707809
+../datasets/avg_overlapping_stdev//13103.448276.txt	NClist	201919814	3900	0.539253	4.83437
+../datasets/avg_overlapping_stdev//13103.448276.txt	Interval Tree	201920016	26528	0.266829	2.67319
+../datasets/avg_overlapping_stdev//13103.448276.txt	R-Tree8	201920016	36036	1.40342	5.78157
+../datasets/avg_overlapping_stdev//13103.448276.txt	R-Tree16	201920016	31416	1.58788	3.62546
+../datasets/avg_overlapping_stdev//13103.448276.txt	R-Tree32	201920016	29436	2.05017	2.83873
+../datasets/avg_overlapping_stdev//13103.448276.txt	R-Tree64	201920016	28512	2.79016	2.37421
+../datasets/avg_overlapping_stdev//13103.448276.txt	Segment Tree	201920016	197440	2.11428	2.04414
+../datasets/avg_overlapping_stdev//1379.310345.txt	MavlyutovIndex_x1	201902815	39544	0.474495	0.619546
+../datasets/avg_overlapping_stdev//1379.310345.txt	NClist	201902623	3856	0.530785	3.95843
+../datasets/avg_overlapping_stdev//1379.310345.txt	Interval Tree	201902815	26172	0.261788	2.04885
+../datasets/avg_overlapping_stdev//1379.310345.txt	R-Tree8	201902815	35772	1.37008	4.85322
+../datasets/avg_overlapping_stdev//1379.310345.txt	R-Tree16	201902815	31152	1.53565	2.99691
+../datasets/avg_overlapping_stdev//1379.310345.txt	R-Tree32	201902815	29308	2.02253	2.31404
+../datasets/avg_overlapping_stdev//1379.310345.txt	R-Tree64	201902815	28380	2.83567	1.82857
+../datasets/avg_overlapping_stdev//1379.310345.txt	Segment Tree	201902815	197968	2.09057	2.01657
+../datasets/avg_overlapping_stdev//2068.965517.txt	MavlyutovIndex_x1	201881761	39580	0.4912	0.613061
+../datasets/avg_overlapping_stdev//2068.965517.txt	NClist	201881589	3872	0.524783	4.05057
+../datasets/avg_overlapping_stdev//2068.965517.txt	Interval Tree	201881761	26448	0.26114	2.2347
+../datasets/avg_overlapping_stdev//2068.965517.txt	R-Tree8	201881761	35772	1.37567	4.98364
+../datasets/avg_overlapping_stdev//2068.965517.txt	R-Tree16	201881761	31288	1.54559	3.05302
+../datasets/avg_overlapping_stdev//2068.965517.txt	R-Tree32	201881761	29304	2.02013	2.33886
+../datasets/avg_overlapping_stdev//2068.965517.txt	R-Tree64	201881761	28116	2.83048	1.90454
+../datasets/avg_overlapping_stdev//2068.965517.txt	Segment Tree	201881761	198100	2.08343	2.03444
+../datasets/avg_overlapping_stdev//2758.620690.txt	MavlyutovIndex_x1	201891258	39544	0.478109	0.617569
+../datasets/avg_overlapping_stdev//2758.620690.txt	NClist	201891033	3880	0.529364	4.08698
+../datasets/avg_overlapping_stdev//2758.620690.txt	Interval Tree	201891258	26284	0.264861	2.13597
+../datasets/avg_overlapping_stdev//2758.620690.txt	R-Tree8	201891258	35904	1.37041	4.99038
+../datasets/avg_overlapping_stdev//2758.620690.txt	R-Tree16	201891258	31284	1.55083	3.11491
+../datasets/avg_overlapping_stdev//2758.620690.txt	R-Tree32	201891258	29304	2.11395	2.37819
+../datasets/avg_overlapping_stdev//2758.620690.txt	R-Tree64	201891258	28380	2.82231	1.94401
+../datasets/avg_overlapping_stdev//2758.620690.txt	Segment Tree	201891258	197968	2.03774	2.05445
+../datasets/avg_overlapping_stdev//3448.275862.txt	MavlyutovIndex_x1	201926465	39580	0.473928	0.638434
+../datasets/avg_overlapping_stdev//3448.275862.txt	NClist	201926245	3884	0.530456	4.15558
+../datasets/avg_overlapping_stdev//3448.275862.txt	Interval Tree	201926465	26384	0.264953	2.1886
+../datasets/avg_overlapping_stdev//3448.275862.txt	R-Tree8	201926465	35904	1.38795	5.07296
+../datasets/avg_overlapping_stdev//3448.275862.txt	R-Tree16	201926465	31284	1.55121	3.14628
+../datasets/avg_overlapping_stdev//3448.275862.txt	R-Tree32	201926465	29304	2.03236	2.43403
+../datasets/avg_overlapping_stdev//3448.275862.txt	R-Tree64	201926465	28248	2.77427	1.97208
+../datasets/avg_overlapping_stdev//3448.275862.txt	Segment Tree	201926465	197968	2.08364	2.04712
+../datasets/avg_overlapping_stdev//4137.931034.txt	MavlyutovIndex_x1	201923128	39580	0.474185	0.620594
+../datasets/avg_overlapping_stdev//4137.931034.txt	NClist	201922927	3888	0.534643	4.20509
+../datasets/avg_overlapping_stdev//4137.931034.txt	Interval Tree	201923128	26516	0.262462	2.23294
+../datasets/avg_overlapping_stdev//4137.931034.txt	R-Tree8	201923128	35904	1.39053	5.12301
+../datasets/avg_overlapping_stdev//4137.931034.txt	R-Tree16	201923128	31284	1.53345	3.21021
+../datasets/avg_overlapping_stdev//4137.931034.txt	R-Tree32	201923128	29304	2.02573	2.40633
+../datasets/avg_overlapping_stdev//4137.931034.txt	R-Tree64	201923128	28380	2.85974	2.02941
+../datasets/avg_overlapping_stdev//4137.931034.txt	Segment Tree	201923128	197968	2.03865	1.98272
+../datasets/avg_overlapping_stdev//4827.586207.txt	MavlyutovIndex_x1	201920557	39580	0.481813	0.630438
+../datasets/avg_overlapping_stdev//4827.586207.txt	NClist	201920358	3892	0.533271	4.25812
+../datasets/avg_overlapping_stdev//4827.586207.txt	Interval Tree	201920557	26580	0.266356	2.2669
+../datasets/avg_overlapping_stdev//4827.586207.txt	R-Tree8	201920557	35904	1.39514	5.01801
+../datasets/avg_overlapping_stdev//4827.586207.txt	R-Tree16	201920557	31284	1.54463	3.24005
+../datasets/avg_overlapping_stdev//4827.586207.txt	R-Tree32	201920557	29304	2.02507	2.50361
+../datasets/avg_overlapping_stdev//4827.586207.txt	R-Tree64	201920557	28248	2.79394	1.93281
+../datasets/avg_overlapping_stdev//4827.586207.txt	Segment Tree	201920557	198100	2.12288	2.0395
+../datasets/avg_overlapping_stdev//5517.241379.txt	MavlyutovIndex_x1	201893658	39580	0.473116	0.646517
+../datasets/avg_overlapping_stdev//5517.241379.txt	NClist	201893452	3892	0.53765	4.3029
+../datasets/avg_overlapping_stdev//5517.241379.txt	Interval Tree	201893658	26556	0.263745	2.26855
+../datasets/avg_overlapping_stdev//5517.241379.txt	R-Tree8	201893658	36036	1.38359	5.26222
+../datasets/avg_overlapping_stdev//5517.241379.txt	R-Tree16	201893658	31284	1.54889	3.30496
+../datasets/avg_overlapping_stdev//5517.241379.txt	R-Tree32	201893658	29304	2.08345	2.46832
+../datasets/avg_overlapping_stdev//5517.241379.txt	R-Tree64	201893658	28380	3.01173	2.09559
+../datasets/avg_overlapping_stdev//5517.241379.txt	Segment Tree	201893658	198100	2.05325	1.98406
+../datasets/avg_overlapping_stdev//6206.896552.txt	MavlyutovIndex_x1	201965129	39580	0.480593	0.643921
+../datasets/avg_overlapping_stdev//6206.896552.txt	NClist	201964951	3896	0.537758	4.34099
+../datasets/avg_overlapping_stdev//6206.896552.txt	Interval Tree	201965129	26560	0.277727	2.35341
+../datasets/avg_overlapping_stdev//6206.896552.txt	R-Tree8	201965129	36036	1.38959	5.02788
+../datasets/avg_overlapping_stdev//6206.896552.txt	R-Tree16	201965129	31284	1.57255	3.32203
+../datasets/avg_overlapping_stdev//6206.896552.txt	R-Tree32	201965129	29304	2.23026	2.59335
+../datasets/avg_overlapping_stdev//6206.896552.txt	R-Tree64	201965129	28380	2.77721	1.99626
+../datasets/avg_overlapping_stdev//6206.896552.txt	Segment Tree	201965129	198232	2.10694	2.04885
+../datasets/avg_overlapping_stdev//6896.551724.txt	MavlyutovIndex_x1	201920597	39544	0.481934	0.700793
+../datasets/avg_overlapping_stdev//6896.551724.txt	NClist	201920421	3896	0.537306	4.47264
+../datasets/avg_overlapping_stdev//6896.551724.txt	Interval Tree	201920597	26136	0.264153	2.29553
+../datasets/avg_overlapping_stdev//6896.551724.txt	R-Tree8	201920597	36036	1.39838	5.38076
+../datasets/avg_overlapping_stdev//6896.551724.txt	R-Tree16	201920597	31284	1.61956	3.36383
+../datasets/avg_overlapping_stdev//6896.551724.txt	R-Tree32	201920597	29304	2.02799	2.45592
+../datasets/avg_overlapping_stdev//6896.551724.txt	R-Tree64	201920597	28380	2.80123	2.15205
+../datasets/avg_overlapping_stdev//6896.551724.txt	Segment Tree	201920598	198232	2.09932	2.03025
+../datasets/avg_overlapping_stdev//689.655172.txt	MavlyutovIndex_x1	201914013	39544	0.472174	0.626516
+../datasets/avg_overlapping_stdev//689.655172.txt	NClist	201913808	3796	0.510011	3.83122
+../datasets/avg_overlapping_stdev//689.655172.txt	Interval Tree	201914013	26340	0.261645	1.9864
+../datasets/avg_overlapping_stdev//689.655172.txt	R-Tree8	201914013	35640	1.35176	4.64512
+../datasets/avg_overlapping_stdev//689.655172.txt	R-Tree16	201914013	31152	1.52715	2.89863
+../datasets/avg_overlapping_stdev//689.655172.txt	R-Tree32	201914013	29172	2.02192	2.20817
+../datasets/avg_overlapping_stdev//689.655172.txt	R-Tree64	201914013	28248	2.89435	1.63837
+../datasets/avg_overlapping_stdev//689.655172.txt	Segment Tree	201914013	198232	2.06304	1.99837
+../datasets/avg_overlapping_stdev//7586.206897.txt	MavlyutovIndex_x1	201946923	39544	0.476655	0.641827
+../datasets/avg_overlapping_stdev//7586.206897.txt	NClist	201946740	3900	0.535005	4.48018
+../datasets/avg_overlapping_stdev//7586.206897.txt	Interval Tree	201946923	26304	0.26468	2.36235
+../datasets/avg_overlapping_stdev//7586.206897.txt	R-Tree8	201946923	36036	1.37803	5.3859
+../datasets/avg_overlapping_stdev//7586.206897.txt	R-Tree16	201946923	31284	1.542	3.37567
+../datasets/avg_overlapping_stdev//7586.206897.txt	R-Tree32	201946923	29440	2.04989	2.53063
+../datasets/avg_overlapping_stdev//7586.206897.txt	R-Tree64	201946923	28380	2.83802	2.16439
+../datasets/avg_overlapping_stdev//7586.206897.txt	Segment Tree	201946923	198232	2.05184	1.98873
+../datasets/avg_overlapping_stdev//8275.862069.txt	MavlyutovIndex_x1	201829716	39580	0.474787	0.647796
+../datasets/avg_overlapping_stdev//8275.862069.txt	NClist	201829515	3900	0.535338	4.4955
+../datasets/avg_overlapping_stdev//8275.862069.txt	Interval Tree	201829716	26564	0.261039	2.42667
+../datasets/avg_overlapping_stdev//8275.862069.txt	R-Tree8	201829716	36036	1.38886	5.15493
+../datasets/avg_overlapping_stdev//8275.862069.txt	R-Tree16	201829716	31284	1.53922	3.33483
+../datasets/avg_overlapping_stdev//8275.862069.txt	R-Tree32	201829716	29436	2.03056	2.64169
+../datasets/avg_overlapping_stdev//8275.862069.txt	R-Tree64	201829716	28380	2.74208	2.09861
+../datasets/avg_overlapping_stdev//8275.862069.txt	Segment Tree	201829716	198232	2.02965	2.02189
+../datasets/avg_overlapping_stdev//8965.517241.txt	MavlyutovIndex_x1	201912651	39580	0.478641	0.653016
+../datasets/avg_overlapping_stdev//8965.517241.txt	NClist	201912474	3900	0.534689	4.53994
+../datasets/avg_overlapping_stdev//8965.517241.txt	Interval Tree	201912651	26752	0.26721	2.40887
+../datasets/avg_overlapping_stdev//8965.517241.txt	R-Tree8	201912651	36036	1.3894	5.39845
+../datasets/avg_overlapping_stdev//8965.517241.txt	R-Tree16	201912651	31416	1.56227	3.44099
+../datasets/avg_overlapping_stdev//8965.517241.txt	R-Tree32	201912651	29436	2.02054	2.51014
+../datasets/avg_overlapping_stdev//8965.517241.txt	R-Tree64	201912651	28380	2.81545	2.22159
+../datasets/avg_overlapping_stdev//8965.517241.txt	Segment Tree	201912651	198364	2.05756	2.02349
+../datasets/avg_overlapping_stdev//9655.172414.txt	MavlyutovIndex_x1	201903733	39580	0.480607	0.670661
+../datasets/avg_overlapping_stdev//9655.172414.txt	NClist	201903535	3900	0.534597	4.60979
+../datasets/avg_overlapping_stdev//9655.172414.txt	Interval Tree	201903733	26424	0.264493	2.51126
+../datasets/avg_overlapping_stdev//9655.172414.txt	R-Tree8	201903733	36036	1.38859	5.64389
+../datasets/avg_overlapping_stdev//9655.172414.txt	R-Tree16	201903733	31416	1.54175	3.4614
+../datasets/avg_overlapping_stdev//9655.172414.txt	R-Tree32	201903733	29304	2.01676	2.69035
+../datasets/avg_overlapping_stdev//9655.172414.txt	R-Tree64	201903733	28380	2.77803	2.24127
+../datasets/avg_overlapping_stdev//9655.172414.txt	Segment Tree	201903733	198364	2.0574	2.01928

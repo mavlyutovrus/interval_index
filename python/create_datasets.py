@@ -141,7 +141,7 @@ if 0:
         len_mean = math.ceil(len_mean * factor)
 
 
-if 0:
+if 1:
     # avg_overlapping standard deviation
     queries = []
     for query_index in xrange(QUERIES_COUNT):
@@ -149,14 +149,14 @@ if 0:
         length = 100
         queries += [(start, length)]
     
-    len_mean = 1000
+    len_mean = 10000
     DATASETS_COUNT = 30
     radius = 0
     max_radius = len_mean
     delta = (max_radius - radius) / (float(DATASETS_COUNT - 1))
     for _ in xrange(20):
         print "radius:", radius
-        if 1:
+        if 0:
             intervals = []
             lengths = [length >=0 and length or 0.0 for length in uniform(len_mean - radius, len_mean + radius, POINTS_COUNT)]
             print min(lengths), lengths[:15]
@@ -178,11 +178,11 @@ if 0:
             avg_overlapping = sum(overlappings) / float(len(overlappings))
             print sum(overlappings)
             print "avg. overlapping", avg_overlapping
-            save_dataset("../datasets/avg_overlapping_stdev/%f.txt" % (radius), intervals, queries)
+            save_dataset("../datasets/avg_overlapping_stdev/%f.txt" % (2 * radius), intervals, queries)
         radius += delta
 
 
-if 1:
+if 0:
     # different number of intervals
     intervals_counts = [10000]
     for _ in xrange(50):

@@ -1,0 +1,4 @@
+../datasets/exome_alignement/dataset.txt
+../datasets/exome_alignement/dataset.txt	MavlyutovIndex	5087754	0.0163484
+../datasets/exome_alignement/dataset.txt	ITree	5087754	0.0297413
+../datasets/exome_alignement/dataset.txt	RTree	5087754	0.070716

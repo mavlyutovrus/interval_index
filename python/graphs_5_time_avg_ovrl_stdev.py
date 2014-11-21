@@ -47,13 +47,13 @@ def draw_scatter_plot(x_values, algo2results):
         algo = algos[algo_index]
         line, = plt.plot(x_values, algo2results[algo], lw=3, color=colors[algo_index])
         line.set_zorder(1) 
-    plt.xlim([0, 600])
-    plt.ylim([0, 0.5])
+    plt.xlim([0, 13000])
+    #plt.ylim([0, 0.5])
     #plt.xscale('log')
     
     ylabel = plt.ylabel("Time per 100K queries [s]")
     ylabel.set_fontsize(font_size)
-    xlabel = plt.xlabel("Overlapping standard deviation")
+    xlabel = plt.xlabel("Interval length range")
     xlabel.set_fontsize(font_size)
 
     for ytick in plt.yticks()[1]:
