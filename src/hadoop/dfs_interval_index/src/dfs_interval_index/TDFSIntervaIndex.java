@@ -8,8 +8,12 @@ import java.io.IOException;
 import java.util.Iterator;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.PriorityQueue;
 
+import org.apache.hadoop.hdfs.client.HdfsDataInputStream;
+import org.apache.hadoop.hdfs.client.HdfsDataOutputStream;
+import org.apache.hadoop.hdfs.protocol.LocatedBlock;
 import org.apache.hadoop.io.*;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.*;
@@ -120,6 +124,10 @@ public class TDFSIntervaIndex {
 		IndexFilePath = indexFilePath;
 		IndexFile = hdfs.open(new Path(IndexFilePath + ".index"));
 		CheckpointsFile = hdfs.open(new Path(IndexFilePath + ".checkpoints"));	
+		//cache block locations
+		((HdfsDataInputStream)IndexFile).getAllBlocks();
+		((HdfsDataInputStream)IndexFile).getAllBlocks();
+		
 		FSDataInputStream metaFile = hdfs.open(new Path(IndexFilePath + ".meta"));
 		CheckpointInterval = (int)metaFile.readLong();
 		long skiplistSize = metaFile.readLong();
@@ -128,6 +136,7 @@ public class TDFSIntervaIndex {
 			SkipList.add(new TSkipListElem(metaFile.readLong(), metaFile.readDouble()));
 
 		}
+		System.out.println(SkipList.size());
 		metaFile.close();
 
 		
@@ -157,7 +166,7 @@ public class TDFSIntervaIndex {
 			jobConfig.setReducerClass(dfs_interval_index.TSortMR.Reduce.class);
 			jobConfig.setInputFormat(TextInputFormat.class);
 			jobConfig.setOutputFormat(SequenceFileOutputFormat.class);		
-			//everything will be joined into one file!
+			//NB: everything will be joined into one file
 			jobConfig.setNumReduceTasks(1);
 			
 			String jarPath = dfs_interval_index.TSortMR.Map.class.getProtectionDomain().getCodeSource().getLocation().getPath();
@@ -168,7 +177,6 @@ public class TDFSIntervaIndex {
 				//TODO: replace
 				jobConfig.setJar("/home/arslan/src/1d_interval_index/src/hadoop/dfs_interval_index.jar");
 			}
-			
 			FileInputFormat.setInputPaths(jobConfig, new Path(sourceFilePath));
 			FileOutputFormat.setOutputPath(jobConfig, new Path(sortedFile));
 			try {
@@ -182,9 +190,9 @@ public class TDFSIntervaIndex {
 		Path sortedFilePath = new Path(sortedFile + "/part-00000");
 		
 		if (calcOptimalCheckpointInterval) {
-		    Path overlappingsFilePath = new Path(sourceFilePath + ".overallpings");
-		    hdfs.delete(overlappingsFilePath, true);	
-		    FSDataOutputStream overlappingsFile = hdfs.create(overlappingsFilePath);		    
+		    //Path overlappingsFilePath = new Path(sourceFilePath + ".overallpings");
+		    //hdfs.delete(overlappingsFilePath, true);	
+		    //FSDataOutputStream overlappingsFile = hdfs.create(overlappingsFilePath);		    
 		    ArrayList<Integer> overlappingsSample = new ArrayList<Integer>();	
 		    //TODO: replace deprecated method
 		    SequenceFile.Reader reader = new SequenceFile.Reader(hdfs, sortedFilePath, config);
@@ -193,7 +201,9 @@ public class TDFSIntervaIndex {
 			NullWritable nullWritable = NullWritable.get();	
 			int processed = 0;
 			final int SAMPLE_SIZE = 1000000;
+			double max_len = 0;
 			while (reader.next(key, nullWritable)) {
+				max_len = Math.max(key.End - key.Start, max_len);
 				while (rightBordersHeap.peek() != null) {
 					if (rightBordersHeap.peek() < key.Start) {
 						rightBordersHeap.poll();
@@ -214,7 +224,7 @@ public class TDFSIntervaIndex {
 					}
 				}
 			}
-			overlappingsFile.close();
+			//overlappingsFile.close();
 			{
 				double avgOverlapping = 0.0;
 				for (int pos = 0; pos < overlappingsSample.size(); ++pos) {
@@ -237,21 +247,21 @@ public class TDFSIntervaIndex {
 					}
 				}
 			}
-			
 		}
-		
+
 		
 		IndexFilePath = indexFilePath;
-		FSDataOutputStream indexFile = hdfs.create(new Path(IndexFilePath + ".index"));
-		FSDataOutputStream checkpointsFile = hdfs.create(new Path(IndexFilePath + ".checkpoints"));
-		FSDataOutputStream metaFile = hdfs.create(new Path(IndexFilePath + ".meta"));
-		metaFile.writeLong(CheckpointInterval);
+		HdfsDataOutputStream indexFile = (HdfsDataOutputStream)hdfs.create(new Path(IndexFilePath + ".index"));
+		HdfsDataOutputStream checkpointsFile = (HdfsDataOutputStream)hdfs.create(new Path(IndexFilePath + ".checkpoints"));
+		long indexFileSize = indexFile.size();
+		long checkpointsFileSize = checkpointsFile.size();
 		
+		
+		FSDataOutputStream metaFile = hdfs.create(new Path(IndexFilePath + ".meta"));		
+		metaFile.writeLong(CheckpointInterval);
 		System.out.println(String.format("Optimal checkpoint interval: %d", CheckpointInterval));
-				
 		if (buildIndex) {
 			SkipList = new ArrayList<TSkipListElem>();
-
 			PriorityQueue<TRightBorderSorter> rightBordersHeap = new PriorityQueue<TRightBorderSorter>();
 			SequenceFile.Reader reader = new SequenceFile.Reader(hdfs, sortedFilePath, config);
 			long pageIndex = 0;
@@ -259,13 +269,12 @@ public class TDFSIntervaIndex {
 			TInterval previousInterval = null;
 			TInterval key = new TInterval();
 			NullWritable nullWritable = NullWritable.get();	
-			while (reader.next(key, nullWritable)) {
+			while (reader.next(key, nullWritable)) {	
 				if (recordIndex % 50000 == 0) {
 					System.out.println(String.format("..processed %d", recordIndex));
 				}
 				if (recordIndex % CheckpointInterval == 0) {
 					{//leave only intervals which continue
-						
 						while (rightBordersHeap.peek() != null) {
 							if (rightBordersHeap.peek().Interval.End < key.Start) {
 								rightBordersHeap.poll();
@@ -275,13 +284,12 @@ public class TDFSIntervaIndex {
 						}
 					}
 					try {
-						indexFile.writeLong(checkpointsFile.size());
-						indexFile.writeLong(checkpointsFile.size());
-						indexFile.writeLong(checkpointsFile.size());
-						indexFile.writeLong(checkpointsFile.size());
-						++recordIndex;
-						{
+						//write a checkpoint record
+						final long checkpointsSizeBeforeInsert = checkpointsFileSize;
+						double farestRigtBorder = -1;
+						{//write to checkpoints file
 							checkpointsFile.writeInt(rightBordersHeap.size());
+							checkpointsFileSize += 4;
 							PriorityQueue<TRightBorderReversedSorter> rightBordersReversedHeap = 
 										new PriorityQueue<TRightBorderReversedSorter>();
 							Iterator<TRightBorderSorter> iterator = rightBordersHeap.iterator();
@@ -289,29 +297,43 @@ public class TDFSIntervaIndex {
 								TRightBorderReversedSorter element = new TRightBorderReversedSorter(iterator.next().Interval);
 								rightBordersReversedHeap.add(element);
 							}
+							if (rightBordersReversedHeap.peek() != null) {
+								farestRigtBorder = rightBordersReversedHeap.peek().Interval.End;
+							}							
 							while (rightBordersReversedHeap.peek() != null) {
 								TInterval interval = rightBordersReversedHeap.poll().Interval;
 								checkpointsFile.writeDouble(interval.Start);
 								checkpointsFile.writeDouble(interval.End);
-								checkpointsFile.writeLong(interval.Id);								
+								checkpointsFile.writeLong(interval.Id);	
+								checkpointsFileSize += 8 * 3;
 							}
-							while (checkpointsFile.size() % MIN_BLOCK_SIZE != 0) {
+							while (checkpointsFileSize % MIN_BLOCK_SIZE != 0) {							
 								checkpointsFile.writeInt(0);
-							}
+								checkpointsFileSize += 4;
+							}						
 						}
+						
+						{//write to index file
+							indexFile.writeLong(checkpointsSizeBeforeInsert);
+							indexFile.writeDouble(farestRigtBorder);
+							indexFile.writeLong(checkpointsSizeBeforeInsert);
+							indexFile.writeLong(checkpointsSizeBeforeInsert);
+							indexFileSize += 8 * 4;
+							++recordIndex;	
+						}
+						
 					} catch (IOException exception) {
-						System.err.println(exception);
+						System.out.println(exception);
 					}
 				}
 				rightBordersHeap.add(new TRightBorderSorter(key));
-				long prevPositionInIndex = indexFile.size();
+				long prevPositionInIndex = indexFileSize;
 				indexFile.writeDouble(key.Start);
 				indexFile.writeDouble(key.End);
 				indexFile.writeLong(key.Id);
 				indexFile.writeLong(key.Id);
+				indexFileSize += 8 * 4;
 				++recordIndex;
-				//System.out.println(String.format("%f - %f - %d", key.Start, key.End, key.Id));
-				
 				long newPageIndex = prevPositionInIndex / PAGE_SIZE;
 				if (SkipList.size() == 0 || (newPageIndex > pageIndex) && (previousInterval != null) &&
 						key.Start > previousInterval.Start) {
@@ -320,8 +342,7 @@ public class TDFSIntervaIndex {
 				}
 				previousInterval = new TInterval(key);
 			}
-			SkipList.add(new TSkipListElem(indexFile.size(), previousInterval.Start + 1));
-			
+			SkipList.add(new TSkipListElem(indexFileSize, previousInterval.Start + 1));
 			
 			{
 				metaFile.writeLong(SkipList.size());
@@ -330,7 +351,6 @@ public class TDFSIntervaIndex {
 					metaFile.writeDouble(SkipList.get(index).MinLeftBorder);
 				}
 			}
-			
 			indexFile.close();
 			checkpointsFile.close();
 			metaFile.close();
@@ -359,7 +379,10 @@ public class TDFSIntervaIndex {
 	}
 	
 	public int Search(final double start, final double end) throws IOException {
-		System.out.println(String.format("search %f-%f", start, end));
+		return Search(start, end, PAGE_SIZE);
+	}
+	
+	public int Search(final double start, final double end, final int READ_SIZE) throws IOException {
 		if (end <= start) {
 			return 0;
 		}		
@@ -375,71 +398,101 @@ public class TDFSIntervaIndex {
 		
 		long uploadRightBorder = 0;
 		int lastRecordIndex = SkipList.size() - 1;
-		//TODO: rewrite to binary search
-		for (int recordIndex = 0; recordIndex < SkipList.size(); ++recordIndex) {
-			double chunkStartValue = SkipList.get(recordIndex).MinLeftBorder;
-			long chunkOffset = SkipList.get(recordIndex).Offset;
-			if (chunkStartValue > end || recordIndex == lastRecordIndex) {
-				uploadRightBorder = chunkOffset;
-				//System.out.println(String.format("first chunk: %f-%d", chunkStartValue, recordIndex));
-				break;
+		{
+			if (SkipList.get(lastRecordIndex).MinLeftBorder <= end) {
+				uploadRightBorder = SkipList.get(lastRecordIndex).Offset;
 			}
+			if (SkipList.get(0).MinLeftBorder > end) {
+				uploadRightBorder = SkipList.get(0).Offset;
+			}
+			int leftIndex = 0;
+			int rightIndex = lastRecordIndex;
+			while (rightIndex > leftIndex + 1) {
+				int middle = (rightIndex + leftIndex) / 2;
+				if (SkipList.get(middle).MinLeftBorder > end) {
+					rightIndex = middle;
+ 				} else {
+ 					leftIndex = middle;
+ 				}
+			}
+			uploadRightBorder = SkipList.get(rightIndex).Offset;
 		}
 		
 		ArrayList<TInterval> results = new ArrayList<TInterval>();
+		int readCount = 0;
+		long readTime = 0;
+		int checkpointReadCount = 0;
 	
-		byte[] buffer = new byte[PAGE_SIZE];
+		byte[] buffer = new byte[READ_SIZE];
 		double nextIntervalStart = end;
 		while (uploadRightBorder > 0) {
 			final int RECORD_SIZE = 32;
 			final int FIELD_SIZE = 8;
-			long uploadFrom = (long)(Math.max(0, Math.ceil((double)(uploadRightBorder - PAGE_SIZE) / RECORD_SIZE))) * RECORD_SIZE;
-			
+			long uploadFrom = (long)(Math.max(0, Math.ceil((double)(uploadRightBorder - READ_SIZE) / RECORD_SIZE))) * RECORD_SIZE;
 			
 			int length = (int)(uploadRightBorder - uploadFrom);
-			//System.out.println(String.format("upload: %d-%d", uploadFrom, uploadFrom + length));
 			
-			IndexFile.readFully(uploadFrom, buffer, 0, PAGE_SIZE);
+			long readTimeStart = System.currentTimeMillis();
+			IndexFile.readFully(uploadFrom, buffer, 0, READ_SIZE);
+			readTime += System.currentTimeMillis() - readTimeStart;
+			++readCount;
+			
 			ByteBuffer bufferAsStream = ByteBuffer.wrap(buffer);
 			int localProfit = 0;
 			boolean lastChunk = false;
 			for (int recordIndex = (length / RECORD_SIZE) - 1; recordIndex > -1; --recordIndex) {
-				bufferAsStream.position(recordIndex * RECORD_SIZE);
-				double intervalStart = bufferAsStream.getDouble();
-				double intervalEnd = bufferAsStream.getDouble();
-				//System.out.println(String.format(".. interval: %f - %f", intervalStart, intervalEnd));
-				long intervalId = bufferAsStream.getLong();
 				long globalRecordIndex = (uploadFrom / RECORD_SIZE) + recordIndex;
 				boolean isLinkToCheckPoints = globalRecordIndex % CheckpointInterval == 0;
 				if (isLinkToCheckPoints) {
+					//still inside the query, just skip this checkpoint
+					if (nextIntervalStart >= start) {
+						continue; 
+					}
+					boolean isFirstLinkInBuffer = recordIndex < CheckpointInterval;
+					bufferAsStream.position(recordIndex * RECORD_SIZE);
 					long checkpointPosition = bufferAsStream.getLong();
-					//checkpoints never appear between intervals having same start value, so (less or equal) is allowed
-					if (nextIntervalStart <= start) {
-						SearchInCheckpoint(results, checkpointPosition, start, end);						
+					double farestRightBorderInChArray = bufferAsStream.getDouble();
+					
+					//no more intervals that overlap the query
+					if (farestRightBorderInChArray == -1 || farestRightBorderInChArray < start) {
+						lastChunk = true;
+						break; //full stop
+					}
+					//ok, worst case, let's read from checkpoint array
+					if (isFirstLinkInBuffer) {
+						SearchInCheckpoint(results, checkpointPosition, start, end);
+						++checkpointReadCount;
 						lastChunk = true;
 						break; // full stop 
-					} else {
-						continue;
 					}
-				}
+					//use what we already read on 100%, go further
+					continue;
+				}		
 				
-				if (intervalEnd >= start && intervalStart <= end) {
-					//add to results
-					TInterval result = new TInterval();
-					result.Id = intervalId;
-					result.Start = intervalStart;
-					result.End = intervalEnd;
-					results.add(result);
-					localProfit += 1;
+				{
+					bufferAsStream.position(recordIndex * RECORD_SIZE);
+					double intervalStart = bufferAsStream.getDouble();
+					double intervalEnd = bufferAsStream.getDouble();
+					long intervalId = bufferAsStream.getLong();
+					if (intervalEnd >= start && intervalStart <= end) {
+						//add to results
+						TInterval result = new TInterval();
+						result.Id = intervalId;
+						result.Start = intervalStart;
+						result.End = intervalEnd;
+						results.add(result);
+						localProfit += 1;
+					}
+					nextIntervalStart = intervalStart;
 				}
-				nextIntervalStart = intervalStart;
 			}
-			//System.out.println(String.format("local profit: %s", localProfit));
 			if (lastChunk) {
 				break;
 			}
 			uploadRightBorder = uploadFrom;
 		}
+		
+		//return (int)readTime;		
 		return results.size();
 	}	
 	

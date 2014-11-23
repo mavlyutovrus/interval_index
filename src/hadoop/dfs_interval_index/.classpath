@@ -37,7 +37,7 @@
 	<classpathentry kind="lib" path="/home/arslan/src/1d_interval_index/src/hadoop/share/hadoop-auth.jar"/>
 	<classpathentry kind="lib" path="/home/arslan/src/1d_interval_index/src/hadoop/share/hadoop-auth-2.3.0-cdh5.1.3.jar"/>
 	<classpathentry kind="lib" path="/home/arslan/src/1d_interval_index/src/hadoop/share/hadoop-common.jar" sourcepath="/home/arslan/src/hadoop-2.3.0/share/hadoop/common/sources/hadoop-common-2.3.0-sources.jar"/>
-	<classpathentry kind="lib" path="/home/arslan/src/1d_interval_index/src/hadoop/share/hadoop-common-2.3.0-cdh5.1.3.jar"/>
+	<classpathentry kind="lib" path="/home/arslan/src/1d_interval_index/src/hadoop/share/hadoop-common-2.3.0-cdh5.1.3.jar" sourcepath="/home/arslan/src/hadoop-2.3.0/share/hadoop/common/sources/hadoop-common-2.3.0-sources.jar"/>
 	<classpathentry kind="lib" path="/home/arslan/src/1d_interval_index/src/hadoop/share/hadoop-common-2.3.0-cdh5.1.3-tests.jar"/>
 	<classpathentry kind="lib" path="/home/arslan/src/1d_interval_index/src/hadoop/share/hadoop-datajoin.jar"/>
 	<classpathentry kind="lib" path="/home/arslan/src/1d_interval_index/src/hadoop/share/hadoop-datajoin-2.3.0-cdh5.1.3.jar"/>
@@ -47,8 +47,6 @@
 	<classpathentry kind="lib" path="/home/arslan/src/1d_interval_index/src/hadoop/share/hadoop-extras-2.3.0-cdh5.1.3.jar"/>
 	<classpathentry kind="lib" path="/home/arslan/src/1d_interval_index/src/hadoop/share/hadoop-gridmix.jar"/>
 	<classpathentry kind="lib" path="/home/arslan/src/1d_interval_index/src/hadoop/share/hadoop-gridmix-2.3.0-cdh5.1.3.jar"/>
-	<classpathentry kind="lib" path="/home/arslan/src/1d_interval_index/src/hadoop/share/hadoop-hdfs.jar"/>
-	<classpathentry kind="lib" path="/home/arslan/src/1d_interval_index/src/hadoop/share/hadoop-hdfs-2.3.0-cdh5.1.3.jar"/>
 	<classpathentry kind="lib" path="/home/arslan/src/1d_interval_index/src/hadoop/share/hadoop-hdfs-2.3.0-cdh5.1.3-tests.jar"/>
 	<classpathentry kind="lib" path="/home/arslan/src/1d_interval_index/src/hadoop/share/hadoop-hdfs-nfs.jar"/>
 	<classpathentry kind="lib" path="/home/arslan/src/1d_interval_index/src/hadoop/share/hadoop-hdfs-nfs-2.3.0-cdh5.1.3.jar"/>
@@ -179,5 +177,19 @@
 	<classpathentry kind="lib" path="/home/arslan/src/1d_interval_index/src/hadoop/share/xz-1.0.jar"/>
 	<classpathentry kind="lib" path="/home/arslan/src/1d_interval_index/src/hadoop/share/zookeeper.jar"/>
 	<classpathentry kind="lib" path="/home/arslan/src/1d_interval_index/src/hadoop/share/zookeeper-3.4.5-cdh5.1.3.jar"/>
+	<classpathentry kind="lib" path="/home/arslan/src/spatialhadoop-2.2/lib/esri-geometry-api-1.1.1.jar"/>
+	<classpathentry kind="lib" path="/home/arslan/src/spatialhadoop-2.2/lib/fits.jar"/>
+	<classpathentry kind="lib" path="/home/arslan/src/spatialhadoop-2.2/lib/jhdf.jar"/>
+	<classpathentry kind="lib" path="/home/arslan/src/spatialhadoop-2.2/lib/jhdf4obj.jar"/>
+	<classpathentry kind="lib" path="/home/arslan/src/spatialhadoop-2.2/lib/jhdf5.jar"/>
+	<classpathentry kind="lib" path="/home/arslan/src/spatialhadoop-2.2/lib/jhdf5obj.jar"/>
+	<classpathentry kind="lib" path="/home/arslan/src/spatialhadoop-2.2/lib/jhdfobj.jar"/>
+	<classpathentry kind="lib" path="/home/arslan/src/spatialhadoop-2.2/lib/jhdfview.jar"/>
+	<classpathentry kind="lib" path="/home/arslan/src/spatialhadoop-2.2/lib/jts-1.8.jar"/>
+	<classpathentry kind="lib" path="/home/arslan/src/spatialhadoop-2.2/lib/junit.jar"/>
+	<classpathentry kind="lib" path="/home/arslan/src/spatialhadoop-2.2/lib/netcdf.jar"/>
+	<classpathentry kind="lib" path="/home/arslan/src/spatialhadoop-2.2/git/spatialhadoop2/dist/spatialhadoop-2.2.jar" sourcepath="/home/arslan/src/spatialhadoop-2.2/git/spatialhadoop2/src"/>
+	<classpathentry kind="lib" path="/home/arslan/src/spatialhadoop-2.2/git/spatialhadoop2/dist/spatialhadoop-main.jar"/>
+	<classpathentry kind="lib" path="/home/arslan/src/hadoop-2.3.0-src/hadoop-hdfs-project/hadoop-hdfs/target/classes" sourcepath="/home/arslan/src/hadoop-2.3.0-src/hadoop-hdfs-project/hadoop-hdfs/src/main/java"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

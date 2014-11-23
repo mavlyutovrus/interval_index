@@ -4,6 +4,10 @@ package dfs_interval_index;
 import dfs_interval_index.TDFSIntervaIndex;
 import dfs_interval_index.TMapReduceSearcher;
 import dfs_interval_index.TSpatialHadoop;
+import edu.umn.cs.spatialHadoop.core.CellInfo;
+import edu.umn.cs.spatialHadoop.core.Rectangle;
+import edu.umn.cs.spatialHadoop.core.SpatialSite;
+import edu.umn.cs.spatialHadoop.mapred.GridOutputFormat;
 
 import java.io.*;
 import java.util.*;
@@ -16,12 +20,14 @@ import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.conf.*;
 import org.apache.hadoop.hdfs.DFSInputStream;
 import org.apache.hadoop.hdfs.client.HdfsDataInputStream;
+import org.apache.hadoop.hdfs.client.HdfsDataOutputStream;
 import org.apache.hadoop.hdfs.protocol.LocatedBlock;
 import org.apache.hadoop.http.HttpConfig;
 import org.apache.hadoop.io.*;
 import org.apache.hadoop.thriftfs.api.DatanodeInfo;
 import org.apache.hadoop.util.*;
 import org.apache.hadoop.io.MapFile.*;
+import org.apache.hadoop.io.compress.SplittableCompressionCodec.READ_MODE;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -34,16 +40,20 @@ import org.apache.hadoop.io.Text;
 import org.apache.hadoop.util.ProgramDriver;
 import org.apache.hadoop.mapreduce.filecache.DistributedCache;
 
+import edu.umn.cs.spatialHadoop.core.Rectangle;
+
+
+
 
 
 public class TTests {
-
-	public TTests() {
-		// TODO Auto-generated constructor stub
-	}
-
-	public static void main(String[] args) throws IOException {
-		
+	
+	void read_test(String[] args) throws IOException {
+		/*
+		args = new String[2];
+		args[0] = "/user/ruslan/ruslan/intervals.txt";
+		args[1] = "10";
+		*/
 		String sourceFile = "/user/ruslan/ruslan/intervals.txt";
 		//String sourceFile = "/user/ruslan/ruslan/intervals.txt.short";
 		String indexFile = "/user/ruslan/ruslan/interval_index";
@@ -54,14 +64,11 @@ public class TTests {
 		config.addResource(new Path("/home/arslan/jeclipse/eclipse/workspace/hadoop_test/global_conf/mapred-site.xml"));
 		config.addResource(new Path("/home/arslan/jeclipse/eclipse/workspace/hadoop_test/global_conf/yarn-site.xml"));
 		FileSystem fs = FileSystem.get(config);
-		
 		//DFSInputStream file = new DFSInputStream();
 		
 		//String fileName = "/user/ruslan/ruslan/intervals.txt";
-		
-		
-		
-/*		args = new String[2];
+
+	/*		args = new String[2];
 		args[0] = "/user/ruslan/ruslan/intervals.txt";
 		args[1] = "10";*/
 		
@@ -142,115 +149,164 @@ public class TTests {
 				System.out.println();
 			}
 		}
+	}
+
+	public TTests() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) throws IOException {
+		
+		String sourceFile = "/user/ruslan/ruslan/intervals.txt";
+		//String sourceFile = "/user/ruslan/ruslan/intervals.txt.short";
+		String indexFile = "/user/ruslan/ruslan/interval_index";
+		
+		Configuration config = new Configuration();
+		config.addResource(new Path("/home/arslan/jeclipse/eclipse/workspace/hadoop_test/global_conf/core-site.xml"));
+		config.addResource(new Path("/home/arslan/jeclipse/eclipse/workspace/hadoop_test/global_conf/hdfs-site.xml"));
+		config.addResource(new Path("/home/arslan/jeclipse/eclipse/workspace/hadoop_test/global_conf/mapred-site.xml"));
+		config.addResource(new Path("/home/arslan/jeclipse/eclipse/workspace/hadoop_test/global_conf/yarn-site.xml"));
+		FileSystem fs = FileSystem.get(config);
 		
 		
+		//TDFSIntervaIndex index = new TDFSIntervaIndex(sourceFile, indexFile, fs, config);
 		
+		TDFSIntervaIndex index = new TDFSIntervaIndex(indexFile, fs, config);
+		int MAX_QUERIES = 100000;
+		double MIN_VALUE = 0;
+		double MAX_VALUE = 10000000000.0;
+		double QUERY_LENGHT = 1000;
+		ArrayList<Rectangle> allQueries = new ArrayList<Rectangle>();
+		Random randomizer = new Random(0); //be deterministic
+		for (int queryIndex = 0; queryIndex < MAX_QUERIES; ++queryIndex) {
+			double queryStart = randomizer.nextDouble() * (MAX_VALUE - MIN_VALUE);
+			double queryEnd = queryStart + QUERY_LENGHT;
+			allQueries.add(new Rectangle(queryStart, 0, queryEnd, 1));
+		}
 		
-		
-		
-		
-/*		
+   		ArrayList<Integer> queriesCountPerExperiment = new ArrayList<Integer>();
 		{
-
-			ArrayList<Long> sizes = new ArrayList<Long>();
-			for (int size = 1; size <= 65536 * 8; size = size << 1) {
-				for (int attempt = 0; attempt < 1000; ++attempt) {
-					sizes.add(new Long(size));					
-				}
+			int queriesCount = 1;
+			queriesCountPerExperiment.add(queriesCount);
+			queriesCount = 10;
+			int RUN_COUNT = 30;
+			double factor = Math.exp(Math.log(MAX_QUERIES / (double)(queriesCount) ) / (RUN_COUNT - 1));
+			for (; queriesCount <= MAX_QUERIES; queriesCount *= factor) {
+				queriesCountPerExperiment.add((int)queriesCount);
 			}
-			{
-				long seed = System.nanoTime();
-				Collections.shuffle(sizes, new Random(seed));
-			}	
+		}
+		
+		
+		for (int dataSetIndex = 0; dataSetIndex < queriesCountPerExperiment.size(); ++dataSetIndex) {
+			final int queriesCount = queriesCountPerExperiment.get(dataSetIndex);
+			TInterval[] queries = new TInterval[queriesCount];
+			for (int queryIndex = 0; queryIndex < queriesCount; ++queryIndex) {
+				double queryStart = allQueries.get(queryIndex).x1;
+				double queryEnd   = allQueries.get(queryIndex).x2;
+				queries[queryIndex] = new TInterval(queryStart, queryEnd, queryIndex + 1);
+			}
 			
-			String fileName = "/user/ruslan/ruslan/intervals.txt";
-			final long fileLength = fs.getContentSummary(new Path(fileName)).getLength();
-			FSDataInputStream file = fs.open(new Path(fileName));
-			//warmup
-			System.out.println(file.read());
-			Random randomizer = new Random(System.nanoTime());
-			for (int readIndex = 0; readIndex < sizes.size(); ++readIndex) {
-				long chunkLength = sizes.get(readIndex);
-				double random = randomizer.nextDouble();
-				long offset = (long)(random * (double)(fileLength - chunkLength));
-				byte[] buffer = new byte[(int)chunkLength];		
-				{
-					long start_time = System.currentTimeMillis();
-					file.readFully(offset, buffer);
-					long delta = System.currentTimeMillis() - start_time;
-					System.out.println(String.format("%d\t%d\t%d\n", offset, chunkLength, delta));
+			TMapReduceSearcher MRSearch = new TMapReduceSearcher(sourceFile, fs, config);
+			{
+				long start = System.currentTimeMillis();
+				long numberOfResults = MRSearch.Search(queries);
+				final long time = System.currentTimeMillis() - start;
+				System.out.println(String.format("mapreduce queries %d response %d time %d", queriesCount, numberOfResults, time));
+			}
+		}
+		
+		
+		/*
+		String sourceFileMBR = sourceFile + ".spatial_hadoop";
+		String SHIndexFile = sourceFile + ".saptial_hadoop_index";		
+		TSpatialHadoop spatialHadoop = new TSpatialHadoop(fs, config);
+		
+		for (int dataSetIndex = 0; dataSetIndex < queriesCountPerExperiment.size(); ++dataSetIndex) {
+			final int queriesCount = queriesCountPerExperiment.get(dataSetIndex);
+			CellInfo[] queries = new CellInfo[queriesCount];
+			for (int queryIndex = 0; queryIndex < queriesCount; ++queryIndex) {
+				double queryStart = allQueries.get(queryIndex).x1;
+				double queryEnd   = allQueries.get(queryIndex).x2;
+				queries[queryIndex] = new CellInfo(queryIndex + 1, new Rectangle(queryStart, 0, queryEnd, 1));
+			}
+			
+			{
+				long start = System.currentTimeMillis();		
+				final long response = spatialHadoop.QueryRTree(queries, SHIndexFile + "_r+tree", "r+tree");
+				final long time = System.currentTimeMillis() - start;
+				System.out.println(String.format("spatial_hadoop queries %d response %d time %d", queriesCount, response, time));
+			}
+		}
+		
+		for (int readSize = 1024; readSize <= TDFSIntervaIndex.PAGE_SIZE; readSize *= 2)
+		{
+			int queriesPerExperimentPosition = 0;
+			final long start = System.currentTimeMillis();
+			long totalResults = 0;
+			for (int queryIndex = 0; queryIndex < allQueries.size(); ++queryIndex) {
+				totalResults += index.Search(allQueries.get(queryIndex).x1, allQueries.get(queryIndex).x2, readSize);
+				boolean reportCase = false;
+				if (queriesPerExperimentPosition < queriesCountPerExperiment.size()) {
+					if (queriesCountPerExperiment.get(queriesPerExperimentPosition) == queryIndex + 1) {
+						reportCase = true;
+						++queriesPerExperimentPosition;
+					}
+				}
+				if (queryIndex % 1000 == 0 || reportCase) {
+					final long time = System.currentTimeMillis() - start;
+					System.out.println(String.format("interval_index read_size %d queries %d response %d time %d", readSize, queryIndex + 1, totalResults, time));					
 				}
 			}
-		}*/
-		
-		
-				
-		/*
-		FSDataInputStream file = fs.open(new Path(args[0]));
-		byte[] buffer = new byte[Integer.parseInt(args[2])];
-		final int offset = Integer.parseInt(args[1]);
-		long start_time = System.currentTimeMillis();
-		file.readFully(offset, buffer);
-		System.out.println(System.currentTimeMillis() - start_time);
-		*/
-		
-		
-		/*
-		for (int endOffset = 0; endOffset < 65536 * 3; endOffset += 65536) {
-			for (int size = 1; size <= 65536; size *= 2) {
-				byte[] buffer = new byte[size + endOffset];
-				
-				long start_time = System.currentTimeMillis();
-				file.readFully(0, buffer);
-				System.out.println(System.currentTimeMillis() - start_time);
-
-				start_time = System.currentTimeMillis();
-				file.readFully(65536, buffer);
-				System.out.println(System.currentTimeMillis() - start_time);
-				
-				start_time = System.currentTimeMillis();
-				file.readFully(65536 * 10, buffer);
-				System.out.println(System.currentTimeMillis() - start_time);
-				
-				break;
-			}
-			break;
 		}
 		*/
-		return;
+
 		
-		
-		
-		//String sourceFileMBR = sourceFile + ".spatial_hadoop";
-		//String SHIndexFile = sourceFile + ".saptial_hadoop_index";
+
+		//spatialHadoop.Convert2MBR(0, 10000020000.0, sourceFile, sourceFileMBR);
+		//spatialHadoop.CreateIndex(sourceFileMBR, SHIndexFile + "_rtree", "rtree");
+		//spatialHadoop.CreateIndex(sourceFileMBR, SHIndexFile + "_r+tree", "r+tree");
+		//spatialHadoop.CreateIndex(sourceFileMBR, SHIndexFile + "_grid", "grid");
 		
 		
 		/*
-		TSpatialHadoop spatialHadoop = new TSpatialHadoop(fs, config);
-		spatialHadoop.Convert2MBR(sourceFile, sourceFileMBR);
-		spatialHadoop.CreateIndex(sourceFileMBR, SHIndexFile);
 		{
 			long start = System.currentTimeMillis();		
-			long response = spatialHadoop.Query(0, 1000, SHIndexFile);
-			System.out.println(String.format("Response size: %d", response));
+			long response = spatialHadoop.Query(0, 1000, SHIndexFile + "_rtree", "rtree");
+			System.out.println(String.format("response shadoop_rtree: %d", response));
+			System.out.println(String.format("time: %d", System.currentTimeMillis() - start));
+		}
+		{
+			long start = System.currentTimeMillis();		
+			long response = spatialHadoop.Query(0, 1000, SHIndexFile + "_r+tree", "r+tree");
+			System.out.println(String.format("response shadoop_r+tree: %d", response));
+			System.out.println(String.format("time: %d", System.currentTimeMillis() - start));
+		}
+		{
+			long start = System.currentTimeMillis();		
+			long response = spatialHadoop.Query(0, 1000, SHIndexFile + "_grid", "grid");
+			System.out.println(String.format("response shadoop_grid: %d", response));
 			System.out.println(String.format("time: %d", System.currentTimeMillis() - start));
 		}
 		{
 			long start = System.currentTimeMillis();
 			TMapReduceSearcher MRSearch = new TMapReduceSearcher(sourceFile, fs, config);
 			long numberOfResults = MRSearch.Search(0, 1000);
-			System.out.println(String.format(".. test case %d", numberOfResults));
+			System.out.println(String.format("response mapreduce: %d", numberOfResults));
 			System.out.println(String.format("time: %d", System.currentTimeMillis() - start));
 		}
 		*/
+				
+		
 		
 		
 		//TDFSIntervaIndex index = new TDFSIntervaIndex(sourceFile, indexFile, fs, config);
+		
 		/*
 		TDFSIntervaIndex index = new TDFSIntervaIndex(indexFile, fs, config);
 		Random rand = new Random();
 		for (int testCase = 0; testCase < 100000; ++testCase) {
-			double queryStart =  rand.nextDouble() * (5000000);
+			long MAX = (long)1000000000 * 10;
+			double queryStart =  rand.nextDouble() * MAX;
 			double queryEnd =   queryStart + rand.nextDouble() * 10000;
 			long numberOfIndexResults = index.Search(queryStart, queryEnd);
 			TMapReduceSearcher MRSearch = new TMapReduceSearcher(sourceFile, fs, config);
@@ -259,10 +315,11 @@ public class TTests {
 				System.err.println(String.format("ERRor %f-%f: %d != %d", queryStart, queryEnd, numberOfResults, numberOfIndexResults));
 				System.exit(1);
 			}
-			System.out.println(String.format(".. test case %d", testCase));
+			System.out.println(String.format(".. test case %d: [%f,%f], %d", testCase, queryStart, queryEnd, numberOfIndexResults));
 		}
 		*/
 		
+	
 	}
 
 }
