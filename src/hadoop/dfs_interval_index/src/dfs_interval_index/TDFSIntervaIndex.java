@@ -35,6 +35,10 @@ public class TDFSIntervaIndex {
 	public static final int MIN_BLOCK_SIZE = 512;
 	private ArrayList<TSkipListElem> SkipList;
 	private String IndexFilePath;
+	
+	public long CheckpointSearches;
+	public long ReadsCount;
+	
 	FSDataInputStream IndexFile;
 	FSDataInputStream CheckpointsFile;
 	
@@ -434,6 +438,7 @@ public class TDFSIntervaIndex {
 			
 			long readTimeStart = System.currentTimeMillis();
 			IndexFile.readFully(uploadFrom, buffer, 0, READ_SIZE);
+			++ReadsCount;
 			readTime += System.currentTimeMillis() - readTimeStart;
 			++readCount;
 			
@@ -461,6 +466,7 @@ public class TDFSIntervaIndex {
 					//ok, worst case, let's read from checkpoint array
 					if (isFirstLinkInBuffer) {
 						SearchInCheckpoint(results, checkpointPosition, start, end);
+						++CheckpointSearches;
 						++checkpointReadCount;
 						lastChunk = true;
 						break; // full stop 

@@ -98,9 +98,7 @@ public class TMapReduceSearcher {
 		Counters counters = runningJob.getCounters();
 		Counter outputRecordCounter = counters.findCounter(TaskCounter.MAP_OUTPUT_RECORDS);
 		final long resultCount = outputRecordCounter.getValue();
-		return resultCount;		
-			
-		/*
+		
 		long numberOfResults = 0;
 		FileStatus[] reduceFiles = HDFS.listStatus(new Path(resultsFile + "/"));
 		for (FileStatus status : reduceFiles) {
@@ -116,7 +114,7 @@ public class TMapReduceSearcher {
 			}
 	    }
 		return numberOfResults;
-		*/
+		
 	}
 	
 	public static class TSearchMap extends MapReduceBase implements Mapper<LongWritable, Text, TInterval, NullWritable> {

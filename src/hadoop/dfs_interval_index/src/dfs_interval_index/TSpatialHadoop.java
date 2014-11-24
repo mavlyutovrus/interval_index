@@ -1,5 +1,6 @@
 package dfs_interval_index;
 
+import java.io.EOFException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -14,9 +15,11 @@ import org.apache.hadoop.fs.FileStatus;
 import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.fs.PathFilter;
+import org.apache.hadoop.hdfs.client.HdfsDataInputStream;
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.NullWritable;
+import org.apache.hadoop.io.SequenceFile;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.io.Writable;
 import org.apache.hadoop.mapred.ClusterStatus;
@@ -69,7 +72,6 @@ import edu.umn.cs.spatialHadoop.operations.RangeQuery.RangeQueryMap;
 import edu.umn.cs.spatialHadoop.operations.RangeQuery.RangeQueryMapNoDupAvoidance;
 import edu.umn.cs.spatialHadoop.operations.Repartition.RepartitionReduce;
 
-
 import java.util.Iterator;
 
 public class TSpatialHadoop {
@@ -120,7 +122,8 @@ public class TSpatialHadoop {
 		params.set("shape", "rect");
 		
 	    Path inFile = new Path(indexPath);
-	    Path outputPath = new Path("/user/ruslan/ruslan/spatialhadoop.query");
+	    String outputFile = "/user/ruslan/ruslan/spatialhadoop.query";
+	    Path outputPath = new Path(outputFile);
 	    if (HDFS.exists(outputPath)) {
 	    	HDFS.delete(outputPath, true);
 	    }
@@ -199,7 +202,25 @@ public class TSpatialHadoop {
 		Counters counters = runningJob.getCounters();
 		Counter outputRecordCounter = counters.findCounter(TaskCounter.MAP_OUTPUT_RECORDS);
 		final long resultCount = outputRecordCounter.getValue();
-
+		
+		FileStatus[] reduceFiles = HDFS.listStatus(new Path(outputFile + "/"));
+		for (FileStatus status : reduceFiles) {
+	        Path path = status.getPath();
+	        if (path.toString().endsWith("_SUCCESS")) {
+	        	continue;
+	        }
+	        FSDataInputStream file = HDFS.open(path);
+	        long size = 0;
+	        final int READ_SIZE = 65536;
+	        byte[] buffer = new byte[READ_SIZE];
+	        try {
+	        	while (file.available() > 0) {
+	        		file.readFully(buffer);
+	        		size += READ_SIZE;
+	        	}
+	        } catch (EOFException e) {
+	        }
+	    }
 		return resultCount;
 	}
 	
