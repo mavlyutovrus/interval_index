@@ -99,6 +99,7 @@ public class TMapReduceSearcher {
 		Counter outputRecordCounter = counters.findCounter(TaskCounter.MAP_OUTPUT_RECORDS);
 		final long resultCount = outputRecordCounter.getValue();
 		
+		/*
 		long numberOfResults = 0;
 		FileStatus[] reduceFiles = HDFS.listStatus(new Path(resultsFile + "/"));
 		for (FileStatus status : reduceFiles) {
@@ -113,7 +114,8 @@ public class TMapReduceSearcher {
 				++numberOfResults;
 			}
 	    }
-		return numberOfResults;
+	    */
+		return resultCount;
 		
 	}
 	

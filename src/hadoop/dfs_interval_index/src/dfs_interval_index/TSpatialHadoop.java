@@ -112,7 +112,23 @@ public class TSpatialHadoop {
 		Path InPath = new Path(indexPath);
 		Path OutPath = new Path("/user/ruslan/ruslan/sp_results");
 		HDFS.delete(OutPath, true);
-		return RangeQuery.rangeQuery(InPath, OutPath, new Rectangle(queryLeft, 0, queryRight, 1), params);
+		long resultCount = RangeQuery.rangeQuery(InPath, OutPath, new Rectangle(queryLeft, 0, queryRight, 1), params);
+		//upload results to a client machine
+		FileStatus[] reduceFiles = HDFS.listStatus(new Path(OutPath.toString() + "/"));
+		for (FileStatus status : reduceFiles) {
+	        Path path = status.getPath();
+	        if (path.toString().endsWith("_SUCCESS")) {
+	        	continue;
+	        }
+	        FSDataInputStream file = HDFS.open(path);
+	        //try {
+		        HDFS.copyToLocalFile(path, new Path("temp.txt"));
+		        FileSystem.getLocal(Config).delete(new Path("temp.txt"), true);
+	        //} catch (IOException e) {
+	        //	continue;
+	        //}
+	    }
+		return resultCount;
 	}
 	
 	public long QueryRTree(CellInfo[] queries, String indexPath, String indexType) throws IOException {
@@ -210,16 +226,12 @@ public class TSpatialHadoop {
 	        	continue;
 	        }
 	        FSDataInputStream file = HDFS.open(path);
-	        long size = 0;
-	        final int READ_SIZE = 65536;
-	        byte[] buffer = new byte[READ_SIZE];
-	        try {
-	        	while (file.available() > 0) {
-	        		file.readFully(buffer);
-	        		size += READ_SIZE;
-	        	}
-	        } catch (EOFException e) {
-	        }
+	        //try {
+		        HDFS.copyToLocalFile(path, new Path("temp.txt"));
+		        FileSystem.getLocal(Config).delete(new Path("temp.txt"), true);
+	        //} catch (IOException e) {
+	        //	continue;
+	        //}
 	    }
 		return resultCount;
 	}

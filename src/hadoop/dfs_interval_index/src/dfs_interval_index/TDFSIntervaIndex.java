@@ -150,7 +150,7 @@ public class TDFSIntervaIndex {
 	public TDFSIntervaIndex(String sourceFilePath, String indexFilePath, FileSystem hdfs, Configuration config) 
 																			throws IOException {	
 		
-		boolean preSort = false;
+		boolean preSort = true;
 		boolean calcOptimalCheckpointInterval = true;
 		boolean buildIndex = true;
 		String sortedFile = sourceFilePath + ".sorted";
@@ -311,10 +311,10 @@ public class TDFSIntervaIndex {
 								checkpointsFile.writeLong(interval.Id);	
 								checkpointsFileSize += 8 * 3;
 							}
-							while (checkpointsFileSize % MIN_BLOCK_SIZE != 0) {							
-								checkpointsFile.writeInt(0);
-								checkpointsFileSize += 4;
-							}						
+							//while (checkpointsFileSize % MIN_BLOCK_SIZE != 0) {							
+							//	checkpointsFile.writeInt(0);
+							//	checkpointsFileSize += 4;
+							//}				
 						}
 						
 						{//write to index file
@@ -382,11 +382,11 @@ public class TDFSIntervaIndex {
 		}
 	}
 	
-	public int Search(final double start, final double end) throws IOException {
+	public long Search(final double start, final double end) throws IOException {
 		return Search(start, end, PAGE_SIZE);
 	}
 	
-	public int Search(final double start, final double end, final int READ_SIZE) throws IOException {
+	public long Search(final double start, final double end, final int READ_SIZE) throws IOException {
 		if (end <= start) {
 			return 0;
 		}		
@@ -497,8 +497,6 @@ public class TDFSIntervaIndex {
 			}
 			uploadRightBorder = uploadFrom;
 		}
-		
-		//return (int)readTime;		
 		return results.size();
 	}	
 	
