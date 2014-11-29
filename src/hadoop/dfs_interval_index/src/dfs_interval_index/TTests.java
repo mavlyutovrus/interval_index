@@ -24,7 +24,7 @@ import org.apache.hadoop.hdfs.client.HdfsDataOutputStream;
 import org.apache.hadoop.hdfs.protocol.LocatedBlock;
 import org.apache.hadoop.http.HttpConfig;
 import org.apache.hadoop.io.*;
-import org.apache.hadoop.thriftfs.api.DatanodeInfo;
+import org.apache.hadoop.hdfs.protocol.DatanodeInfo;
 import org.apache.hadoop.util.*;
 import org.apache.hadoop.io.MapFile.*;
 import org.apache.hadoop.io.compress.SplittableCompressionCodec.READ_MODE;
@@ -188,7 +188,27 @@ public class TTests {
 		config.addResource(new Path("/home/arslan/jeclipse/eclipse/workspace/hadoop_test/global_conf/hdfs-site.xml"));
 		config.addResource(new Path("/home/arslan/jeclipse/eclipse/workspace/hadoop_test/global_conf/mapred-site.xml"));
 		config.addResource(new Path("/home/arslan/jeclipse/eclipse/workspace/hadoop_test/global_conf/yarn-site.xml"));
+		config.addResource(new Path("core-site.xml"));
+		config.addResource(new Path("hdfs-site.xml"));
+		config.addResource(new Path("mapred-site.xml"));
+		config.addResource(new Path("yarn-site.xml"));
 		FileSystem fs = FileSystem.get(config);
+		
+		/*
+		HdfsDataInputStream IndexFile = (HdfsDataInputStream)fs.open(new Path("/user/ruslan/ruslan/intervals_1000000000_100.txt"));
+		List<LocatedBlock> blocks = IndexFile.getAllBlocks(); 
+		int count = 0;
+		int blockIndex = 0;
+		for (LocatedBlock block : blocks) {
+			for (DatanodeInfo info :block.getLocations()) {
+				if (info.getHostName().contains("301")) {
+					System.out.println(info.getHostName());
+				}
+			}
+		}
+		*/
+		
+		
 		
 		long[] datasetSizes = {(long)Math.pow(10, 7), (long)Math.pow(10, 8), (long)Math.pow(10, 9)};
 		int[] avgOverlappings = {10, 100, 10000};
@@ -242,67 +262,82 @@ public class TTests {
 		*/
 
 		//query performance
-		/*
-		Random randomizer = new Random(0);
-		double[] queryLengths = {100, 10000};
-		for (int sizeIndex = 0; sizeIndex < datasetSizes.length; ++sizeIndex) {
-			for (int overlappingIndex = 0; overlappingIndex < avgOverlappings.length; ++overlappingIndex) {
-				final long datasetSize = datasetSizes[sizeIndex];
-				final int avgOverlapping = avgOverlappings[overlappingIndex];
-				if (datasetSize == (long)Math.pow(10, 9) && avgOverlapping != 100) {
-					continue;
-				}
-				String filename = String.format("/user/ruslan/ruslan/intervals_%d_%d.txt", datasetSize, avgOverlapping);
-				System.out.println("RESPONSE for " + filename);
-				
-				for (int lengthIndex = 0; lengthIndex < queryLengths.length; ++lengthIndex) {
-					double queryLength = queryLengths[lengthIndex];
-					final int ATTEMPTS = 10;
-					for (int attempt = 0; attempt < ATTEMPTS; ++attempt) {
-						{
-							TDFSIntervaIndex index = new TDFSIntervaIndex(filename + ".index", fs, config);
-							index.ReadsCount = 0;
-							double responseSize = 0;
-							long startTime = System.currentTimeMillis();
-							final int II_QUERIES = 10000;
-							for (int queryIndex = 0; queryIndex < II_QUERIES; ++queryIndex) {
-								double queryStart = randomizer.nextDouble() * (MAX_START - MIN_START) + MIN_START;
-								responseSize += index.Search(queryStart, queryStart + queryLength);
-							}
-							double timeDelta = (double)(System.currentTimeMillis() - startTime) / II_QUERIES;
-							responseSize = responseSize / II_QUERIES;
-							double readsCount = (double)index.ReadsCount / II_QUERIES;
-							System.out.println(String.format("RESPONSE interval_index_cold read_count %f qlen %f response_size %f time %f", 
-																			readsCount, queryLength, responseSize, timeDelta));						
-						}
-
-						{
-							TSpatialHadoop shIndex = new TSpatialHadoop(fs, config);
-							long startTime = System.currentTimeMillis();
-							double queryStart = randomizer.nextDouble() * (MAX_START - MIN_START) + MIN_START;
-							long responseSize = shIndex.Query(queryStart, queryStart + queryLength, filename + ".shindex", "r+tree");
-							long timeDelta = System.currentTimeMillis() - startTime;
-							System.out.println(String.format("RESPONSE spatial_hadoop qlen %f response_size %d time %d", 
-																					queryLength, responseSize, timeDelta));
-						}
-						
-						{
-							TMapReduceSearcher MapReduceSearch = new TMapReduceSearcher(filename, fs, config);
-							long startTime = System.currentTimeMillis();
-							double queryStart = randomizer.nextDouble() * (MAX_START - MIN_START) + MIN_START;
-							TInterval[] queries = {new TInterval(queryStart, queryStart + queryLength, 1)};
-							long responseSize = MapReduceSearch.Search(queries);
-							long timeDelta = System.currentTimeMillis() - startTime;
-							System.out.println(String.format("RESPONSE map_reduce qlen %f response_size %d time %d", 
-																					queryLength, responseSize, timeDelta));
-						}
+		{
+			Random randomizer = new Random(0);
+			for (int sizeIndex = 0; sizeIndex < datasetSizes.length; ++sizeIndex) {
+				for (int overlappingIndex = 0; overlappingIndex < avgOverlappings.length; ++overlappingIndex) {
+					final long datasetSize = datasetSizes[sizeIndex];
+					final int avgOverlapping = avgOverlappings[overlappingIndex];
+					if (datasetSize == (long)Math.pow(10, 9) && avgOverlapping != 100) {
+						continue;
 					}
+					if (datasetSize != (long)Math.pow(10, 9)) {
+						continue;
+					}
+					
+					String filename = String.format("/user/ruslan/ruslan/intervals_%d_%d.txt", datasetSize, avgOverlapping);
+					System.out.println("RESPONSE for " + filename);
+					TDFSIntervaIndex index = new TDFSIntervaIndex(filename + ".index", fs, config);
+//					{//warmup
+//						index.ReadsCount = 0;
+//						double responseSize = 0;
+//						long startTime = System.currentTimeMillis();
+//						final int II_QUERIES = 1000000;
+//						for (int queryIndex = 0; queryIndex < II_QUERIES; ++queryIndex) {
+//							double queryStart = randomizer.nextDouble() * (MAX_START - MIN_START) + MIN_START;
+//							responseSize += index.Search(queryStart, queryStart + 1000);
+//						}
+//						double timeDelta = (double)(System.currentTimeMillis() - startTime) / II_QUERIES;
+//						responseSize = responseSize / II_QUERIES;
+//						double readsCount = (double)index.ReadsCount / II_QUERIES;
+//						//System.out.println(String.format("RESPONSE interval_index_cold read_count %f qlen %f response_size %f time %f", 
+//						//												readsCount, queryLength, responseSize, timeDelta));						
+//					}					
+					double[] queryLengths = {10000, 100};
+					for (int lengthIndex = 0; lengthIndex < queryLengths.length; ++lengthIndex) {
+						double queryLength = queryLengths[lengthIndex];
+						final int ATTEMPTS = 100;
+						for (int attempt = 0; attempt < ATTEMPTS; ++attempt) {
+//							{
+//								index.ReadsCount = 0;
+//								double responseSize = 0;
+//								long startTime = System.currentTimeMillis();
+//								final int II_QUERIES = 10;
+//								for (int queryIndex = 0; queryIndex < II_QUERIES; ++queryIndex) {
+//									double queryStart = randomizer.nextDouble() * (MAX_START - MIN_START) + MIN_START;
+//									responseSize += index.Search(queryStart, queryStart + queryLength);
+//								}
+//								double timeDelta = (double)(System.currentTimeMillis() - startTime) / II_QUERIES;
+//								responseSize = responseSize / II_QUERIES;
+//								double readsCount = (double)index.ReadsCount / II_QUERIES;
+//								System.out.println(String.format("RESPONSE interval_index_cold read_count %f qlen %f response_size %f time %f", 
+//																				readsCount, queryLength, responseSize, timeDelta));						
+//							}
+//							{
+//								TSpatialHadoop shIndex = new TSpatialHadoop(fs, config);
+//								long startTime = System.currentTimeMillis();
+//								double queryStart = randomizer.nextDouble() * (MAX_START - MIN_START) + MIN_START;
+//								long responseSize = shIndex.Query(queryStart, queryStart + queryLength, filename + ".shindex", "r+tree");
+//								long timeDelta = System.currentTimeMillis() - startTime;
+//								System.out.println(String.format("RESPONSE spatial_hadoop qlen %f response_size %d time %d", 
+//																						queryLength, responseSize, timeDelta));
+//							}
+//							
+//							{
+//								TMapReduceSearcher MapReduceSearch = new TMapReduceSearcher(filename, fs, config);
+//								long startTime = System.currentTimeMillis();
+//								double queryStart = randomizer.nextDouble() * (MAX_START - MIN_START) + MIN_START;
+//								TInterval[] queries = {new TInterval(queryStart, queryStart + queryLength, 1)};
+//								long responseSize = MapReduceSearch.Search(queries);
+//								long timeDelta = System.currentTimeMillis() - startTime;
+//								System.out.println(String.format("RESPONSE map_reduce qlen %f response_size %d time %d", 
+//																						queryLength, responseSize, timeDelta));
+//							}
+						}
+					}	
 				}
 			}
-		}	
-		*/
-		
-		
+		}
 		
 		{//real dataset
 			TInterval[] queries = {new TInterval(73427291.000000, 73427411.000000, 0),
@@ -362,57 +397,55 @@ public class TTests {
 			{//queries
 				Random randomizer = new Random(0);
 				TDFSIntervaIndex index = new TDFSIntervaIndex(EXOME_DATASET + ".index", fs, config);
-				{//warmup
-					
-					index.ReadsCount = 0;
-					double responseSize = 0;
-					long startTime = System.currentTimeMillis();
-					final int II_QUERIES = 10000;
-					for (int queryIndex = 0; queryIndex < II_QUERIES; ++queryIndex) {
-						double queryStart = randomizer.nextDouble() * MAX_BP_INDEX;
-						responseSize += index.Search(queryStart, queryStart + 1000);
-					}
-					double timeDelta = (double)(System.currentTimeMillis() - startTime) / II_QUERIES;
-					responseSize = responseSize / II_QUERIES;
-					double readsCount = (double)index.ReadsCount / II_QUERIES;
-					//System.out.println(String.format("RESPONSE interval_index_cold read_count %f qlen %f response_size %f time %f", 
-					//												readsCount, queryLength, responseSize, timeDelta));						
-				}
-				final int ATTEMPTS = 10;
+//				{//warmup
+//					
+//					index.ReadsCount = 0;
+//					double responseSize = 0;
+//					long startTime = System.currentTimeMillis();
+//					final int II_QUERIES = 100000;
+//					for (int queryIndex = 0; queryIndex < II_QUERIES; ++queryIndex) {
+//						double queryStart = randomizer.nextDouble() * MAX_BP_INDEX;
+//						responseSize += index.Search(queryStart, queryStart + 1000);
+//					}
+//					double timeDelta = (double)(System.currentTimeMillis() - startTime) / II_QUERIES;
+//					responseSize = responseSize / II_QUERIES;
+//					double readsCount = (double)index.ReadsCount / II_QUERIES;
+//					//System.out.println(String.format("RESPONSE interval_index_cold read_count %f qlen %f response_size %f time %f", 
+//					//												readsCount, queryLength, responseSize, timeDelta));						
+//				}
+				final int ATTEMPTS = 30;
 				for (int attempt = 0; attempt < ATTEMPTS; ++attempt) {
-					{
-						index.ReadsCount = 0;
-						double responseSize = 0;
-						long startTime = System.currentTimeMillis();
-						final int II_QUERIES = 1;
-						double queryStart = queries[attempt].Start;
-						double queryEnd = queries[attempt].End;
-						responseSize += index.Search(queryStart, queryEnd);
-						double timeDelta = (double)(System.currentTimeMillis() - startTime) / II_QUERIES;
-						responseSize = responseSize / II_QUERIES;
-						double readsCount = (double)index.ReadsCount / II_QUERIES;
-						System.out.println(String.format("RESPONSE interval_index_cold read_count %f qlen 120 response_size %f time %f", 
-																		readsCount, responseSize, timeDelta));						
-					}
-
-					{
-						TSpatialHadoop shIndex = new TSpatialHadoop(fs, config);
-						long startTime = System.currentTimeMillis();
-						long responseSize = shIndex.Query(queries[attempt].Start, queries[attempt].End, EXOME_DATASET + ".shindex", "r+tree");
-						long timeDelta = System.currentTimeMillis() - startTime;
-						System.out.println(String.format("RESPONSE spatial_hadoop qlen 120 response_size %d time %d", 
-																				responseSize, timeDelta));
-					}
-					
-					{
-						TMapReduceSearcher MapReduceSearch = new TMapReduceSearcher(EXOME_DATASET, fs, config);
-						long startTime = System.currentTimeMillis();
-						TInterval[] query = {queries[attempt]};
-						long responseSize = MapReduceSearch.Search(query);
-						long timeDelta = System.currentTimeMillis() - startTime;
-						System.out.println(String.format("RESPONSE map_reduce qlen 120 response_size %d time %d", 
-																				responseSize, timeDelta));
-					}
+//					{
+//						index.ReadsCount = 0;
+//						double responseSize = 0;
+//						long startTime = System.currentTimeMillis();
+//						final int II_QUERIES = 1;
+//						double queryStart = queries[attempt].Start;
+//						double queryEnd = queries[attempt].End;
+//						responseSize += index.Search(queryStart, queryEnd);
+//						double timeDelta = (double)(System.currentTimeMillis() - startTime) / II_QUERIES;
+//						responseSize = responseSize / II_QUERIES;
+//						double readsCount = (double)index.ReadsCount / II_QUERIES;
+//						System.out.println(String.format("RESPONSE interval_index_cold read_count %f qlen 120 response_size %f time %f", 
+//																		readsCount, responseSize, timeDelta));						
+//					}					
+//					{
+//						TSpatialHadoop shIndex = new TSpatialHadoop(fs, config);
+//						long startTime = System.currentTimeMillis();
+//						long responseSize = shIndex.Query(queries[attempt].Start, queries[attempt].End, EXOME_DATASET + ".shindex", "r+tree");
+//						long timeDelta = System.currentTimeMillis() - startTime;
+//						System.out.println(String.format("RESPONSE spatial_hadoop qlen 120 response_size %d time %d", 
+//																				responseSize, timeDelta));
+//					}
+//					{
+//						TMapReduceSearcher MapReduceSearch = new TMapReduceSearcher(EXOME_DATASET, fs, config);
+//						long startTime = System.currentTimeMillis();
+//						TInterval[] query = {queries[attempt]};
+//						long responseSize = MapReduceSearch.Search(query);
+//						long timeDelta = System.currentTimeMillis() - startTime;
+//						System.out.println(String.format("RESPONSE map_reduce qlen 120 response_size %d time %d", 
+//																				responseSize, timeDelta));
+//					}
 				}				
 			}
 		}

@@ -252,7 +252,6 @@ public class TDFSIntervaIndex {
 				}
 			}
 		}
-
 		
 		IndexFilePath = indexFilePath;
 		HdfsDataOutputStream indexFile = (HdfsDataOutputStream)hdfs.create(new Path(IndexFilePath + ".index"));
@@ -387,6 +386,8 @@ public class TDFSIntervaIndex {
 	}
 	
 	public long Search(final double start, final double end, final int READ_SIZE) throws IOException {
+
+		
 		if (end <= start) {
 			return 0;
 		}		
@@ -423,7 +424,6 @@ public class TDFSIntervaIndex {
 		}
 		
 		ArrayList<TInterval> results = new ArrayList<TInterval>();
-		int readCount = 0;
 		long readTime = 0;
 		int checkpointReadCount = 0;
 	
@@ -440,7 +440,6 @@ public class TDFSIntervaIndex {
 			IndexFile.readFully(uploadFrom, buffer, 0, READ_SIZE);
 			++ReadsCount;
 			readTime += System.currentTimeMillis() - readTimeStart;
-			++readCount;
 			
 			ByteBuffer bufferAsStream = ByteBuffer.wrap(buffer);
 			int localProfit = 0;
