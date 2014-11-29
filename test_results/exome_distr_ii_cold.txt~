@@ -1,4 +1,6 @@
 2014-11-28 21:52:09,775 WARN  [main] util.NativeCodeLoader (NativeCodeLoader.java:<clinit>(62)) - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+RESPONSE for /user/ruslan/ruslan/intervals_1000000000_100.txt
+493215
 108367
 RESPONSE interval_index_cold read_count 2.000000 qlen 120 response_size 541.000000 time 16.000000
 RESPONSE interval_index_cold read_count 1.000000 qlen 120 response_size 474.000000 time 4.000000

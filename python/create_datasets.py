@@ -5,11 +5,16 @@ import numpy as np
 import math
 import random
 from heapq import heapify, heappush, heappop
+from Cython.Plex.Regexps import Char
 
 MIN = 0
 MAX = 10000000
 POINTS_COUNT = 1000000
 QUERIES_COUNT = 200000
+
+
+
+
 
 
 def save_dataset(filename, intervals, queries):
@@ -141,7 +146,7 @@ if 0:
         len_mean = math.ceil(len_mean * factor)
 
 
-if 1:
+if 0:
     # avg_overlapping standard deviation
     queries = []
     for query_index in xrange(QUERIES_COUNT):
@@ -249,7 +254,7 @@ if 0:
         print "avg. overlapping", avg_overlapping
     save_dataset("../datasets/exome_alignement/dataset.txt", intervals, queries)
 
-if 0:
+if 1:
     #real: time intervals
     import os
     path = "../datasets/time_intervals/"
@@ -263,8 +268,17 @@ if 0:
            start, end = [float(item) for item in line.split("\t")[1:-1]]
            intervals += [(start, end - start)]
     min_left = min(left for left, _ in intervals )
-    intervals = [(start - min_left, end) for start, end in intervals]
-           
+    max_right = max(left + length for left, length in intervals)
+    max_right -= min_left
+    intervals = [(start - min_left, length) for start, length in intervals]
+    
+    queries = []
+    for query_index in xrange(100000):
+        start = random.random() * max_right
+        length = 100
+        queries += [(start, length)]
+    
+    save_dataset("../datasets/time_intervals/dataset.txt", intervals, queries)
     print len(intervals)
     intervals.sort()
     out = open("t", "w")

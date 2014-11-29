@@ -1,0 +1,160 @@
+run0
+../datasets/time_intervals/dataset.txt	MavlyutovIndex_x1	426059722	66836	0.870107	1.69105
+../datasets/exome_alignement/dataset.txt	MavlyutovIndex_x1	5087754	543612	6.55574	0.0172755
+../datasets/time_intervals/dataset.txt	NClist	419634487	372	0.711956	4.07765
+../datasets/exome_alignement/dataset.txt	NClist	1118049	5196	2.18561	0.0205106
+../datasets/time_intervals/dataset.txt	Interval Tree	426050183	38120	0.410525	3.05798
+../datasets/exome_alignement/dataset.txt	Interval Tree	5087754	240212	4.47076	0.0286507
+../datasets/time_intervals/dataset.txt	R-Tree8	426050183	54780	1.94478	13.5989
+../datasets/exome_alignement/dataset.txt	R-Tree8	5087754	487872	12.9445	0.060369
+../datasets/time_intervals/dataset.txt	R-Tree16	426050183	47388	2.31584	6.81367
+../datasets/exome_alignement/dataset.txt	R-Tree16	5087754	439956	16.6158	0.0453614
+../datasets/time_intervals/dataset.txt	R-Tree32	426050183	43824	3.08472	4.64265
+../datasets/exome_alignement/dataset.txt	R-Tree32	5087754	418044	23.8262	0.033004
+../datasets/time_intervals/dataset.txt	R-Tree64	426050183	41580	4.38068	3.85804
+../datasets/exome_alignement/dataset.txt	R-Tree64	5087754	415668	36.5766	0.0308138
+../datasets/time_intervals/dataset.txt	Segment Tree	426043013	57800	1.28246	3.9963
+run1
+../datasets/time_intervals/dataset.txt	MavlyutovIndex_x1	426059722	66836	0.835574	1.6566
+../datasets/exome_alignement/dataset.txt	MavlyutovIndex_x1	5087754	543612	3.78769	0.0170221
+../datasets/time_intervals/dataset.txt	NClist	419634487	372	0.704434	4.05602
+../datasets/exome_alignement/dataset.txt	NClist	1118049	5196	2.07976	0.0204623
+../datasets/time_intervals/dataset.txt	Interval Tree	426050183	38120	0.415	3.064
+../datasets/exome_alignement/dataset.txt	Interval Tree	5087754	240212	3.4502	0.0292705
+../datasets/time_intervals/dataset.txt	R-Tree8	426050183	54780	1.96751	14.182
+../datasets/exome_alignement/dataset.txt	R-Tree8	5087754	487872	12.8299	0.0593364
+../datasets/time_intervals/dataset.txt	R-Tree16	426050183	47388	2.36154	7.02892
+../datasets/exome_alignement/dataset.txt	R-Tree16	5087754	439956	16.8901	0.0445208
+../datasets/time_intervals/dataset.txt	R-Tree32	426050183	43824	3.11917	4.67968
+../datasets/exome_alignement/dataset.txt	R-Tree32	5087754	418044	23.6144	0.0326366
+../datasets/time_intervals/dataset.txt	R-Tree64	426050183	41580	4.37414	3.95451
+../datasets/exome_alignement/dataset.txt	R-Tree64	5087754	415668	36.7779	0.0305136
+../datasets/time_intervals/dataset.txt	Segment Tree	426043013	57800	1.34094	4.17544
+run2
+../datasets/time_intervals/dataset.txt	MavlyutovIndex_x1	426059722	66836	0.842363	1.66274
+../datasets/exome_alignement/dataset.txt	MavlyutovIndex_x1	5087754	543612	3.84522	0.0167793
+../datasets/time_intervals/dataset.txt	NClist	419634487	372	0.712491	4.12603
+../datasets/exome_alignement/dataset.txt	NClist	1118049	5196	2.10605	0.02044
+../datasets/time_intervals/dataset.txt	Interval Tree	426050183	38120	0.415312	3.13838
+../datasets/exome_alignement/dataset.txt	Interval Tree	5087754	240212	3.37953	0.0294761
+../datasets/time_intervals/dataset.txt	R-Tree8	426050183	54780	2.17479	14.5856
+../datasets/exome_alignement/dataset.txt	R-Tree8	5087754	487872	12.888	0.0591905
+../datasets/time_intervals/dataset.txt	R-Tree16	426050183	47388	2.34217	7.01735
+../datasets/exome_alignement/dataset.txt	R-Tree16	5087754	439956	16.6145	0.0444888
+../datasets/time_intervals/dataset.txt	R-Tree32	426050183	43824	3.11275	4.72647
+../datasets/exome_alignement/dataset.txt	R-Tree32	5087754	418044	24.1443	0.0324938
+../datasets/time_intervals/dataset.txt	R-Tree64	426050183	41580	4.39049	3.96144
+../datasets/exome_alignement/dataset.txt	R-Tree64	5087754	415668	36.6496	0.0305101
+../datasets/time_intervals/dataset.txt	Segment Tree	426043013	57800	1.32649	4.34848
+run3
+../datasets/time_intervals/dataset.txt	MavlyutovIndex_x1	426059722	66836	0.840984	1.6789
+../datasets/exome_alignement/dataset.txt	MavlyutovIndex_x1	5087754	543612	3.84713	0.0168086
+../datasets/time_intervals/dataset.txt	NClist	419634487	372	0.720717	4.15837
+../datasets/exome_alignement/dataset.txt	NClist	1118049	5196	2.08988	0.020396
+../datasets/time_intervals/dataset.txt	Interval Tree	426050183	38120	0.417223	3.17436
+../datasets/exome_alignement/dataset.txt	Interval Tree	5087754	240212	3.43462	0.0284557
+../datasets/time_intervals/dataset.txt	R-Tree8	426050183	54780	1.97432	14.1585
+../datasets/exome_alignement/dataset.txt	R-Tree8	5087754	487872	12.8465	0.0593479
+../datasets/time_intervals/dataset.txt	R-Tree16	426050183	47388	2.35036	6.91285
+../datasets/exome_alignement/dataset.txt	R-Tree16	5087754	439956	16.6669	0.0476667
+../datasets/time_intervals/dataset.txt	R-Tree32	426050183	43824	3.11149	4.80096
+../datasets/exome_alignement/dataset.txt	R-Tree32	5087754	418044	23.6747	0.0338077
+../datasets/time_intervals/dataset.txt	R-Tree64	426050183	41580	4.41803	3.94934
+../datasets/exome_alignement/dataset.txt	R-Tree64	5087754	415668	36.5986	0.0308702
+../datasets/time_intervals/dataset.txt	Segment Tree	426043013	57800	1.28675	4.04191
+run4
+../datasets/time_intervals/dataset.txt	MavlyutovIndex_x1	426059722	66836	0.837638	1.67537
+../datasets/exome_alignement/dataset.txt	MavlyutovIndex_x1	5087754	543612	3.79082	0.0170737
+../datasets/time_intervals/dataset.txt	NClist	419634487	372	0.704748	4.06402
+../datasets/exome_alignement/dataset.txt	NClist	1118049	5196	2.09083	0.0205229
+../datasets/time_intervals/dataset.txt	Interval Tree	426050183	38120	0.417989	3.06705
+../datasets/exome_alignement/dataset.txt	Interval Tree	5087754	240212	3.2805	0.0286367
+../datasets/time_intervals/dataset.txt	R-Tree8	426050183	54780	1.93959	14.0448
+../datasets/exome_alignement/dataset.txt	R-Tree8	5087754	487872	12.8184	0.0600662
+../datasets/time_intervals/dataset.txt	R-Tree16	426050183	47388	2.30852	6.8323
+../datasets/exome_alignement/dataset.txt	R-Tree16	5087754	439956	16.5181	0.0449915
+../datasets/time_intervals/dataset.txt	R-Tree32	426050183	43824	3.08115	4.50943
+../datasets/exome_alignement/dataset.txt	R-Tree32	5087754	418044	23.4948	0.0329356
+../datasets/time_intervals/dataset.txt	R-Tree64	426050183	41580	4.41299	3.86862
+../datasets/exome_alignement/dataset.txt	R-Tree64	5087754	415668	36.5737	0.0308905
+../datasets/time_intervals/dataset.txt	Segment Tree	426043013	57800	1.29631	4.08733
+run5
+../datasets/time_intervals/dataset.txt	MavlyutovIndex_x1	426059722	66836	0.83807	1.6691
+../datasets/exome_alignement/dataset.txt	MavlyutovIndex_x1	5087754	543612	3.80748	0.0170212
+../datasets/time_intervals/dataset.txt	NClist	419634487	372	0.707493	4.24517
+../datasets/exome_alignement/dataset.txt	NClist	1118049	5196	2.14216	0.0210416
+../datasets/time_intervals/dataset.txt	Interval Tree	426050183	38120	0.431855	3.12491
+../datasets/exome_alignement/dataset.txt	Interval Tree	5087754	240212	3.41259	0.0283877
+../datasets/time_intervals/dataset.txt	R-Tree8	426050183	54780	1.97239	14.3483
+../datasets/exome_alignement/dataset.txt	R-Tree8	5087754	487872	12.8604	0.0634465
+../datasets/time_intervals/dataset.txt	R-Tree16	426050183	47388	2.33281	6.98567
+../datasets/exome_alignement/dataset.txt	R-Tree16	5087754	439956	16.6192	0.0444241
+../datasets/time_intervals/dataset.txt	R-Tree32	426050183	43824	3.12565	4.59923
+../datasets/exome_alignement/dataset.txt	R-Tree32	5087754	418044	23.6325	0.0325344
+../datasets/time_intervals/dataset.txt	R-Tree64	426050183	41580	4.38623	3.97502
+../datasets/exome_alignement/dataset.txt	R-Tree64	5087754	415668	37.0547	0.030473
+../datasets/time_intervals/dataset.txt	Segment Tree	426043013	57800	1.3223	4.0971
+run6
+../datasets/time_intervals/dataset.txt	MavlyutovIndex_x1	426059722	66836	0.861385	1.70641
+../datasets/exome_alignement/dataset.txt	MavlyutovIndex_x1	5087754	543612	3.98401	0.017268
+../datasets/time_intervals/dataset.txt	NClist	419634487	372	0.710149	4.1661
+../datasets/exome_alignement/dataset.txt	NClist	1118049	5196	2.15908	0.023956
+../datasets/time_intervals/dataset.txt	Interval Tree	426050183	38120	0.432827	3.27695
+../datasets/exome_alignement/dataset.txt	Interval Tree	5087754	240212	3.30383	0.0286597
+../datasets/time_intervals/dataset.txt	R-Tree8	426050183	54780	1.99775	15.1249
+../datasets/exome_alignement/dataset.txt	R-Tree8	5087754	487872	13.0389	0.0599963
+../datasets/time_intervals/dataset.txt	R-Tree16	426050183	47388	2.51665	7.43901
+../datasets/exome_alignement/dataset.txt	R-Tree16	5087754	439956	16.6907	0.0451928
+../datasets/time_intervals/dataset.txt	R-Tree32	426050183	43824	3.18203	4.83797
+../datasets/exome_alignement/dataset.txt	R-Tree32	5087754	418044	23.9677	0.0344902
+../datasets/time_intervals/dataset.txt	R-Tree64	426050183	41580	4.40693	4.08692
+../datasets/exome_alignement/dataset.txt	R-Tree64	5087754	415668	37.6793	0.0309848
+../datasets/time_intervals/dataset.txt	Segment Tree	426043013	57800	1.38413	4.46055
+run7
+../datasets/time_intervals/dataset.txt	MavlyutovIndex_x1	426059722	66836	0.872496	1.70685
+../datasets/exome_alignement/dataset.txt	MavlyutovIndex_x1	5087754	543612	3.8579	0.0173233
+../datasets/time_intervals/dataset.txt	NClist	419634487	372	0.721575	4.31159
+../datasets/exome_alignement/dataset.txt	NClist	1118049	5196	2.18483	0.0205328
+../datasets/time_intervals/dataset.txt	Interval Tree	426050183	38120	0.410783	3.34254
+../datasets/exome_alignement/dataset.txt	Interval Tree	5087754	240212	3.31069	0.0287524
+../datasets/time_intervals/dataset.txt	R-Tree8	426050183	54780	1.95837	13.6398
+../datasets/exome_alignement/dataset.txt	R-Tree8	5087754	487872	13.3579	0.0604483
+../datasets/time_intervals/dataset.txt	R-Tree16	426050183	47388	2.44341	7.35842
+../datasets/exome_alignement/dataset.txt	R-Tree16	5087754	439956	16.9116	0.0450127
+../datasets/time_intervals/dataset.txt	R-Tree32	426050183	43824	3.08317	4.66314
+../datasets/exome_alignement/dataset.txt	R-Tree32	5087754	418044	23.5348	0.0330534
+../datasets/time_intervals/dataset.txt	R-Tree64	426050183	41580	4.33773	3.87355
+../datasets/exome_alignement/dataset.txt	R-Tree64	5087754	415668	36.8303	0.0309093
+../datasets/time_intervals/dataset.txt	Segment Tree	426043013	57800	1.29014	4.028
+run8
+../datasets/time_intervals/dataset.txt	MavlyutovIndex_x1	426059722	66836	0.841518	1.67649
+../datasets/exome_alignement/dataset.txt	MavlyutovIndex_x1	5087754	543612	3.78303	0.0170429
+../datasets/time_intervals/dataset.txt	NClist	419634487	372	0.709296	4.07798
+../datasets/exome_alignement/dataset.txt	NClist	1118049	5196	2.08618	0.0204565
+../datasets/time_intervals/dataset.txt	Interval Tree	426050183	38120	0.415794	3.08539
+../datasets/exome_alignement/dataset.txt	Interval Tree	5087754	240212	3.30247	0.0288035
+../datasets/time_intervals/dataset.txt	R-Tree8	426050183	54780	1.94282	14.0541
+../datasets/exome_alignement/dataset.txt	R-Tree8	5087754	487872	13.108	0.0602639
+../datasets/time_intervals/dataset.txt	R-Tree16	426050183	47388	2.36316	6.88029
+../datasets/exome_alignement/dataset.txt	R-Tree16	5087754	439956	16.5705	0.045245
+../datasets/time_intervals/dataset.txt	R-Tree32	426050183	43824	3.09349	4.51916
+../datasets/exome_alignement/dataset.txt	R-Tree32	5087754	418044	23.7822	0.0331676
+../datasets/time_intervals/dataset.txt	R-Tree64	426050183	41580	4.33796	3.86307
+../datasets/exome_alignement/dataset.txt	R-Tree64	5087754	415668	38.3732	0.0313261
+../datasets/time_intervals/dataset.txt	Segment Tree	426043013	57800	1.34946	4.19683
+run9
+../datasets/time_intervals/dataset.txt	MavlyutovIndex_x1	426059722	66836	0.836995	1.67999
+../datasets/exome_alignement/dataset.txt	MavlyutovIndex_x1	5087754	543612	3.79577	0.0170194
+../datasets/time_intervals/dataset.txt	NClist	419634487	372	0.70569	4.07969
+../datasets/exome_alignement/dataset.txt	NClist	1118049	5196	2.09322	0.0205891
+../datasets/time_intervals/dataset.txt	Interval Tree	426050183	38120	0.413692	3.07377
+../datasets/exome_alignement/dataset.txt	Interval Tree	5087754	240212	3.31465	0.0291014
+../datasets/time_intervals/dataset.txt	R-Tree8	426050183	54780	1.94436	13.7683
+../datasets/exome_alignement/dataset.txt	R-Tree8	5087754	487872	12.8543	0.0600641
+../datasets/time_intervals/dataset.txt	R-Tree16	426050183	47388	2.31485	6.84934
+../datasets/exome_alignement/dataset.txt	R-Tree16	5087754	439956	17.0496	0.0450969
+../datasets/time_intervals/dataset.txt	R-Tree32	426050183	43824	3.37189	4.72863
+../datasets/exome_alignement/dataset.txt	R-Tree32	5087754	418044	24.1108	0.0332101
+../datasets/time_intervals/dataset.txt	R-Tree64	426050183	41580	4.38525	3.97629
+../datasets/exome_alignement/dataset.txt	R-Tree64	5087754	415668	36.5913	0.03097
+../datasets/time_intervals/dataset.txt	Segment Tree	426043013	57800	1.30259	4.10799

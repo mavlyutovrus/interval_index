@@ -1,0 +1,32 @@
+2014-11-28 15:33:36,135 WARN  [main] util.NativeCodeLoader (NativeCodeLoader.java:<clinit>(62)) - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+108367
+RESPONSE interval_index_cold read_count 2.000000 qlen 120 response_size 541.000000 time 4.000000
+RESPONSE interval_index_cold read_count 1.000000 qlen 120 response_size 474.000000 time 2.000000
+RESPONSE interval_index_cold read_count 2.000000 qlen 120 response_size 505.000000 time 3.000000
+RESPONSE interval_index_cold read_count 2.000000 qlen 120 response_size 660.000000 time 3.000000
+RESPONSE interval_index_cold read_count 1.000000 qlen 120 response_size 362.000000 time 2.000000
+RESPONSE interval_index_cold read_count 2.000000 qlen 120 response_size 220.000000 time 4.000000
+RESPONSE interval_index_cold read_count 2.000000 qlen 120 response_size 363.000000 time 4.000000
+RESPONSE interval_index_cold read_count 2.000000 qlen 120 response_size 950.000000 time 3.000000
+RESPONSE interval_index_cold read_count 1.000000 qlen 120 response_size 458.000000 time 2.000000
+RESPONSE interval_index_cold read_count 1.000000 qlen 120 response_size 300.000000 time 2.000000
+RESPONSE interval_index_cold read_count 1.000000 qlen 120 response_size 215.000000 time 4.000000
+RESPONSE interval_index_cold read_count 2.000000 qlen 120 response_size 410.000000 time 3.000000
+RESPONSE interval_index_cold read_count 1.000000 qlen 120 response_size 290.000000 time 2.000000
+RESPONSE interval_index_cold read_count 2.000000 qlen 120 response_size 356.000000 time 4.000000
+RESPONSE interval_index_cold read_count 1.000000 qlen 120 response_size 138.000000 time 1.000000
+RESPONSE interval_index_cold read_count 2.000000 qlen 120 response_size 161.000000 time 3.000000
+RESPONSE interval_index_cold read_count 2.000000 qlen 120 response_size 214.000000 time 4.000000
+RESPONSE interval_index_cold read_count 1.000000 qlen 120 response_size 163.000000 time 2.000000
+RESPONSE interval_index_cold read_count 1.000000 qlen 120 response_size 1078.000000 time 4.000000
+RESPONSE interval_index_cold read_count 2.000000 qlen 120 response_size 451.000000 time 4.000000
+RESPONSE interval_index_cold read_count 2.000000 qlen 120 response_size 625.000000 time 3.000000
+RESPONSE interval_index_cold read_count 1.000000 qlen 120 response_size 428.000000 time 2.000000
+RESPONSE interval_index_cold read_count 1.000000 qlen 120 response_size 169.000000 time 2.000000
+RESPONSE interval_index_cold read_count 2.000000 qlen 120 response_size 339.000000 time 4.000000
+RESPONSE interval_index_cold read_count 1.000000 qlen 120 response_size 628.000000 time 3.000000
+RESPONSE interval_index_cold read_count 2.000000 qlen 120 response_size 277.000000 time 3.000000
+RESPONSE interval_index_cold read_count 1.000000 qlen 120 response_size 159.000000 time 2.000000
+RESPONSE interval_index_cold read_count 2.000000 qlen 120 response_size 1260.000000 time 3.000000
+RESPONSE interval_index_cold read_count 2.000000 qlen 120 response_size 614.000000 time 4.000000
+RESPONSE interval_index_cold read_count 2.000000 qlen 120 response_size 289.000000 time 3.000000
