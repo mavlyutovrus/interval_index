@@ -66,14 +66,15 @@ int main(int argc, char *argv[]) {
 		long long resultsCounter = 0;
 		long long resultsStartingBeforeQueryCounter = 0;
 		long long resultsFromWalkToCheckpoint = 0;
-		double binSearchTime, noInsideTime, binSearchAndWalkToCheckpointTime, fullQueryTime;
+		double binSearchTime, binSearchAndWalkToCheckpointTime, noCheckpointArray, fullQueryTime;
 		wrapperIt->get()->CalcQueryTime(queries,
 										&resultsFromWalkToCheckpoint,
 										&resultsStartingBeforeQueryCounter,
 										&resultsCounter,
 										&binSearchTime,
 										&binSearchAndWalkToCheckpointTime,
-										&noInsideTime, &fullQueryTime);
+										&noCheckpointArray,
+										&fullQueryTime);
 		std::cout << datasetPath
 					  << "\t" << wrapperIt->get()->Id
 					  << "\t" << dataMemConsumption
@@ -84,7 +85,7 @@ int main(int argc, char *argv[]) {
 					  << "\t" << wrapperIt->get()->IntervalIndexPtr->GetCheckpointInterval()
 					  << "\t" << binSearchTime
 					  << "\t" << binSearchAndWalkToCheckpointTime
-					  << "\t" << noInsideTime
+					  << "\t" << noCheckpointArray
 					  << "\t" << fullQueryTime << "\n";
 		std::cout.flush();
 	}

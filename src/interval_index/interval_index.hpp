@@ -233,6 +233,69 @@ public:
 			}
 		}
 	}
+	//this method is only for performance measurements
+	template <class TCallback>
+	void SearchExceptCheckpointArray(const TIntervalBorder start, const TIntervalBorder stop, TCallback* callbackPtr=NULL,
+							bool onlyBinarySearch=false, bool skipIntervalsStartedBeforeQuery=false) const {
+		if (stop < start) {
+			return;
+		}
+		if (!Index.size()) {
+			return;
+		}
+		if (BoundingInterval.first > stop || BoundingInterval.second < start) {
+			return;
+		}
+		int leftmostStartInsideQuery;
+		if (Index.rbegin()->first.first < start) {
+			leftmostStartInsideQuery = Index.size();
+		} else if (Index.begin()->first.first >= start) {
+			leftmostStartInsideQuery = 0;
+		} else {//binary search
+			int left = 0;
+			int right = Index.size() - 1;
+			while (right > left + 1) {
+				int middle = (left + right) / 2;
+				if (Index[middle].first.first < start) {
+					left = middle;
+				} else {
+					right = middle;
+				}
+			}
+			leftmostStartInsideQuery = right;
+		}
+		int checkpointIndex = 0;
+		if (leftmostStartInsideQuery == 0 || leftmostStartInsideQuery % CheckpointInterval > 0
+										  || start == Index[leftmostStartInsideQuery].first.first) {
+			checkpointIndex = leftmostStartInsideQuery / CheckpointInterval;
+		} else {
+			// because there might be an interval which overlaps query,
+			//   but ends BEFORE leftmostStartInsideQuery's start
+			checkpointIndex = (leftmostStartInsideQuery - 1) / CheckpointInterval;
+		}
+		checkpointIndex = std::min(checkpointIndex, (int)Checkpoints.size() - 1);
+		const int checkpointPosition = CheckpointInterval * checkpointIndex;
+		//checkpoint_position -> start_point
+		if (leftmostStartInsideQuery > 0) {
+			for (int current = checkpointPosition; current < leftmostStartInsideQuery; ++current) {
+				if (Index[current].first.second >= start) {
+					if (callbackPtr) {
+						(*callbackPtr)(Index[current].first, Index[current].second);
+					}
+				}
+			}
+		}
+		{//start_point -> (till left border goes beyond stop value)
+			for (int current = leftmostStartInsideQuery;
+					 current < Index.size() && Index[current].first.first <= stop; ++current) {
+				if (callbackPtr) {
+					(*callbackPtr)(Index[current].first, Index[current].second);
+				}
+			}
+		}
+	}
+
+
 
 	//this method is only for performance measurements
 	template <class TCallback>

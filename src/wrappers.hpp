@@ -51,14 +51,14 @@ public:
 								 long long* hitsCountPtr,
 								 double* onlyBinarySearchesPtr,
 								 double* onlyBinarySearchesAndWalkToCheckpointPtr,
-								 double* onlyStartingBeforePtr,
+								 double* wholeExceptCheckpointPtr,
 								 double* wholeTimePtr) {
 		if (!IntervalIndexPtr) {
 			return 0.0;
 		}
 		*onlyBinarySearchesPtr = 0;
 		*onlyBinarySearchesAndWalkToCheckpointPtr = 0;
-		*onlyStartingBeforePtr = 0;
+		*wholeExceptCheckpointPtr = 0;
 		*wholeTimePtr = 0;
 		*hitsCountPtr = 0;
 		*hitsStartedBeforeQueryCountPtr = 0;
@@ -102,9 +102,9 @@ public:
 			TResultsCounter counter;
 			TTime startTime = GetTime();
 			for (int queryIndex = 0; queryIndex < queries.size(); ++queryIndex) {
-				IntervalIndexPtr->SearchStartingBeforeOnly(queries[queryIndex].first, queries[queryIndex].second, &counter);
+				IntervalIndexPtr->SearchExceptCheckpointArray(queries[queryIndex].first, queries[queryIndex].second, &counter);
 			}
-			*onlyStartingBeforePtr = GetElapsedInSeconds(startTime, GetTime());
+			*wholeExceptCheckpointPtr = GetElapsedInSeconds(startTime, GetTime());
 			if (hitsStartedBeforeQueryCountPtr) {
 				*hitsStartedBeforeQueryCountPtr = counter.GetCount();
 			}
