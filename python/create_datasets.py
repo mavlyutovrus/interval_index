@@ -1,19 +1,14 @@
 import random
-import matplotlib.pyplot as plt
 from numpy.random import normal, uniform
 import numpy as np
 import math
-import random
 from heapq import heapify, heappush, heappop
-from Cython.Plex.Regexps import Char
+import os
 
 MIN = 0
 MAX = 10000000
 POINTS_COUNT = 1000000
 QUERIES_COUNT = 200000
-
-
-
 
 
 
@@ -32,7 +27,8 @@ def save_dataset(filename, intervals, queries):
         out.write(str(start) + "\t" + str(start + length) + "\n")
     out.close()
 
-if 0:
+
+if 1:
     # chi_time_mem
     len_mean = 100
     len_stdev = 10
@@ -63,10 +59,10 @@ if 0:
     for point_index in xrange(QUERIES_COUNT_SPEC):
         start = random.random() * (MAX - MIN) + MIN
         queries += [(start, lengths[point_index])]
-    save_dataset("../datasets/chi_time_mem_1M_100_1M_100.txt", intervals, queries)
+    save_dataset("datasets/chi_time_mem_1M_100_1M_100.txt", intervals, queries)
 
 
-if 0:
+if 1:
     # query_len
     len_mean = 100
     len_stdev = 10
@@ -101,7 +97,7 @@ if 0:
         for point_index in xrange(QUERIES_COUNT):
             start = random.random() * (MAX - MIN) + MIN
             queries += [(start, query_length)]
-        save_dataset("../datasets/query_len/dataset_query_len_%d.txt" % (query_length), intervals, queries)
+        save_dataset("datasets/query_len/dataset_query_len_%d.txt" % (query_length), intervals, queries)
         print query_length
         query_length =  math.ceil(query_length * factor)
 
