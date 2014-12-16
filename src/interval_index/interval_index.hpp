@@ -445,8 +445,7 @@ public:
 		return CheckpointInterval;
 	}
 
-//private:
-public:
+private:
 	int CheckpointInterval;
 	vector<TKeyId> Index;
 	vector<TKeyId> CheckpointsData;
