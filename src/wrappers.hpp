@@ -47,7 +47,7 @@ public:
 	}
 	double CalcQueryTime(const vector<TInterval>& queries,
 								 long long* hitsFromWalkToCheckpointPtr,
-								 long long* hitsStartedBeforeQueryCountPtr,
+								 long long* hitsExceptCheckpointArrayPtr,
 								 long long* hitsCountPtr,
 								 double* onlyBinarySearchesPtr,
 								 double* onlyBinarySearchesAndWalkToCheckpointPtr,
@@ -61,7 +61,7 @@ public:
 		*wholeExceptCheckpointPtr = 0;
 		*wholeTimePtr = 0;
 		*hitsCountPtr = 0;
-		*hitsStartedBeforeQueryCountPtr = 0;
+		*hitsExceptCheckpointArrayPtr = 0;
 
 		{
 			TResultsCounter counter;
@@ -105,8 +105,8 @@ public:
 				IntervalIndexPtr->SearchExceptCheckpointArray(queries[queryIndex].first, queries[queryIndex].second, &counter);
 			}
 			*wholeExceptCheckpointPtr = GetElapsedInSeconds(startTime, GetTime());
-			if (hitsStartedBeforeQueryCountPtr) {
-				*hitsStartedBeforeQueryCountPtr = counter.GetCount();
+			if (hitsExceptCheckpointArrayPtr) {
+				*hitsExceptCheckpointArrayPtr = counter.GetCount();
 			}
 		}
 		return *wholeTimePtr;

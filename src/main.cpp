@@ -40,13 +40,13 @@ int main(int argc, char *argv[]) {
 	vector<TInterval> queries;
 	UploadData(datasetPath.c_str(), &data, &queries);
 
-//	{//warmup
-//	    vector<TKeyId> buffer;
-//	    for (int i = 0; i < 5; ++i) {
-//	        buffer.insert(buffer.end(), data.begin(), data.end());
-//	    }
-//	    std::cout << "warmup: " << buffer.size() << "\n";
-//	}
+	{//warmup
+	    vector<TKeyId> buffer;
+	    for (int i = 0; i < 5; ++i) {
+	        buffer.insert(buffer.end(), data.begin(), data.end());
+	    }
+	    std::cout << "warmup: " << buffer.size() << "\n";
+	}
 
 	vector<std::shared_ptr<TWrapper> >::iterator wrapperIt = wrappers.begin() + algo2use;
 	double memUsageKb;

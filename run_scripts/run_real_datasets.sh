@@ -6,12 +6,10 @@ last_algo=`expr $algos_count - 1`
 for run_index in 0 1 2 3 4 5 6 7 8 9 
 do 
   echo run$run_index
-  for path in `ls $1/*.txt`
+  for algo_index in `seq 0 $last_algo`
   do
-    for algo_index in `seq 0 $last_algo`
-    do
-      ./index_run $path $algo_index 
-    done
+    ./index_run ../datasets/time_intervals/dataset.txt $algo_index 
+    ./index_run ../datasets/exome_alignement/dataset.txt $algo_index 
   done
 done
 

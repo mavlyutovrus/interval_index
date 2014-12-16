@@ -64,12 +64,12 @@ int main(int argc, char *argv[]) {
 		long long dataMemConsumption, dsMemConsumption;
 		wrapperIt->get()->IntervalIndexPtr->GetMemoryConsumption(&dataMemConsumption, &dsMemConsumption);
 		long long resultsCounter = 0;
-		long long resultsStartingBeforeQueryCounter = 0;
+		long long resultsOutOfCheckpointArray = 0;
 		long long resultsFromWalkToCheckpoint = 0;
 		double binSearchTime, binSearchAndWalkToCheckpointTime, noCheckpointArray, fullQueryTime;
 		wrapperIt->get()->CalcQueryTime(queries,
 										&resultsFromWalkToCheckpoint,
-										&resultsStartingBeforeQueryCounter,
+										&resultsOutOfCheckpointArray,
 										&resultsCounter,
 										&binSearchTime,
 										&binSearchAndWalkToCheckpointTime,
@@ -80,7 +80,7 @@ int main(int argc, char *argv[]) {
 					  << "\t" << dataMemConsumption
 					  << "\t" << dsMemConsumption
 					  << "\t" << resultsFromWalkToCheckpoint
-					  << "\t" << resultsStartingBeforeQueryCounter
+					  << "\t" << resultsOutOfCheckpointArray
 					  << "\t" << resultsCounter
 					  << "\t" << wrapperIt->get()->IntervalIndexPtr->GetCheckpointInterval()
 					  << "\t" << binSearchTime
