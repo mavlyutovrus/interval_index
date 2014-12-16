@@ -40,6 +40,7 @@ int main(int argc, char *argv[]) {
 	vector<TInterval> queries;
 	UploadData(datasetPath.c_str(), &data, &queries);
 
+	if (0)
 	{//warmup
 	    vector<TKeyId> buffer;
 	    for (int i = 0; i < 5; ++i) {

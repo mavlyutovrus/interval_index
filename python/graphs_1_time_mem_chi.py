@@ -45,19 +45,30 @@ def draw_scatter_plot(x_values, left_algo2results, right_algo2results,
     ax2 = ax1.twinx()
     
     ax1.grid(b=True, which='major', color='gray', axis="x", linestyle='-.', zorder=-1)
-    
+    lines = []
+    all_algos = []
     #ax1
     if 1:
         #yerr=left_algo2results["full_time"][1], 
+
+        #plt.errorbar(a,b,yerr=c, linestyle="None")
+        line, = ax2.plot(x_values, left_algo2results["only_binsearch"][0], lw=1, color="black", linestyle="--")            
+        lines += [line]
+        all_algos += ["BS"]
+        plt.errorbar(x_values, left_algo2results["full_time"][0], yerr=left_algo2results["full_time"][1], color="black")  
+        line, = ax2.plot(x_values, left_algo2results["only_binsearch+inside"][0], lw=1, color="black", linestyle="--", marker="x")   
+        lines += [line]
+        all_algos += ["BS + Walk (1)-(2)"]
+        line, = ax2.plot(x_values, left_algo2results["only_binsearch+and_walk+inside"][0], lw=1, color="black", linestyle="--", marker="d")   
+        lines += [line]
+        all_algos += ["BS + Walk (1)-(3)"]
         line, = ax2.plot(x_values, 
                          left_algo2results["full_time"][0], 
                          lw=1, color="black", 
-                         linestyle="-")  
-        #plt.errorbar(a,b,yerr=c, linestyle="None")
-        plt.errorbar(x_values, left_algo2results["full_time"][0], yerr=left_algo2results["full_time"][1], color="black")  
-        line, = ax2.plot(x_values, left_algo2results["only_binsearch+and_walk+inside"][0], lw=1, color="black", linestyle="--", marker="d")   
-        line, = ax2.plot(x_values, left_algo2results["only_binsearch+and_walk"][0], lw=1, color="black", linestyle="--", marker="x")   
-        line, = ax2.plot(x_values, left_algo2results["only_binsearch"][0], lw=1, color="black", linestyle="--")            
+                         linestyle="-")
+        lines += [line]
+        all_algos += ["Full time"]
+
         #ax2.fill(x_values[:1] + x_values + x_values[-1:], [0] + left_algo2results["only_binsearch"] + [0], "b")
 
     #ax2 
@@ -67,6 +78,8 @@ def draw_scatter_plot(x_values, left_algo2results, right_algo2results,
         for algo_index in xrange(len(algos)):
             algo = algos[algo_index]
             line, = ax1.plot(x_values, right_algo2results[algo][0], lw=2, color="red", linestyle="-")
+            lines += [line] 
+            all_algos += ["Space Factor"]
             line.set_zorder(1)         
     
     ax2.set_ylim([0, 0.09])
@@ -111,7 +124,21 @@ def draw_scatter_plot(x_values, left_algo2results, right_algo2results,
     
     savefig(filename + file_type, transparent="True", pad_inches=0)
     plt.show()
-    #exit()
+    
+    
+    fig = figure(figsize=(4, 2.5), dpi=80) 
+    legend = plt.legend(lines, all_algos, shadow=False, loc=1, fontsize=font_size)
+    plt.axis('off')
+    legend.draw_frame(False) 
+    savefig("../paper/imgs/legend1_0.eps", transparent="True", pad_inches=0)
+    plt.show()
+    fig = figure(figsize=(7.5, 2), dpi=80) 
+    legend = plt.legend(lines, all_algos, shadow=False, loc=1, ncol=2, fontsize=font_size)
+    plt.axis('off')
+    legend.draw_frame(False) 
+    savefig("../paper/imgs/legend1_1.eps", transparent="True", pad_inches=0)
+    plt.show()
+
 
 
 def draw_legend():
@@ -162,12 +189,14 @@ if 1:
         err_margin = err_margin * 100000 / QUERIES_COUNT
         time_trends.setdefault("only_binsearch", []).append((algo_index, algo_result, err_margin))
           
-        algo_result, err_margin = calc_avg_minus_extremes([results[-3] for results in all_algo_results])
+        print calc_avg_minus_extremes([results[-2] - results[-3] for results in all_algo_results])[0]
+          
+        algo_result, err_margin = calc_avg_minus_extremes([results[-2] - results[-3] + results[-4] for results in all_algo_results])
         algo_result = algo_result * 100000 / QUERIES_COUNT
         err_margin = err_margin * 100000 / QUERIES_COUNT
-        time_trends.setdefault("only_binsearch+and_walk", []).append((algo_index, algo_result, err_margin))
+        time_trends.setdefault("only_binsearch+inside", []).append((algo_index, algo_result, err_margin))
         
-        algo_result, err_margin = calc_avg_minus_extremes([results[-1] - results[-2] + results[-3] for results in all_algo_results])
+        algo_result, err_margin = calc_avg_minus_extremes([results[-2] for results in all_algo_results])
         algo_result = algo_result * 100000 / QUERIES_COUNT
         err_margin = err_margin * 100000 / QUERIES_COUNT
         time_trends.setdefault("only_binsearch+and_walk+inside", []).append((algo_index, algo_result, err_margin))        
