@@ -1,8 +1,8 @@
 set -e
 
-mkdir bin
-mkdir datasets
-mkdir test_results
+mkdir -p bin
+mkdir -p datasets
+mkdir -p test_results
 
 rm -f index_run
 g++-4.8 -O3 src/main.cpp src/nclist/intervaldb.c -Isrc/ -std=gnu++11 -o bin/index_run
