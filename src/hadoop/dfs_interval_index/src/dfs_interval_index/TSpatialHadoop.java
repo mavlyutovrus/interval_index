@@ -98,7 +98,6 @@ public class TSpatialHadoop {
 		try {
 			Repartition.repartition(InPath, OutPath, params);
 		} catch (java.io.IOException err) {
-			System.out.println("Stupid mistake!");
 			System.err.println(err.getMessage());
 		}
 	}
@@ -368,7 +367,7 @@ public class TSpatialHadoop {
 				System.out.println("JAR: " + jarPath);
 			} else {
 				//TODO: replace
-				job.setJar("dfs_interval_index.jar");
+				job.setJar("/home/arslan/src/1d_interval_index/src/hadoop/dfs_interval_index.jar");
 			}
 			
 			//output-input classes

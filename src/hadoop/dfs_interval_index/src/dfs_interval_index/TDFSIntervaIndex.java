@@ -30,7 +30,7 @@ import org.apache.hadoop.mapred.TextOutputFormat;
 
 public class TDFSIntervaIndex {
 	
-	private int CheckpointInterval = 201;
+	private int CheckpointInterval = 201; //dummy value
 	public static final int PAGE_SIZE = 65536;
 	public static final int MIN_BLOCK_SIZE = 512;
 	private ArrayList<TSkipListElem> SkipList;
@@ -140,15 +140,18 @@ public class TDFSIntervaIndex {
 			SkipList.add(new TSkipListElem(metaFile.readLong(), metaFile.readDouble()));
 
 		}
-		System.out.println(SkipList.size());
 		metaFile.close();
 
 		
 	}
 	
 	
-	public TDFSIntervaIndex(String sourceFilePath, String indexFilePath, FileSystem hdfs, Configuration config) 
-																			throws IOException {	
+	public TDFSIntervaIndex(String sourceFilePath,
+			                FileSystem hdfs, 
+			                Configuration config, 
+			                boolean verbose) throws IOException {	
+		
+		
 		
 		boolean preSort = true;
 		boolean calcOptimalCheckpointInterval = true;
@@ -176,7 +179,7 @@ public class TDFSIntervaIndex {
 			String jarPath = dfs_interval_index.TSortMR.Map.class.getProtectionDomain().getCodeSource().getLocation().getPath();
 			if (jarPath.endsWith("jar")) {
 				jobConfig.setJar(jarPath);
-				System.out.println("JAR: " + jarPath);
+				if (verbose) System.out.println("JAR: " + jarPath);
 			} else {
 				//TODO: replace
 				jobConfig.setJar("/home/arslan/src/1d_interval_index/src/hadoop/dfs_interval_index.jar");
@@ -186,7 +189,6 @@ public class TDFSIntervaIndex {
 			try {
 				JobClient.runJob(jobConfig);
 			} catch ( java.lang.IllegalArgumentException exception) {
-				System.out.println("stupid exception");
 			}
 		}
 		
@@ -220,7 +222,7 @@ public class TDFSIntervaIndex {
 				{
 					++processed;
 					
-					if (processed % 500000 == 0) {
+					if (processed % 500000 == 0 && verbose) {
 						System.out.println(String.format("..processed, %d", processed));
 					}
 					if (processed >= SAMPLE_SIZE) {
@@ -235,7 +237,7 @@ public class TDFSIntervaIndex {
 					avgOverlapping += overlappingsSample.get(pos);
 				}
 				avgOverlapping = avgOverlapping / overlappingsSample.size();
-				System.out.println(String.format("Avg overlapping: %f", avgOverlapping));
+				if (verbose) System.out.println(String.format("Avg overlapping: %f", avgOverlapping));
 				
 				
 				double maxMemoryUsage = overlappingsSample.size();//spaceFactor == 1
@@ -253,16 +255,16 @@ public class TDFSIntervaIndex {
 			}
 		}
 		
-		IndexFilePath = indexFilePath;
-		HdfsDataOutputStream indexFile = (HdfsDataOutputStream)hdfs.create(new Path(IndexFilePath + ".index"));
-		HdfsDataOutputStream checkpointsFile = (HdfsDataOutputStream)hdfs.create(new Path(IndexFilePath + ".checkpoints"));
+		IndexFilePath = sourceFilePath;
+		HdfsDataOutputStream indexFile = (HdfsDataOutputStream)hdfs.create(new Path(IndexFilePath + ".index"), true);
+		HdfsDataOutputStream checkpointsFile = (HdfsDataOutputStream)hdfs.create(new Path(IndexFilePath + ".checkpoints"), true);
 		long indexFileSize = indexFile.size();
 		long checkpointsFileSize = checkpointsFile.size();
 		
 		
 		FSDataOutputStream metaFile = hdfs.create(new Path(IndexFilePath + ".meta"));		
 		metaFile.writeLong(CheckpointInterval);
-		System.out.println(String.format("Optimal checkpoint interval: %d", CheckpointInterval));
+		if (verbose) System.out.println(String.format("Optimal checkpoint interval: %d", CheckpointInterval));
 		if (buildIndex) {
 			SkipList = new ArrayList<TSkipListElem>();
 			PriorityQueue<TRightBorderSorter> rightBordersHeap = new PriorityQueue<TRightBorderSorter>();
@@ -273,7 +275,7 @@ public class TDFSIntervaIndex {
 			TInterval key = new TInterval();
 			NullWritable nullWritable = NullWritable.get();	
 			while (reader.next(key, nullWritable)) {	
-				if (recordIndex % 50000 == 0) {
+				if (recordIndex % 50000 == 0 && verbose) {
 					System.out.println(String.format("..processed %d", recordIndex));
 				}
 				if (recordIndex % CheckpointInterval == 0) {
@@ -326,7 +328,7 @@ public class TDFSIntervaIndex {
 						}
 						
 					} catch (IOException exception) {
-						System.out.println(exception);
+						System.err.println(exception);
 					}
 				}
 				rightBordersHeap.add(new TRightBorderSorter(key));
@@ -386,8 +388,6 @@ public class TDFSIntervaIndex {
 	}
 	
 	public long Search(final double start, final double end, final int READ_SIZE) throws IOException {
-
-		
 		if (end <= start) {
 			return 0;
 		}		
@@ -470,7 +470,7 @@ public class TDFSIntervaIndex {
 						lastChunk = true;
 						break; // full stop 
 					}
-					//use what we already read on 100%, go further
+					//use what we already read, go further
 					continue;
 				}		
 				
