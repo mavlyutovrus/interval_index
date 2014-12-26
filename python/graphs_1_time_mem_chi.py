@@ -119,6 +119,12 @@ def draw_scatter_plot(x_values, left_algo2results, right_algo2results,
     ax1.set_ylabel('Space Factor', color='black', size=font_size)
     ax2.set_ylabel('100K queries time, s', color='black', size=font_size)
     
+    
+    legend = plt.legend(lines, all_algos, shadow=False, loc=2, ncol=2, fontsize=font_size * 0.7)
+    legend.draw_frame(False) 
+    plt.axis('off')
+    #legend.draw_frame(False)
+    
     fig.patch.set_visible(False)    
     plt.tight_layout()
     

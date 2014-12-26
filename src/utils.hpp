@@ -103,8 +103,6 @@ void UploadData(const char* filename, vector<TKeyId>* intervalsPtr, vector<TInte
 }
 
 
-
-
 typedef std::chrono::time_point<std::chrono::system_clock> TTime;
 TTime GetTime() {
     return std::chrono::system_clock::now();

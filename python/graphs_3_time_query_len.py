@@ -33,6 +33,7 @@ def load_data(filename):
 
 
 colors = ["red", "green", "blue", "orange", "brown", "black", "silver", "aqua", "purple"]
+markers = [",", "x", "d", "v", "s", "p"] 
 suffix = ""
 file_type = ""
 
@@ -46,7 +47,7 @@ def draw_scatter_plot(x_values, algo2results):
     print colors
     for algo_index in xrange(len(algos)):
         algo = algos[algo_index]
-        line, = plt.plot(x_values, algo2results[algo], lw=3, color=colors[algo_index])
+        line, = plt.plot(x_values, algo2results[algo], lw=3, color=colors[algo_index], marker=markers[algo_index])
         line.set_zorder(1) 
     plt.xlim([10, 10000])
     plt.xscale('log')
@@ -62,7 +63,7 @@ def draw_scatter_plot(x_values, algo2results):
     for xtick in plt.xticks()[1]:
         xtick.set_fontsize(font_size)
     plt.tight_layout()
-    #savefig("../paper/imgs/3_time_query_len.eps", transparent="True", pad_inches=0)
+    savefig("../paper/imgs/3_time_query_len.eps", transparent="True", pad_inches=0)
     
     plt.show()
     exit()
@@ -217,6 +218,7 @@ def draw_scatter_plot(x_values, algo2results):
 def draw_legend():
     algos = ['1MavlyutovIndex_x1', 'Interval Tree', 'NClist', 'R-Tree', 'Segment Tree']
     colors = ['red', 'green', 'blue', 'orange', 'brown', 'black', 'silver', 'aqua', 'purple']
+    markers = [",", "x", "d", "v", "s", "p"] 
     font_size= 20
     fig = figure(figsize=(8, 6), dpi=80)
     p1 = plt.bar(range(len(algos)), range(len(algos)), 1.0, color="#7FCA9F")
@@ -233,11 +235,15 @@ def draw_legend():
 def draw_legend2():
     algos = ['CINTIA', 'Interval Tree', 'NClist', 'R-Tree', 'Segment Tree']
     colors = ['red', 'green', 'blue', 'orange', 'brown', 'black', 'silver', 'aqua', 'purple']
+    markers = [",", "x", "d", "v", "s", "p"] 
     font_size= 20
     fig = figure(figsize=(4, 6), dpi=80)
-    p1 = plt.bar(range(5), range(5), 1.0, color="#7FCA9F")
+    
+    p1 = []
     for algo_index in xrange(len(algos)):
+        p1.append(plt.plot(range(len(algos)), range(len(algos)))[0])
         p1[algo_index].set_color(colors[algo_index])
+        p1[algo_index].set_marker(markers[algo_index])
     plt.axis('off')
     fig = figure(figsize=(3.5, 2.5), dpi=80)
     legend = plt.legend( p1, algos, shadow=False, loc=1, fontsize=font_size)
@@ -253,11 +259,11 @@ def draw_legend2():
     fig = figure(figsize=(7, 1.5), dpi=80)
     legend = plt.legend( p1, algos, shadow=False, loc=1, ncol=2, fontsize=font_size)
     plt.axis('off')
-    legend.draw_frame(False) 
+    legend.draw_frame(False)
     savefig("../paper/imgs/legend2.eps", transparent="True", pad_inches=0)
     
-draw_legend2()
-exit()    
+#draw_legend2()
+#exit()    
 
 
 def calc_avg_minus_extremes(values):

@@ -33,6 +33,7 @@ def load_data(filename):
 
 
 colors = ["red", "green", "blue", "orange", "brown", "black", "silver", "aqua", "purple"]
+markers = [",", "x", "d", "v", "s", "p"] 
 suffix = ""
 file_type = ""
 
@@ -46,7 +47,7 @@ def draw_scatter_plot(x_values, algo2results):
     print colors
     for algo_index in xrange(len(algos)):
         algo = algos[algo_index]
-        line, = plt.plot(x_values, algo2results[algo], lw=3, color=colors[algo_index])
+        line, = plt.plot(x_values, algo2results[algo], lw=3, color=colors[algo_index], marker=markers[algo_index])
         line.set_zorder(1) 
     
     plt.xlim([10000, 10**7])

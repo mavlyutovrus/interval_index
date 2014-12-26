@@ -146,11 +146,11 @@ if 1:
     #fig(figsize=(8, 6), dpi=80)
     grid(b=True, which='major', color='gray', axis="both", linestyle='--', zorder=-1)
     font_size = 20
-    ax1.scatter(x_vals1, y_vals1, lw=1, color="black", marker=".")
+    first = ax1.scatter(x_vals1, y_vals1, lw=1, color="black", marker=".")
     trend1 = numpy.poly1d(numpy.polyfit(x_vals1, y_vals1, 1))(x_vals1)
     ax1.plot(x_vals1, trend1, "--", lw=2, color="blue")
     
-    ax1.scatter(x_vals2, y_vals2, lw=1, color="black", marker="x")
+    second = ax1.scatter(x_vals2, y_vals2, lw=1, color="black", marker="x")
     trend2 = numpy.poly1d(numpy.polyfit(x_vals2, y_vals2, 1))(x_vals2)
     ax1.plot(x_vals2, trend2, "--", lw=2, color="red")
     
@@ -158,5 +158,6 @@ if 1:
     ax1.set_xlabel("Read Size, [bytes]", size = font_size)
     ax1.set_xlim([0, 100000])
     ax1.set_ylim([0, 20])
+    ax1.legend([first, second], ["not-cached", "cached"], loc=2)
     savefig("../paper/imgs/hdfs_read.eps", transparent="True", pad_inches=0)
     plt.show()
