@@ -8,11 +8,9 @@ The main contribution is in two files:
 - src/hadoop/dfs_interval_index/src/dfs_interval_index/TDFSIntervaIndex.java 
 Those are in-memory (C++) and HDFS implementation of CIntIA (Checkpint Interval Index Array).
 
-Everything around it is all kind of files to test those implementations and compare them to other solutions.
+Everything around it was create to test the indices and compare them to other solutions.
 
-No descriptive explanation of the framework before we get our paper accepted. 
-
-But if you want to try it, you can do the following:
+But if you want to use it, you can do the following:
 
 1) for in-memory C++ tests you need a g++-4.8 (almost certainly you have it). 
 Just run the script in the root folder:
